@@ -1,13 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import SEOHead from '@/components/SEOHead';
+import Header from '@/components/Header';
+import HeroSection from '@/components/HeroSection';
+import ServicesSection from '@/components/ServicesSection';
+import DifferentialsSection from '@/components/DifferentialsSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import TeamSection from '@/components/TeamSection';
+import LocationSection from '@/components/LocationSection';
+import Footer from '@/components/Footer';
+import FloatingButtons from '@/components/FloatingButtons';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      <SEOHead />
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main>
+          <HeroSection />
+          <ServicesSection />
+          <DifferentialsSection />
+          <TestimonialsSection />
+          <TeamSection />
+          <LocationSection />
+        </main>
+        <Footer />
+        <FloatingButtons />
       </div>
-    </div>
+    </>
   );
 };
 
