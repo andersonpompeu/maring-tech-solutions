@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, ChevronDown, Wrench, Tv, Smartphone } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown, Wrench, Tv, Smartphone, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -9,231 +9,325 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const services = {
-    eletrodomesticos: [
-      { name: 'Máquinas de Lavar', href: '#servicos' },
-      { name: 'Geladeiras', href: '#servicos' },
-      { name: 'Fogões', href: '#servicos' },
-      { name: 'Micro-ondas', href: '#servicos' },
-    ],
-    tvs: [
-      { name: 'Smart TVs LED', href: '#servicos' },
-      { name: 'TVs OLED', href: '#servicos' },
-      { name: 'TVs QLED', href: '#servicos' },
-    ],
-    celulares: [
-      { name: 'iPhone', href: '#servicos' },
-      { name: 'Android', href: '#servicos' },
-      { name: 'Tablets', href: '#servicos' },
-    ],
+    eletrodomesticos: {
+      icon: Wrench,
+      title: 'Eletrodomésticos',
+      description: 'Conserto de linha branca',
+      items: [
+        { name: 'Máquinas de Lavar', desc: 'Todas as marcas', href: '#servicos' },
+        { name: 'Geladeiras', desc: 'Frost Free e convencionais', href: '#servicos' },
+        { name: 'Fogões', desc: 'Gás e elétricos', href: '#servicos' },
+        { name: 'Micro-ondas', desc: 'Reparo especializado', href: '#servicos' },
+      ],
+    },
+    tvs: {
+      icon: Tv,
+      title: 'Televisores',
+      description: 'Smart TVs e monitores',
+      items: [
+        { name: 'Smart TVs LED', desc: 'Samsung, LG, Sony', href: '#servicos' },
+        { name: 'TVs OLED', desc: 'Alta definição', href: '#servicos' },
+        { name: 'TVs QLED', desc: 'Qualidade premium', href: '#servicos' },
+      ],
+    },
+    celulares: {
+      icon: Smartphone,
+      title: 'Celulares',
+      description: 'Smartphones e tablets',
+      items: [
+        { name: 'iPhone', desc: 'Todos os modelos', href: '#servicos' },
+        { name: 'Android', desc: 'Samsung, Motorola, Xiaomi', href: '#servicos' },
+        { name: 'Tablets', desc: 'iPad e Android', href: '#servicos' },
+      ],
+    },
   };
 
+  const navLinks = [
+    { name: 'Início', href: '#inicio' },
+    { name: 'Diferenciais', href: '#diferenciais' },
+    { name: 'Depoimentos', href: '#depoimentos' },
+    { name: 'Contato', href: '#contato' },
+  ];
+
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-card/95 backdrop-blur-md shadow-card py-2'
-          : 'bg-transparent py-4'
-      }`}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <Wrench className="w-6 h-6 text-primary-foreground" />
+    <>
+      {/* Top Bar */}
+      <div className={`hidden lg:block bg-primary text-primary-foreground transition-all duration-300 ${isScrolled ? 'h-0 opacity-0 overflow-hidden' : 'py-2'}`}>
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between text-sm">
+            <div className="flex items-center gap-6">
+              <span className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                Maringá, PR
+              </span>
+              <span className="flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                Seg-Sáb: 8h às 18h
+              </span>
             </div>
-            <div className={`transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-white'}`}>
-              <span className="font-heading font-bold text-lg block leading-tight">TechFix</span>
-              <span className="text-xs opacity-80">Maringá</span>
-            </div>
-          </a>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
-            <a
-              href="#inicio"
-              className={`font-medium transition-colors hover:text-secondary ${
-                isScrolled ? 'text-foreground' : 'text-white'
-              }`}
-            >
-              Início
-            </a>
-
-            {/* Mega Menu - Eletrodomésticos */}
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveDropdown('eletro')}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <button
-                className={`flex items-center gap-1 font-medium transition-colors hover:text-secondary ${
-                  isScrolled ? 'text-foreground' : 'text-white'
-                }`}
-              >
-                <Wrench className="w-4 h-4" />
-                Eletrodomésticos
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              {activeDropdown === 'eletro' && (
-                <div className="absolute top-full left-0 mt-2 bg-card rounded-lg shadow-lg p-4 min-w-[200px] animate-fade-in">
-                  {services.eletrodomesticos.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="block px-4 py-2 text-foreground hover:bg-muted rounded-md transition-colors"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* TVs */}
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveDropdown('tvs')}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <button
-                className={`flex items-center gap-1 font-medium transition-colors hover:text-secondary ${
-                  isScrolled ? 'text-foreground' : 'text-white'
-                }`}
-              >
-                <Tv className="w-4 h-4" />
-                TVs
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              {activeDropdown === 'tvs' && (
-                <div className="absolute top-full left-0 mt-2 bg-card rounded-lg shadow-lg p-4 min-w-[200px] animate-fade-in">
-                  {services.tvs.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="block px-4 py-2 text-foreground hover:bg-muted rounded-md transition-colors"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Celulares */}
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveDropdown('celulares')}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <button
-                className={`flex items-center gap-1 font-medium transition-colors hover:text-secondary ${
-                  isScrolled ? 'text-foreground' : 'text-white'
-                }`}
-              >
-                <Smartphone className="w-4 h-4" />
-                Celulares
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              {activeDropdown === 'celulares' && (
-                <div className="absolute top-full left-0 mt-2 bg-card rounded-lg shadow-lg p-4 min-w-[200px] animate-fade-in">
-                  {services.celulares.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="block px-4 py-2 text-foreground hover:bg-muted rounded-md transition-colors"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <a
-              href="#diferenciais"
-              className={`font-medium transition-colors hover:text-secondary ${
-                isScrolled ? 'text-foreground' : 'text-white'
-              }`}
-            >
-              Diferenciais
-            </a>
-
-            <a
-              href="#contato"
-              className={`font-medium transition-colors hover:text-secondary ${
-                isScrolled ? 'text-foreground' : 'text-white'
-              }`}
-            >
-              Contato
-            </a>
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+5544999999999" className={`flex items-center gap-2 ${isScrolled ? 'text-foreground' : 'text-white'}`}>
-              <Phone className="w-4 h-4" />
-              <span className="font-medium">(44) 99999-9999</span>
-            </a>
-            <Button variant="hero" size="lg" asChild>
-              <a
-                href="https://wa.me/5544999999999?text=Olá! Gostaria de solicitar um orçamento."
-                target="_blank"
+            <div className="flex items-center gap-6">
+              <a href="tel:+5544999999999" className="flex items-center gap-2 hover:text-secondary transition-colors">
+                <Phone className="w-4 h-4" />
+                (44) 99999-9999
+              </a>
+              <a 
+                href="https://wa.me/5544999999999" 
+                target="_blank" 
                 rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-secondary transition-colors"
               >
-                Orçamento Grátis
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp
               </a>
-            </Button>
+            </div>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className={`lg:hidden p-2 ${isScrolled ? 'text-foreground' : 'text-white'}`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 animate-fade-in">
-            <nav className="flex flex-col gap-4 bg-card rounded-lg p-4 shadow-lg">
-              <a href="#inicio" className="text-foreground font-medium hover:text-secondary">
-                Início
+      {/* Main Header */}
+      <header
+        className={`sticky top-0 z-50 transition-all duration-500 ${
+          isScrolled
+            ? 'bg-background/98 backdrop-blur-xl shadow-lg border-b border-border/50'
+            : 'bg-background/80 backdrop-blur-sm'
+        }`}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            {/* Logo */}
+            <a href="#" className="flex items-center gap-3 group">
+              <div className="relative">
+                <div className="w-11 h-11 bg-gradient-to-br from-primary via-primary to-accent rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-105">
+                  <Wrench className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-secondary rounded-full flex items-center justify-center">
+                  <span className="text-[8px] font-bold text-secondary-foreground">✓</span>
+                </div>
+              </div>
+              <div>
+                <span className="font-heading font-bold text-xl text-foreground block leading-tight tracking-tight">
+                  TechFix
+                </span>
+                <span className="text-xs text-muted-foreground font-medium">Maringá • PR</span>
+              </div>
+            </a>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center">
+              <div className="flex items-center bg-muted/50 rounded-full px-2 py-1.5">
+                {/* Serviços Dropdown */}
+                <div
+                  className="relative"
+                  onMouseEnter={() => setActiveDropdown('servicos')}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
+                  <button
+                    className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${
+                      activeDropdown === 'servicos' 
+                        ? 'bg-background text-primary shadow-sm' 
+                        : 'text-foreground hover:text-primary'
+                    }`}
+                  >
+                    Serviços
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'servicos' ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  {/* Mega Menu */}
+                  {activeDropdown === 'servicos' && (
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[720px] bg-background rounded-2xl shadow-2xl border border-border/50 p-6 animate-in fade-in slide-in-from-top-2 duration-200">
+                      {/* Arrow */}
+                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-background rotate-45 border-l border-t border-border/50" />
+                      
+                      <div className="grid grid-cols-3 gap-6 relative">
+                        {Object.entries(services).map(([key, category]) => (
+                          <div key={key} className="space-y-3">
+                            <div className="flex items-center gap-3 pb-3 border-b border-border/50">
+                              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                                <category.icon className="w-5 h-5 text-primary" />
+                              </div>
+                              <div>
+                                <h4 className="font-heading font-semibold text-foreground">{category.title}</h4>
+                                <p className="text-xs text-muted-foreground">{category.description}</p>
+                              </div>
+                            </div>
+                            <div className="space-y-1">
+                              {category.items.map((item) => (
+                                <a
+                                  key={item.name}
+                                  href={item.href}
+                                  className="block px-3 py-2.5 rounded-lg hover:bg-muted transition-colors group/item"
+                                >
+                                  <span className="font-medium text-sm text-foreground group-hover/item:text-primary transition-colors">
+                                    {item.name}
+                                  </span>
+                                  <span className="block text-xs text-muted-foreground">{item.desc}</span>
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Bottom CTA */}
+                      <div className="mt-6 pt-4 border-t border-border/50 flex items-center justify-between">
+                        <p className="text-sm text-muted-foreground">
+                          <span className="text-secondary font-semibold">Conserto no mesmo dia</span> • Garantia de 90 dias
+                        </p>
+                        <Button variant="hero" size="sm" asChild>
+                          <a href="#servicos">Ver todos os serviços</a>
+                        </Button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Nav Links */}
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="px-4 py-2 rounded-full font-medium text-sm text-foreground hover:text-primary hover:bg-background transition-all duration-200"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            </nav>
+
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center gap-3">
+              <a 
+                href="tel:+5544999999999" 
+                className="flex items-center gap-2 text-foreground hover:text-primary transition-colors px-3"
+              >
+                <div className="w-9 h-9 rounded-full bg-muted flex items-center justify-center">
+                  <Phone className="w-4 h-4" />
+                </div>
               </a>
-              <a href="#servicos" className="text-foreground font-medium hover:text-secondary">
-                Serviços
-              </a>
-              <a href="#diferenciais" className="text-foreground font-medium hover:text-secondary">
-                Diferenciais
-              </a>
-              <a href="#equipe" className="text-foreground font-medium hover:text-secondary">
-                Equipe
-              </a>
-              <a href="#contato" className="text-foreground font-medium hover:text-secondary">
-                Contato
-              </a>
-              <Button variant="hero" className="w-full" asChild>
+              <Button variant="hero" size="default" className="rounded-full shadow-lg hover:shadow-secondary/30" asChild>
                 <a
                   href="https://wa.me/5544999999999?text=Olá! Gostaria de solicitar um orçamento."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <MessageCircle className="w-4 h-4" />
                   Orçamento Grátis
                 </a>
               </Button>
-            </nav>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden p-2.5 rounded-xl bg-muted hover:bg-muted/80 transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Menu"
+            >
+              {isMobileMenuOpen ? <X className="w-5 h-5 text-foreground" /> : <Menu className="w-5 h-5 text-foreground" />}
+            </button>
           </div>
-        )}
-      </div>
-    </header>
+        </div>
+
+        {/* Mobile Menu */}
+        <div 
+          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <nav className="container mx-auto px-4 pb-6">
+            <div className="bg-muted/50 rounded-2xl p-4 space-y-2">
+              {/* Services Accordion */}
+              <div className="space-y-1">
+                <button
+                  onClick={() => setActiveDropdown(activeDropdown === 'mobile-servicos' ? null : 'mobile-servicos')}
+                  className="w-full flex items-center justify-between px-4 py-3 rounded-xl font-medium text-foreground hover:bg-background transition-colors"
+                >
+                  <span className="flex items-center gap-3">
+                    <Wrench className="w-5 h-5 text-primary" />
+                    Serviços
+                  </span>
+                  <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${activeDropdown === 'mobile-servicos' ? 'rotate-180' : ''}`} />
+                </button>
+                
+                <div className={`overflow-hidden transition-all duration-300 ${activeDropdown === 'mobile-servicos' ? 'max-h-96' : 'max-h-0'}`}>
+                  <div className="px-4 py-2 space-y-4">
+                    {Object.entries(services).map(([key, category]) => (
+                      <div key={key}>
+                        <div className="flex items-center gap-2 text-sm font-semibold text-muted-foreground mb-2">
+                          <category.icon className="w-4 h-4" />
+                          {category.title}
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                          {category.items.map((item) => (
+                            <a
+                              key={item.name}
+                              href={item.href}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className="text-sm text-foreground hover:text-primary py-1"
+                            >
+                              {item.name}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Nav Links */}
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-foreground hover:bg-background transition-colors"
+                >
+                  {link.name}
+                </a>
+              ))}
+
+              {/* Contact Info */}
+              <div className="pt-4 mt-2 border-t border-border/50 space-y-3">
+                <div className="flex items-center gap-3 px-4 text-sm text-muted-foreground">
+                  <MapPin className="w-4 h-4" />
+                  <span>Maringá, PR</span>
+                </div>
+                <div className="flex items-center gap-3 px-4 text-sm text-muted-foreground">
+                  <Clock className="w-4 h-4" />
+                  <span>Seg-Sáb: 8h às 18h</span>
+                </div>
+                <a 
+                  href="tel:+5544999999999" 
+                  className="flex items-center gap-3 px-4 text-sm text-foreground font-medium"
+                >
+                  <Phone className="w-4 h-4 text-primary" />
+                  (44) 99999-9999
+                </a>
+              </div>
+
+              {/* CTA Button */}
+              <Button variant="hero" className="w-full rounded-xl mt-4" size="lg" asChild>
+                <a
+                  href="https://wa.me/5544999999999?text=Olá! Gostaria de solicitar um orçamento."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Solicitar Orçamento Grátis
+                </a>
+              </Button>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </>
   );
 };
 
