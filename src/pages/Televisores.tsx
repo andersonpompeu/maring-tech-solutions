@@ -62,6 +62,51 @@ const Televisores = () => {
     },
   ];
 
+  const testimonials = [
+    {
+      name: 'Lucas Mendes',
+      location: 'Zona 3, Maringá',
+      rating: 5,
+      text: 'Minha Smart TV Samsung ficou com a tela escura. Levei na TechFix e descobriram que era o backlight. Consertaram em 3 dias e ficou perfeita!',
+      service: 'Reparo de Backlight',
+    },
+    {
+      name: 'Patrícia Almeida',
+      location: 'Centro, Maringá',
+      rating: 5,
+      text: 'A TV LG OLED estava com manchas na tela. Achei que teria que trocar, mas os técnicos resolveram. Excelente trabalho e preço justo!',
+      service: 'Conserto de TV OLED',
+    },
+    {
+      name: 'Marcos Vinícius',
+      location: 'Zona 7, Maringá',
+      rating: 5,
+      text: 'TV de 55 polegadas parou de ligar. Vieram buscar em casa, diagnosticaram problema na placa fonte e consertaram rapidamente. Recomendo!',
+      service: 'Conserto Smart TV LED',
+    },
+    {
+      name: 'Camila Santos',
+      location: 'Jardim Imperial, Maringá',
+      rating: 5,
+      text: 'Minha TV Sony estava travando e muito lenta. Fizeram a atualização de software e limpeza geral. Voltou a funcionar como nova!',
+      service: 'Atualização de Software',
+    },
+    {
+      name: 'Ricardo Gomes',
+      location: 'Parque Industrial, Maringá',
+      rating: 5,
+      text: 'TV QLED com listras verticais na tela. Os técnicos foram muito competentes, explicaram todo o processo e resolveram perfeitamente.',
+      service: 'Conserto de TV QLED',
+    },
+    {
+      name: 'Adriana Lima',
+      location: 'Zona 5, Maringá',
+      rating: 5,
+      text: 'Ótimo atendimento! TV com som mas sem imagem. Consertaram o backlight em tempo recorde. Muito satisfeita com o serviço!',
+      service: 'Reparo de Backlight',
+    },
+  ];
+
   return (
     <ServicePageLayout
       title="Conserto de Televisores"
@@ -75,6 +120,7 @@ const Televisores = () => {
       icon={<Tv className="w-5 h-5" />}
       services={services}
       faqs={faqs}
+      testimonials={testimonials}
       schemaType="Television Repair Service"
       breadcrumbName="Televisores"
     />

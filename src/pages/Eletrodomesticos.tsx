@@ -62,6 +62,51 @@ const Eletrodomesticos = () => {
     },
   ];
 
+  const testimonials = [
+    {
+      name: 'Maria Fernanda',
+      location: 'Zona 7, Maringá',
+      rating: 5,
+      text: 'Minha geladeira parou de gelar e achei que teria que comprar outra. O técnico da TechFix veio no mesmo dia, identificou o problema e consertou rapidamente. Economizei muito!',
+      service: 'Conserto de Geladeira',
+    },
+    {
+      name: 'Carlos Eduardo',
+      location: 'Centro, Maringá',
+      rating: 5,
+      text: 'Excelente atendimento! Minha máquina de lavar estava fazendo um barulho estranho e parando no enxágue. Resolveram o problema em poucas horas e com garantia.',
+      service: 'Conserto de Máquina de Lavar',
+    },
+    {
+      name: 'Ana Paula',
+      location: 'Zona 5, Maringá',
+      rating: 5,
+      text: 'O fogão da minha casa tinha problemas no forno que não esquentava direito. O técnico foi super atencioso, explicou tudo e deixou funcionando perfeitamente.',
+      service: 'Conserto de Fogão',
+    },
+    {
+      name: 'Roberto Silva',
+      location: 'Jardim Alvorada, Maringá',
+      rating: 5,
+      text: 'Micro-ondas parou de funcionar do nada. Liguei para a TechFix, vieram buscar, consertaram e entregaram em 2 dias. Preço justo e ótimo serviço!',
+      service: 'Conserto de Micro-ondas',
+    },
+    {
+      name: 'Juliana Costa',
+      location: 'Zona 2, Maringá',
+      rating: 5,
+      text: 'Já é a segunda vez que chamo a TechFix. Desta vez foi para a lava-louças que estava vazando. Serviço impecável como sempre!',
+      service: 'Conserto de Lava-Louças',
+    },
+    {
+      name: 'Fernando Oliveira',
+      location: 'Parque das Laranjeiras, Maringá',
+      rating: 5,
+      text: 'Geladeira antiga da minha mãe parou de funcionar. Conseguiram recuperar e ainda ficou melhor que antes. Muito obrigado pelo cuidado!',
+      service: 'Conserto de Geladeira',
+    },
+  ];
+
   return (
     <ServicePageLayout
       title="Conserto de Eletrodomésticos"
@@ -75,6 +120,7 @@ const Eletrodomesticos = () => {
       icon={<Wrench className="w-5 h-5" />}
       services={services}
       faqs={faqs}
+      testimonials={testimonials}
       schemaType="Appliance Repair Service"
       breadcrumbName="Eletrodomésticos"
     />
