@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown, Wrench, Tv, Smartphone, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -6,6 +7,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,40 +23,43 @@ const Header = () => {
       icon: Wrench,
       title: 'Eletrodomésticos',
       description: 'Conserto de linha branca',
+      href: '/eletrodomesticos',
       items: [
-        { name: 'Máquinas de Lavar', desc: 'Todas as marcas', href: '#servicos' },
-        { name: 'Geladeiras', desc: 'Frost Free e convencionais', href: '#servicos' },
-        { name: 'Fogões', desc: 'Gás e elétricos', href: '#servicos' },
-        { name: 'Micro-ondas', desc: 'Reparo especializado', href: '#servicos' },
+        { name: 'Máquinas de Lavar', desc: 'Todas as marcas', href: '/eletrodomesticos' },
+        { name: 'Geladeiras', desc: 'Frost Free e convencionais', href: '/eletrodomesticos' },
+        { name: 'Fogões', desc: 'Gás e elétricos', href: '/eletrodomesticos' },
+        { name: 'Micro-ondas', desc: 'Reparo especializado', href: '/eletrodomesticos' },
       ],
     },
     tvs: {
       icon: Tv,
       title: 'Televisores',
       description: 'Smart TVs e monitores',
+      href: '/televisores',
       items: [
-        { name: 'Smart TVs LED', desc: 'Samsung, LG, Sony', href: '#servicos' },
-        { name: 'TVs OLED', desc: 'Alta definição', href: '#servicos' },
-        { name: 'TVs QLED', desc: 'Qualidade premium', href: '#servicos' },
+        { name: 'Smart TVs LED', desc: 'Samsung, LG, Sony', href: '/televisores' },
+        { name: 'TVs OLED', desc: 'Alta definição', href: '/televisores' },
+        { name: 'TVs QLED', desc: 'Qualidade premium', href: '/televisores' },
       ],
     },
     celulares: {
       icon: Smartphone,
       title: 'Celulares',
       description: 'Smartphones e tablets',
+      href: '/celulares',
       items: [
-        { name: 'iPhone', desc: 'Todos os modelos', href: '#servicos' },
-        { name: 'Android', desc: 'Samsung, Motorola, Xiaomi', href: '#servicos' },
-        { name: 'Tablets', desc: 'iPad e Android', href: '#servicos' },
+        { name: 'iPhone', desc: 'Todos os modelos', href: '/celulares' },
+        { name: 'Android', desc: 'Samsung, Motorola, Xiaomi', href: '/celulares' },
+        { name: 'Tablets', desc: 'iPad e Android', href: '/celulares' },
       ],
     },
   };
 
   const navLinks = [
-    { name: 'Início', href: '#inicio' },
-    { name: 'Diferenciais', href: '#diferenciais' },
-    { name: 'Depoimentos', href: '#depoimentos' },
-    { name: 'Contato', href: '#contato' },
+    { name: 'Início', href: isHomePage ? '#inicio' : '/' },
+    { name: 'Diferenciais', href: isHomePage ? '#diferenciais' : '/#diferenciais' },
+    { name: 'Depoimentos', href: isHomePage ? '#depoimentos' : '/#depoimentos' },
+    { name: 'Contato', href: isHomePage ? '#contato' : '/#contato' },
   ];
 
   return (
@@ -102,7 +108,7 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3 group">
+            <Link to="/" className="flex items-center gap-3 group">
               <div className="relative">
                 <div className="w-11 h-11 bg-gradient-to-br from-primary via-primary to-accent rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-105">
                   <Wrench className="w-6 h-6 text-primary-foreground" />
@@ -117,7 +123,7 @@ const Header = () => {
                 </span>
                 <span className="text-xs text-muted-foreground font-medium">Maringá • PR</span>
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center">
@@ -159,16 +165,16 @@ const Header = () => {
                             </div>
                             <div className="space-y-1">
                               {category.items.map((item) => (
-                                <a
+                                <Link
                                   key={item.name}
-                                  href={item.href}
+                                  to={item.href}
                                   className="block px-3 py-2.5 rounded-lg hover:bg-muted transition-colors group/item"
                                 >
                                   <span className="font-medium text-sm text-foreground group-hover/item:text-primary transition-colors">
                                     {item.name}
                                   </span>
                                   <span className="block text-xs text-muted-foreground">{item.desc}</span>
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           </div>
@@ -181,7 +187,7 @@ const Header = () => {
                           <span className="text-secondary font-semibold">Conserto no mesmo dia</span> • Garantia de 90 dias
                         </p>
                         <Button variant="hero" size="sm" asChild>
-                          <a href="#servicos">Ver todos os serviços</a>
+                          <Link to="/eletrodomesticos">Ver todos os serviços</Link>
                         </Button>
                       </div>
                     </div>
@@ -265,14 +271,14 @@ const Header = () => {
                         </div>
                         <div className="grid grid-cols-2 gap-2">
                           {category.items.map((item) => (
-                            <a
+                            <Link
                               key={item.name}
-                              href={item.href}
+                              to={item.href}
                               onClick={() => setIsMobileMenuOpen(false)}
                               className="text-sm text-foreground hover:text-primary py-1"
                             >
                               {item.name}
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       </div>
