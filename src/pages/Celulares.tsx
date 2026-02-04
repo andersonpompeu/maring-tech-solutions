@@ -62,6 +62,51 @@ const Celulares = () => {
     },
   ];
 
+  const testimonials = [
+    {
+      name: 'Beatriz Oliveira',
+      location: 'Zona 7, Maringá',
+      rating: 5,
+      text: 'Quebrei a tela do meu iPhone 14 e estava desesperada. A TechFix trocou em menos de 2 horas e ficou perfeita. Tela original e preço justo!',
+      service: 'Troca de Tela iPhone',
+    },
+    {
+      name: 'Gustavo Henrique',
+      location: 'Centro, Maringá',
+      rating: 5,
+      text: 'Meu Samsung S23 caiu na água e achei que tinha perdido. Os técnicos recuperaram completamente! Incrível trabalho de recuperação.',
+      service: 'Recuperação de Celular',
+    },
+    {
+      name: 'Larissa Campos',
+      location: 'Zona 2, Maringá',
+      rating: 5,
+      text: 'Bateria do iPhone viciada, desligava com 30%. Trocaram a bateria original rapidamente e agora dura o dia todo. Recomendo muito!',
+      service: 'Troca de Bateria iPhone',
+    },
+    {
+      name: 'Thiago Nascimento',
+      location: 'Jardim Aclimação, Maringá',
+      rating: 5,
+      text: 'Xiaomi com problema no conector de carga. Consertaram com microsoldagem e ficou melhor que novo. Técnicos muito competentes!',
+      service: 'Reparo de Placa',
+    },
+    {
+      name: 'Mariana Souza',
+      location: 'Zona 5, Maringá',
+      rating: 5,
+      text: 'iPad da minha filha com tela rachada. A TechFix fez a troca com qualidade e rapidez. Atendimento nota 10!',
+      service: 'Conserto de Tablet',
+    },
+    {
+      name: 'Diego Ferreira',
+      location: 'Parque das Grevíleas, Maringá',
+      rating: 5,
+      text: 'Motorola não ligava mais. Diagnosticaram problema na placa e recuperaram todos os meus dados. Muito grato pelo serviço!',
+      service: 'Conserto Android',
+    },
+  ];
+
   return (
     <ServicePageLayout
       title="Conserto de Celulares"
@@ -75,6 +120,7 @@ const Celulares = () => {
       icon={<Smartphone className="w-5 h-5" />}
       services={services}
       faqs={faqs}
+      testimonials={testimonials}
       schemaType="Cell Phone Repair Service"
       breadcrumbName="Celulares"
     />

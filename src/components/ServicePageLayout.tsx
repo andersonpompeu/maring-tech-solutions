@@ -19,7 +19,9 @@ import {
   Shield, 
   Award,
   ChevronRight,
-  MapPin
+  MapPin,
+  Star,
+  Quote
 } from 'lucide-react';
 
 interface FAQItem {
@@ -31,6 +33,14 @@ interface ServiceItem {
   name: string;
   description: string;
   brands?: string[];
+}
+
+interface TestimonialItem {
+  name: string;
+  location: string;
+  rating: number;
+  text: string;
+  service: string;
 }
 
 interface ServicePageLayoutProps {
@@ -45,6 +55,7 @@ interface ServicePageLayoutProps {
   icon: ReactNode;
   services: ServiceItem[];
   faqs: FAQItem[];
+  testimonials: TestimonialItem[];
   schemaType: string;
   breadcrumbName: string;
 }
@@ -61,6 +72,7 @@ const ServicePageLayout = ({
   icon,
   services,
   faqs,
+  testimonials,
   schemaType,
   breadcrumbName,
 }: ServicePageLayoutProps) => {
@@ -345,8 +357,77 @@ const ServicePageLayout = ({
             </div>
           </section>
 
+          {/* Testimonials Section */}
+          <section className="py-16 lg:py-24 bg-muted/30">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <span className="text-secondary font-semibold text-sm uppercase tracking-wider">
+                  Depoimentos
+                </span>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground mt-2">
+                  O Que Nossos Clientes Dizem
+                </h2>
+                <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+                  Veja a opinião de quem já utilizou nossos serviços de {breadcrumbName.toLowerCase()}.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                {testimonials.map((testimonial, index) => (
+                  <div 
+                    key={index}
+                    className="bg-card rounded-2xl p-6 shadow-card border border-border/50 relative"
+                  >
+                    {/* Quote Icon */}
+                    <div className="absolute -top-3 left-6">
+                      <div className="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center shadow-lg">
+                        <Quote className="w-5 h-5 text-secondary-foreground" />
+                      </div>
+                    </div>
+
+                    {/* Rating */}
+                    <div className="flex items-center gap-1 mt-4 mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star 
+                          key={i} 
+                          className={`w-4 h-4 ${i < testimonial.rating ? 'text-secondary fill-secondary' : 'text-muted-foreground'}`} 
+                        />
+                      ))}
+                    </div>
+
+                    {/* Text */}
+                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                      "{testimonial.text}"
+                    </p>
+
+                    {/* Service Badge */}
+                    <span className="inline-block text-xs bg-primary/10 text-primary px-2 py-1 rounded-full mb-4">
+                      {testimonial.service}
+                    </span>
+
+                    {/* Author */}
+                    <div className="flex items-center gap-3 pt-4 border-t border-border/50">
+                      <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                        <span className="text-primary-foreground font-semibold text-sm">
+                          {testimonial.name.charAt(0)}
+                        </span>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground text-sm">{testimonial.name}</p>
+                        <p className="text-xs text-muted-foreground flex items-center gap-1">
+                          <MapPin className="w-3 h-3" />
+                          {testimonial.location}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
           {/* Location Info */}
-          <section className="py-12 bg-muted/30">
+          <section className="py-12 bg-background">
             <div className="container mx-auto px-4">
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
                 <div className="flex items-center gap-3">
