@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import FloatingButtons from './FloatingButtons';
+import SEOTopicsSection, { type SEOTopic } from './SEOTopicsSection';
 import { Button } from './ui/button';
 import { 
   Accordion, 
@@ -58,6 +59,9 @@ interface ServicePageLayoutProps {
   testimonials: TestimonialItem[];
   schemaType: string;
   breadcrumbName: string;
+  seoTopics?: SEOTopic[];
+  seoTopicsTitle?: string;
+  seoTopicsSubtitle?: string;
 }
 
 const ServicePageLayout = ({
@@ -75,6 +79,9 @@ const ServicePageLayout = ({
   testimonials,
   schemaType,
   breadcrumbName,
+  seoTopics,
+  seoTopicsTitle,
+  seoTopicsSubtitle,
 }: ServicePageLayoutProps) => {
   // Schema for LocalBusiness + Service
   const serviceSchema = {
@@ -356,6 +363,16 @@ const ServicePageLayout = ({
               </div>
             </div>
           </section>
+
+          {/* SEO Topics Section */}
+          {seoTopics && seoTopics.length > 0 && (
+            <SEOTopicsSection
+              sectionTitle={seoTopicsTitle || `Serviços de ${breadcrumbName} em Maringá`}
+              sectionSubtitle={seoTopicsSubtitle || 'Especialidades'}
+              topics={seoTopics}
+              city="Maringá"
+            />
+          )}
 
           {/* Testimonials Section */}
           <section className="py-16 lg:py-24 bg-muted/30">
