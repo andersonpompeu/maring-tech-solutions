@@ -7,7 +7,7 @@ import GallerySection from '@/components/GallerySection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import TeamSection from '@/components/TeamSection';
 import ContactSection from '@/components/ContactSection';
-import LocationSection from '@/components/LocationSection';
+import NeighborhoodsSection from '@/components/NeighborhoodsSection';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 
@@ -25,7 +25,7 @@ const Index = () => {
           <TestimonialsSection />
           <TeamSection />
           <ContactSection />
-          <LocationSection />
+          <NeighborhoodsSection />
         </main>
         <Footer />
         <FloatingButtons />
