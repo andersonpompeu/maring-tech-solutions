@@ -213,8 +213,9 @@ const Bairros = () => {
                   
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                     {regionNeighborhoods.map((neighborhood) => (
-                      <div 
+                      <Link 
                         key={neighborhood.name}
+                        to={`/bairros/${neighborhood.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')}`}
                         className={`
                           relative p-4 rounded-xl border transition-all duration-300 cursor-pointer
                           hover:border-primary hover:shadow-md hover:-translate-y-0.5
@@ -237,7 +238,7 @@ const Bairros = () => {
                             Popular
                           </span>
                         )}
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 </div>

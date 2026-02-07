@@ -10,6 +10,7 @@ import Eletrodomesticos from "./pages/Eletrodomesticos";
 import Televisores from "./pages/Televisores";
 import Celulares from "./pages/Celulares";
 import Bairros from "./pages/Bairros";
+import BairroPage from "./pages/BairroPage";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/televisores" element={<Televisores />} />
             <Route path="/celulares" element={<Celulares />} />
             <Route path="/bairros" element={<Bairros />} />
+            <Route path="/bairros/:slug" element={<BairroPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
