@@ -1,4 +1,5 @@
 import { Wrench, Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -152,15 +153,12 @@ const Footer = () => {
               © {currentYear} TechFix Maringá. Todos os direitos reservados.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors">
+              <Link to="/termos-de-uso" className="hover:text-white transition-colors">
                 Termos de Uso
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Política de Garantia
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Privacidade
-              </a>
+              </Link>
+              <Link to="/politica-de-privacidade" className="hover:text-white transition-colors">
+                Política de Privacidade
+              </Link>
             </div>
           </div>
         </div>

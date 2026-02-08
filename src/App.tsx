@@ -11,6 +11,8 @@ import Televisores from "./pages/Televisores";
 import Celulares from "./pages/Celulares";
 import Bairros from "./pages/Bairros";
 import BairroPage from "./pages/BairroPage";
+import TermosDeUso from "./pages/TermosDeUso";
+import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +30,8 @@ const App = () => (
             <Route path="/celulares" element={<Celulares />} />
             <Route path="/bairros" element={<Bairros />} />
             <Route path="/bairros/:slug" element={<BairroPage />} />
+            <Route path="/termos-de-uso" element={<TermosDeUso />} />
+            <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidade />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
