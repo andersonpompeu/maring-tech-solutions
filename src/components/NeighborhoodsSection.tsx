@@ -1,33 +1,14 @@
 import { MapPin, CheckCircle, ArrowRight, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { neighborhoods as neighborhoodData } from '@/data/neighborhoods';
 
-const neighborhoods = [
-  { name: 'Centro', region: 'Central', popular: true },
-  { name: 'Zona 01', region: 'Central', popular: true },
-  { name: 'Zona 02', region: 'Central', popular: true },
-  { name: 'Zona 03', region: 'Central', popular: true },
-  { name: 'Zona 05', region: 'Sul', popular: true },
-  { name: 'Zona 07', region: 'Oeste', popular: true },
-  { name: 'Vila Operária', region: 'Sul', popular: true },
-  { name: 'Jardim Alvorada', region: 'Sul', popular: true },
-  { name: 'Vila Morangueira', region: 'Leste', popular: true },
-  { name: 'Jardim Universitário', region: 'Leste', popular: true },
-  { name: 'Zona 04', region: 'Central', popular: false },
-  { name: 'Zona 06', region: 'Sul', popular: false },
-  { name: 'Zona 08', region: 'Norte', popular: false },
-  { name: 'Zona 10', region: 'Norte', popular: false },
-  { name: 'Jardim Aclimação', region: 'Sul', popular: false },
-  { name: 'Parque das Laranjeiras', region: 'Sul', popular: false },
-  { name: 'Jardim Mandacaru', region: 'Norte', popular: false },
-  { name: 'Parque Industrial', region: 'Norte', popular: false },
-  { name: 'Jardim Imperial', region: 'Oeste', popular: false },
-  { name: 'Parque das Grevíleas', region: 'Oeste', popular: false },
-  { name: 'Jardim Olímpico', region: 'Oeste', popular: false },
-  { name: 'Jardim Real', region: 'Norte', popular: false },
-  { name: 'Parque Avenida', region: 'Central', popular: false },
-  { name: 'Vila Esperança', region: 'Sul', popular: false },
-];
+const neighborhoods = neighborhoodData.map(n => ({
+  name: n.name,
+  slug: n.slug,
+  region: n.region.replace('Região ', ''),
+  popular: n.popular,
+}));
 
 const regionColors: Record<string, string> = {
   Central: 'bg-primary/10 text-primary border-primary/20',
@@ -81,7 +62,8 @@ const NeighborhoodsSection = () => {
         {/* Neighborhoods Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
           {neighborhoods.map((neighborhood) => (
-            <div
+            <Link
+              to={`/bairros/${neighborhood.slug}`}
               key={neighborhood.name}
               className={`
                 group relative flex items-center gap-2 p-3 rounded-xl border transition-all duration-300
@@ -103,7 +85,7 @@ const NeighborhoodsSection = () => {
               {neighborhood.popular && (
                 <span className={`absolute -top-1.5 -right-1.5 w-3 h-3 rounded-full ${regionDotColors[neighborhood.region]}`} />
               )}
-            </div>
+            </Link>
           ))}
         </div>
 
