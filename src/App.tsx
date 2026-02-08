@@ -13,6 +13,7 @@ import Bairros from "./pages/Bairros";
 import BairroPage from "./pages/BairroPage";
 import TermosDeUso from "./pages/TermosDeUso";
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade";
+import CookieConsent from "./components/CookieConsent";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <CookieConsent />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
