@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
+import { geladeiraServices } from '@/data/geladeira-services';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import { Button } from '@/components/ui/button';
@@ -29,38 +30,7 @@ import {
   Droplets,
 } from 'lucide-react';
 
-const heroServices = [
-  {
-    title: 'Conserto de Geladeira Frost Free',
-    description: 'Geladeira não gela ou congela demais? Reparamos o sistema frost free com peças originais.',
-    icon: Snowflake,
-  },
-  {
-    title: 'Reparo de Compressor',
-    description: 'Compressor com defeito ou fazendo barulho? Realizamos troca e reparo especializado.',
-    icon: Settings,
-  },
-  {
-    title: 'Conserto de Painel Eletrônico',
-    description: 'Painel sem resposta ou com erro? Reparamos placas eletrônicas no mesmo dia em Maringá.',
-    icon: Zap,
-  },
-  {
-    title: 'Vazamento de Gás Refrigerante',
-    description: 'Geladeira perdendo gás? Identificamos o vazamento e fazemos a recarga completa.',
-    icon: Droplets,
-  },
-  {
-    title: 'Troca de Borracha de Vedação',
-    description: 'Porta não veda corretamente? Substituímos a borracha para manter a temperatura ideal.',
-    icon: Shield,
-  },
-  {
-    title: 'Problema no Termostato',
-    description: 'Temperatura desregulada? Ajustamos ou trocamos o termostato com garantia.',
-    icon: Thermometer,
-  },
-];
+const heroServices = geladeiraServices;
 
 const applianceTypes = [
   'Geladeira Frost Free',
@@ -307,15 +277,13 @@ const Geladeira = () => {
                       <service.icon className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="text-lg font-heading font-semibold text-foreground mb-2">{service.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
-                    <a
-                      href="https://wa.me/5544999999999?text=Olá! Gostaria de saber mais sobre conserto de geladeira."
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <p className="text-muted-foreground text-sm mb-4">{service.shortDescription}</p>
+                    <Link
+                      to={`/geladeira/${service.slug}`}
                       className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1"
                     >
                       Saiba Mais <ChevronRight className="w-4 h-4" />
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>
