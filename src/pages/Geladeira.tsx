@@ -349,24 +349,31 @@ const Geladeira = () => {
           </section>
 
           {/* Defect Signs */}
-          <section className="py-16 bg-muted/30">
+          <section className="py-20 lg:py-24 bg-muted/40">
             <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-10">
-                  <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Atenção</span>
-                  <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mt-2">
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-12">
+                  <span className="inline-block text-secondary font-bold text-xs uppercase tracking-[0.2em] bg-secondary/10 px-4 py-1.5 rounded-full mb-4">
+                    Atenção
+                  </span>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground leading-tight">
                     Geladeira com defeito em Maringá? Veja os sinais
                   </h2>
-                  <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+                  <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-base leading-relaxed">
                     Problemas na geladeira podem ser causados por falhas no compressor, vazamento de gás ou peças desgastadas.
                     Fique atento aos sintomas e evite danos maiores ao equipamento e perda de alimentos:
                   </p>
                 </div>
-                <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                <div className="grid sm:grid-cols-2 gap-3 max-w-4xl mx-auto">
                   {defectSigns.map((sign, i) => (
-                    <div key={i} className="flex items-start gap-3 bg-card rounded-xl px-5 py-4 border border-border/50 shadow-sm">
-                      <AlertTriangle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                      <span className="text-foreground text-sm">{sign}</span>
+                    <div
+                      key={i}
+                      className="flex items-center gap-4 bg-card rounded-2xl px-6 py-5 border border-border/40 shadow-sm hover:shadow-md hover:border-secondary/30 transition-all duration-300 group"
+                    >
+                      <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center shrink-0 group-hover:bg-secondary/20 transition-colors">
+                        <AlertTriangle className="w-5 h-5 text-secondary" />
+                      </div>
+                      <span className="text-foreground text-sm font-medium leading-snug">{sign}</span>
                     </div>
                   ))}
                 </div>
@@ -375,25 +382,30 @@ const Geladeira = () => {
           </section>
 
           {/* Why Choose Us */}
-          <section className="py-16 lg:py-20">
+          <section className="py-20 lg:py-24">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <div className="bg-card rounded-3xl p-8 md:p-12 shadow-card border border-border/50">
-                  <div className="text-center mb-8">
-                    <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
-                      Por que escolher Conserto de Geladeira Maringá?
-                    </h2>
-                    <p className="text-muted-foreground max-w-2xl mx-auto">
-                      Precisando de conserto urgente? Nossa equipe de Conserto de Geladeira em Maringá atende rapidamente em casos emergenciais, com técnicos prontos para agir.
-                    </p>
-                  </div>
-                  <div className="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto">
-                    {whyChooseUs.map((item, i) => (
-                      <div key={i} className="flex items-center gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                        <span className="text-foreground font-medium text-sm">{item}</span>
-                      </div>
-                    ))}
+                <div className="bg-gradient-to-br from-card to-muted/30 rounded-3xl p-10 md:p-14 shadow-lg border border-border/30 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                  <div className="relative">
+                    <div className="text-center mb-10">
+                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground mb-4 leading-tight">
+                        Por que escolher Conserto de Geladeira Maringá?
+                      </h2>
+                      <p className="text-muted-foreground max-w-2xl mx-auto text-base leading-relaxed">
+                        Precisando de conserto urgente? Nossa equipe de Conserto de Geladeira em Maringá atende rapidamente em casos emergenciais, com técnicos prontos para agir.
+                      </p>
+                    </div>
+                    <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
+                      {whyChooseUs.map((item, i) => (
+                        <div key={i} className="flex items-start gap-4 bg-card/80 rounded-xl px-5 py-4 border border-border/30 shadow-sm">
+                          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                            <CheckCircle2 className="w-4 h-4 text-primary" />
+                          </div>
+                          <span className="text-foreground font-medium text-sm leading-relaxed">{item}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
