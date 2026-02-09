@@ -89,7 +89,7 @@ const HeroSection = () => {
 
           {/* Description */}
           <p className="text-lg text-white/80 mb-8 max-w-xl animate-slide-up stagger-2">
-            {currentSlideData.description}
+            <strong className="font-normal">{currentSlideData.description}</strong>
           </p>
 
           {/* CTAs */}

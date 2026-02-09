@@ -113,7 +113,7 @@ const ContactSection = () => {
                 Informações de Contato
               </h3>
               
-              <div className="space-y-6">
+              <address className="not-italic space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Phone className="w-5 h-5 text-primary" />
@@ -122,6 +122,7 @@ const ContactSection = () => {
                     <p className="font-semibold text-foreground">Telefone / WhatsApp</p>
                     <a 
                       href={`https://wa.me/${whatsappNumber}`}
+                      title="Chamar assistência técnica em Maringá no WhatsApp"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
                       (44) 99999-9999
@@ -137,6 +138,7 @@ const ContactSection = () => {
                     <p className="font-semibold text-foreground">E-mail</p>
                     <a 
                       href="mailto:contato@tecnicomaringa.com.br"
+                      title="Enviar e-mail para assistência técnica em Maringá"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
                       contato@tecnicomaringa.com.br
@@ -150,11 +152,11 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Horário de Atendimento</p>
-                    <p className="text-muted-foreground">Seg - Sex: 8h às 18h</p>
-                    <p className="text-muted-foreground">Sábado: 8h às 12h</p>
+                    <p className="text-muted-foreground">Seg - Sex: <time dateTime="08:00">8h</time> às <time dateTime="18:00">18h</time></p>
+                    <p className="text-muted-foreground">Sábado: <time dateTime="08:00">8h</time> às <time dateTime="12:00">12h</time></p>
                   </div>
                 </div>
-              </div>
+              </address>
             </div>
 
             <div className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-8 text-white">

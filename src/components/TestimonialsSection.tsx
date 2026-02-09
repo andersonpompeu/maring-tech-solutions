@@ -103,7 +103,7 @@ const TestimonialsSection = () => {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <div
+            <article
               key={testimonial.name}
               className={`group relative bg-card rounded-2xl p-6 transition-all duration-500 border border-border/50 animate-fade-in cursor-default ${
                 activeIndex === index
@@ -145,7 +145,7 @@ const TestimonialsSection = () => {
                   {testimonial.service}
                 </span>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

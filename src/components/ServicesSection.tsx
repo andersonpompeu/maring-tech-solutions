@@ -56,7 +56,7 @@ const ServicesSection = () => {
             Assistência Técnica Especializada
           </h2>
           <p className="text-muted-foreground text-lg">
-            Consertamos eletrodomésticos, Smart TVs e celulares em Maringá e região. 
+            Consertamos <strong>eletrodomésticos</strong>, <strong>Smart TVs</strong> e <strong>celulares</strong> em <strong>Maringá</strong> e região. 
             Técnicos certificados e peças originais.
           </p>
         </div>
@@ -66,7 +66,7 @@ const ServicesSection = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div
+              <article
                 key={service.title}
                 className="group bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-2 border border-border/50 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -104,11 +104,12 @@ const ServicesSection = () => {
                     href={`https://wa.me/5544999999999?text=Olá! Preciso de conserto de ${service.title.toLowerCase()}.`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    title={`Solicitar orçamento para conserto de ${service.title.toLowerCase()} em Maringá`}
                   >
                     Solicitar Orçamento
                   </a>
                 </Button>
-              </div>
+              </article>
             );
           })}
         </div>
