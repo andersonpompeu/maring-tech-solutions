@@ -27,7 +27,7 @@ const Header = () => {
       items: [
         { name: 'Máquinas de Lavar', desc: 'Todas as marcas', href: '/maquina-de-lavar' },
         { name: 'Geladeiras', desc: 'Frost Free e convencionais', href: '/geladeira' },
-        { name: 'Fogões', desc: 'Gás e elétricos', href: '/eletrodomesticos' },
+        { name: 'Fogões', desc: 'Gás e elétricos', href: '/fogao' },
         { name: 'Micro-ondas', desc: 'Reparo especializado', href: '/eletrodomesticos' },
       ],
     },
