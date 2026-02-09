@@ -14,6 +14,7 @@ import BairroPage from "./pages/BairroPage";
 import TermosDeUso from "./pages/TermosDeUso";
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade";
 import MaquinaDeLavar from "./pages/MaquinaDeLavar";
+import Geladeira from "./pages/Geladeira";
 import CookieConsent from "./components/CookieConsent";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/eletrodomesticos" element={<Eletrodomesticos />} />
             <Route path="/maquina-de-lavar" element={<MaquinaDeLavar />} />
+            <Route path="/geladeira" element={<Geladeira />} />
             <Route path="/televisores" element={<Televisores />} />
             <Route path="/celulares" element={<Celulares />} />
             <Route path="/bairros" element={<Bairros />} />
