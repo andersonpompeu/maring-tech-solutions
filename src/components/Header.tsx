@@ -147,48 +147,50 @@ const Header = () => {
 
                   {/* Mega Menu */}
                   {activeDropdown === 'servicos' && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[720px] bg-background rounded-2xl shadow-2xl border border-border/50 p-6 animate-in fade-in slide-in-from-top-2 duration-200">
-                      {/* Arrow */}
-                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-background rotate-45 border-l border-t border-border/50" />
-                      
-                      <div className="grid grid-cols-3 gap-6 relative">
-                        {Object.entries(services).map(([key, category]) => (
-                          <div key={key} className="space-y-3">
-                            <div className="flex items-center gap-3 pb-3 border-b border-border/50">
-                              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                                <category.icon className="w-5 h-5 text-primary" />
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
+                      <div className="w-[720px] bg-background rounded-2xl shadow-2xl border border-border/50 p-6 animate-in fade-in slide-in-from-top-2 duration-200">
+                        {/* Arrow */}
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-background rotate-45 border-l border-t border-border/50" />
+                        
+                        <div className="grid grid-cols-3 gap-6 relative">
+                          {Object.entries(services).map(([key, category]) => (
+                            <div key={key} className="space-y-3">
+                              <div className="flex items-center gap-3 pb-3 border-b border-border/50">
+                                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                                  <category.icon className="w-5 h-5 text-primary" />
+                                </div>
+                                <div>
+                                  <h4 className="font-heading font-semibold text-foreground">{category.title}</h4>
+                                  <p className="text-xs text-muted-foreground">{category.description}</p>
+                                </div>
                               </div>
-                              <div>
-                                <h4 className="font-heading font-semibold text-foreground">{category.title}</h4>
-                                <p className="text-xs text-muted-foreground">{category.description}</p>
+                              <div className="space-y-1">
+                                {category.items.map((item) => (
+                                  <Link
+                                    key={item.name}
+                                    to={item.href}
+                                    className="block px-3 py-2.5 rounded-lg hover:bg-muted transition-colors group/item"
+                                  >
+                                    <span className="font-medium text-sm text-foreground group-hover/item:text-primary transition-colors">
+                                      {item.name}
+                                    </span>
+                                    <span className="block text-xs text-muted-foreground">{item.desc}</span>
+                                  </Link>
+                                ))}
                               </div>
                             </div>
-                            <div className="space-y-1">
-                              {category.items.map((item) => (
-                                <Link
-                                  key={item.name}
-                                  to={item.href}
-                                  className="block px-3 py-2.5 rounded-lg hover:bg-muted transition-colors group/item"
-                                >
-                                  <span className="font-medium text-sm text-foreground group-hover/item:text-primary transition-colors">
-                                    {item.name}
-                                  </span>
-                                  <span className="block text-xs text-muted-foreground">{item.desc}</span>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
+                          ))}
+                        </div>
 
-                      {/* Bottom CTA */}
-                      <div className="mt-6 pt-4 border-t border-border/50 flex items-center justify-between">
-                        <p className="text-sm text-muted-foreground">
-                          <span className="text-secondary font-semibold">Conserto no mesmo dia</span> • Garantia de 90 dias
-                        </p>
-                        <Button variant="hero" size="sm" asChild>
-                          <Link to="/eletrodomesticos">Ver todos os serviços</Link>
-                        </Button>
+                        {/* Bottom CTA */}
+                        <div className="mt-6 pt-4 border-t border-border/50 flex items-center justify-between">
+                          <p className="text-sm text-muted-foreground">
+                            <span className="text-secondary font-semibold">Conserto no mesmo dia</span> • Garantia de 90 dias
+                          </p>
+                          <Button variant="hero" size="sm" asChild>
+                            <Link to="/eletrodomesticos">Ver todos os serviços</Link>
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   )}
