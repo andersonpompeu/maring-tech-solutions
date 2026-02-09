@@ -13,39 +13,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-
-const neighborhoods = [
-  { name: 'Centro', region: 'Região Central', popular: true },
-  { name: 'Zona 01', region: 'Região Central', popular: true },
-  { name: 'Zona 02', region: 'Região Central', popular: true },
-  { name: 'Zona 03', region: 'Região Central', popular: true },
-  { name: 'Zona 04', region: 'Região Central', popular: false },
-  { name: 'Zona 05', region: 'Região Sul', popular: true },
-  { name: 'Zona 06', region: 'Região Sul', popular: false },
-  { name: 'Zona 07', region: 'Região Oeste', popular: true },
-  { name: 'Zona 08', region: 'Região Norte', popular: false },
-  { name: 'Zona 10', region: 'Região Norte', popular: false },
-  { name: 'Vila Operária', region: 'Região Sul', popular: true },
-  { name: 'Jardim Alvorada', region: 'Região Sul', popular: true },
-  { name: 'Jardim Aclimação', region: 'Região Sul', popular: false },
-  { name: 'Parque das Laranjeiras', region: 'Região Sul', popular: false },
-  { name: 'Conjunto Habitacional Inocente Vila Nova Júnior', region: 'Região Sul', popular: false },
-  { name: 'Parque Residencial Cidade Nova', region: 'Região Norte', popular: false },
-  { name: 'Jardim Mandacaru', region: 'Região Norte', popular: false },
-  { name: 'Parque Industrial', region: 'Região Norte', popular: false },
-  { name: 'Vila Morangueira', region: 'Região Leste', popular: true },
-  { name: 'Jardim Universitário', region: 'Região Leste', popular: true },
-  { name: 'Conjunto Residencial Parigot de Souza', region: 'Região Leste', popular: false },
-  { name: 'Vila Santa Izabel', region: 'Região Leste', popular: false },
-  { name: 'Jardim Imperial', region: 'Região Oeste', popular: false },
-  { name: 'Parque das Grevíleas', region: 'Região Oeste', popular: false },
-  { name: 'Jardim Olímpico', region: 'Região Oeste', popular: false },
-  { name: 'Jardim Real', region: 'Região Norte', popular: false },
-  { name: 'Parque Avenida', region: 'Região Central', popular: false },
-  { name: 'Vila Esperança', region: 'Região Sul', popular: false },
-  { name: 'Jardim Paulista', region: 'Região Sul', popular: false },
-  { name: 'Jardim São Silvestre', region: 'Região Norte', popular: false },
-];
+import { neighborhoods as neighborhoodData } from '@/data/neighborhoods';
 
 const regions = ['Região Central', 'Região Norte', 'Região Sul', 'Região Leste', 'Região Oeste'];
 
@@ -55,7 +23,7 @@ const Bairros = () => {
     "@type": "LocalBusiness",
     "name": "Assistência Técnica Maringá",
     "description": "Assistência técnica especializada em eletrodomésticos, televisores e celulares. Atendemos todos os bairros de Maringá-PR.",
-    "areaServed": neighborhoods.map(n => ({
+    "areaServed": neighborhoodData.map(n => ({
       "@type": "City",
       "name": `${n.name}, Maringá-PR`
     })),
@@ -69,7 +37,7 @@ const Bairros = () => {
 
   const groupedNeighborhoods = regions.map(region => ({
     region,
-    neighborhoods: neighborhoods.filter(n => n.region === region)
+    neighborhoods: neighborhoodData.filter(n => n.region === region)
   }));
 
   return (
@@ -80,7 +48,7 @@ const Bairros = () => {
           name="description" 
           content="Atendemos todos os bairros de Maringá-PR. Assistência técnica para eletrodomésticos, televisores e celulares com atendimento rápido na sua região." 
         />
-        <meta name="keywords" content="assistência técnica Maringá, bairros atendidos, técnico zona 7, conserto zona 5, reparo Vila Operária" />
+        <meta name="keywords" content="assistência técnica Maringá, bairros atendidos, técnico zona 7, conserto zona 5, reparo Jardim Alvorada" />
         <link rel="canonical" href="https://maringa-tech-care.lovable.app/bairros" />
         <meta property="og:title" content="Bairros Atendidos em Maringá | Assistência Técnica" />
         <meta property="og:description" content="Atendemos todos os bairros de Maringá-PR com rapidez e qualidade." />
@@ -128,27 +96,14 @@ const Bairros = () => {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button 
-                  variant="whatsapp" 
-                  size="lg"
-                  className="group"
-                  asChild
-                >
-                  <a 
-                    href="https://wa.me/5544999999999?text=Olá! Gostaria de agendar um atendimento técnico no meu bairro." 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
+                <Button variant="whatsapp" size="lg" className="group" asChild>
+                  <a href="https://wa.me/5544999999999?text=Olá! Gostaria de agendar um atendimento técnico no meu bairro." target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-5 h-5" />
                     Agendar Visita
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
-                <Button 
-                  variant="hero-outline" 
-                  size="lg"
-                  asChild
-                >
+                <Button variant="hero-outline" size="lg" asChild>
                   <a href="tel:+5544999999999">
                     <Phone className="w-5 h-5" />
                     (44) 99999-9999
@@ -164,7 +119,7 @@ const Bairros = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
-                <p className="text-3xl md:text-4xl font-bold text-primary">{neighborhoods.length}+</p>
+                <p className="text-3xl md:text-4xl font-bold text-primary">{neighborhoodData.length}+</p>
                 <p className="text-muted-foreground text-sm">Bairros Atendidos</p>
               </div>
               <div>
@@ -214,8 +169,8 @@ const Bairros = () => {
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                     {regionNeighborhoods.map((neighborhood) => (
                       <Link 
-                        key={neighborhood.name}
-                        to={`/bairros/${neighborhood.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')}`}
+                        key={neighborhood.slug}
+                        to={`/bairros/${neighborhood.slug}`}
                         className={`
                           relative p-4 rounded-xl border transition-all duration-300 cursor-pointer
                           hover:border-primary hover:shadow-md hover:-translate-y-0.5
@@ -259,16 +214,8 @@ const Bairros = () => {
                 Atendemos toda a região metropolitana de Maringá. Entre em contato e confirme a disponibilidade para seu endereço.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button 
-                  variant="whatsapp" 
-                  size="lg"
-                  asChild
-                >
-                  <a 
-                    href="https://wa.me/5544999999999?text=Olá! Gostaria de saber se vocês atendem meu bairro." 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
+                <Button variant="whatsapp" size="lg" asChild>
+                  <a href="https://wa.me/5544999999999?text=Olá! Gostaria de saber se vocês atendem meu bairro." target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-5 h-5" />
                     Consultar Disponibilidade
                   </a>
