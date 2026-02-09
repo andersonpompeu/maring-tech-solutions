@@ -1,44 +1,24 @@
 import { Tv, Smartphone, Refrigerator, Flame, Microwave, WashingMachine } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { findNeighborhoodBySlug, neighborhoods } from '@/data/neighborhoods';
 
 interface BairroServicesSectionProps {
   bairro: string;
+  bairroSlug?: string;
 }
 
 const services = [
-  {
-    icon: WashingMachine,
-    title: 'Máquinas de Lavar',
-    keywords: ['Brastemp', 'Electrolux', 'LG', 'Samsung'],
-  },
-  {
-    icon: Refrigerator,
-    title: 'Geladeiras',
-    keywords: ['Consul', 'Brastemp', 'Electrolux', 'Panasonic'],
-  },
-  {
-    icon: Flame,
-    title: 'Fogões',
-    keywords: ['Atlas', 'Brastemp', 'Electrolux', 'Fischer'],
-  },
-  {
-    icon: Microwave,
-    title: 'Micro-ondas',
-    keywords: ['Panasonic', 'LG', 'Electrolux', 'Midea'],
-  },
-  {
-    icon: Tv,
-    title: 'Smart TVs',
-    keywords: ['Samsung', 'LG', 'Sony', 'TCL'],
-  },
-  {
-    icon: Smartphone,
-    title: 'Celulares',
-    keywords: ['iPhone', 'Samsung', 'Motorola', 'Xiaomi'],
-  },
+  { icon: WashingMachine, title: 'Máquinas de Lavar', slug: 'conserto-de-maquina-de-lavar', keywords: ['Brastemp', 'Electrolux', 'LG', 'Samsung'] },
+  { icon: Refrigerator, title: 'Geladeiras', slug: 'conserto-de-geladeira', keywords: ['Consul', 'Brastemp', 'Electrolux', 'Panasonic'] },
+  { icon: Flame, title: 'Fogões', slug: 'conserto-de-fogao', keywords: ['Atlas', 'Brastemp', 'Electrolux', 'Fischer'] },
+  { icon: Microwave, title: 'Micro-ondas', slug: 'conserto-de-micro-ondas', keywords: ['Panasonic', 'LG', 'Electrolux', 'Midea'] },
+  { icon: Tv, title: 'Smart TVs', slug: 'conserto-de-tv', keywords: ['Samsung', 'LG', 'Sony', 'TCL'] },
+  { icon: Smartphone, title: 'Celulares', slug: 'conserto-de-celular', keywords: ['iPhone', 'Samsung', 'Motorola', 'Xiaomi'] },
 ];
 
-const BairroServicesSection = ({ bairro }: BairroServicesSectionProps) => {
+const BairroServicesSection = ({ bairro, bairroSlug }: BairroServicesSectionProps) => {
+  const resolvedSlug = bairroSlug || neighborhoods.find(n => n.name === bairro)?.slug || '';
   const getDescription = (title: string) => {
     const descriptions: Record<string, string> = {
       'Máquinas de Lavar': `Conserto de máquinas de lavar no ${bairro}. Lavadoras e lava e seca de todas as marcas.`,
@@ -73,9 +53,10 @@ const BairroServicesSection = ({ bairro }: BairroServicesSectionProps) => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div
+              <Link
                 key={service.title}
-                className="group bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-2 border border-border/50 animate-fade-in"
+                to={`/bairros/${resolvedSlug}/${service.slug}`}
+                className="group bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-2 border border-border/50 animate-fade-in block"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
@@ -98,16 +79,10 @@ const BairroServicesSection = ({ bairro }: BairroServicesSectionProps) => {
                   ))}
                 </div>
 
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground" asChild>
-                  <a
-                    href={`https://wa.me/5544999999999?text=Olá! Moro no ${bairro} e preciso de conserto de ${service.title.toLowerCase()}.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Solicitar Orçamento
-                  </a>
+                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
+                  Ver Detalhes e Orçamento
                 </Button>
-              </div>
+              </Link>
             );
           })}
         </div>

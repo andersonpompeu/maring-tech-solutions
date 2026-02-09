@@ -1,0 +1,300 @@
+import { useParams, Navigate, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { findNeighborhoodBySlug, neighborhoods } from '@/data/neighborhoods';
+import { findBairroServiceBySlug, bairroServices } from '@/data/bairro-services';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import FloatingButtons from '@/components/FloatingButtons';
+import BairroContactSection from '@/components/bairro/BairroContactSection';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import {
+  Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
+import {
+  Accordion, AccordionContent, AccordionItem, AccordionTrigger,
+} from '@/components/ui/accordion';
+import { Shield, Clock, Zap, CheckCircle, Wrench, Star } from 'lucide-react';
+import heroImage from '@/assets/hero-technician.jpg';
+
+const BairroServicePage = () => {
+  const { slug, serviceSlug } = useParams<{ slug: string; serviceSlug: string }>();
+  const neighborhood = slug ? findNeighborhoodBySlug(slug) : undefined;
+  const service = serviceSlug ? findBairroServiceBySlug(serviceSlug) : undefined;
+
+  if (!neighborhood || !service) {
+    return <Navigate to={neighborhood ? `/bairros/${neighborhood.slug}` : '/bairros'} replace />;
+  }
+
+  const bairro = neighborhood.name;
+  const Icon = service.icon;
+  const faqs = service.faqs(bairro);
+  const pageTitle = `${service.title} no ${bairro} - Maringá | TechFix`;
+  const pageDescription = service.description(bairro);
+
+  const otherServices = bairroServices.filter(s => s.slug !== service.slug);
+  const nearbyNeighborhoods = neighborhoods
+    .filter(n => n.region === neighborhood.region && n.slug !== neighborhood.slug)
+    .slice(0, 6);
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": `${service.title} no ${bairro}, Maringá`,
+    "description": pageDescription,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "TechFix Maringá",
+      "telephone": "+554499999999",
+      "address": { "@type": "PostalAddress", "addressLocality": "Maringá", "addressRegion": "PR", "addressCountry": "BR" },
+    },
+    "areaServed": { "@type": "Place", "name": `${bairro}, Maringá-PR` },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": `${service.title} no ${bairro}`,
+      "itemListElement": service.problems.map(p => ({
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": `${p} - ${bairro}` },
+      })),
+    },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": { "@type": "Answer", "text": f.answer },
+    })),
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={`${service.title.toLowerCase()} ${bairro}, conserto ${service.shortTitle.toLowerCase()} ${bairro} Maringá, assistência técnica ${bairro}`} />
+        <link rel="canonical" href={`https://techfixmaringa.com.br/bairros/${neighborhood.slug}/${service.slug}`} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
+
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main>
+          {/* Hero */}
+          <section className="relative min-h-[50vh] flex items-center overflow-hidden">
+            <div className="absolute inset-0">
+              <img src={heroImage} alt={`${service.title} no ${bairro}`} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/60" />
+            </div>
+            <div className="container relative z-10 px-4 py-16">
+              <Breadcrumb className="mb-6">
+                <BreadcrumbList>
+                  <BreadcrumbItem><BreadcrumbLink asChild><Link to="/" className="text-white/70 hover:text-white">Início</Link></BreadcrumbLink></BreadcrumbItem>
+                  <BreadcrumbSeparator className="text-white/50" />
+                  <BreadcrumbItem><BreadcrumbLink asChild><Link to="/bairros" className="text-white/70 hover:text-white">Bairros</Link></BreadcrumbLink></BreadcrumbItem>
+                  <BreadcrumbSeparator className="text-white/50" />
+                  <BreadcrumbItem><BreadcrumbLink asChild><Link to={`/bairros/${neighborhood.slug}`} className="text-white/70 hover:text-white">{bairro}</Link></BreadcrumbLink></BreadcrumbItem>
+                  <BreadcrumbSeparator className="text-white/50" />
+                  <BreadcrumbItem><BreadcrumbPage className="text-white">{service.title}</BreadcrumbPage></BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
+
+              <div className="max-w-3xl">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+                  <Icon className="w-5 h-5 text-secondary" />
+                  <span className="text-white/90 text-sm font-medium">{service.shortTitle}</span>
+                </div>
+                <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
+                  {service.title} em Maringá no {bairro}
+                </h1>
+                <p className="text-lg text-white/80 mb-8 max-w-xl">{pageDescription}</p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button variant="hero" size="xl" asChild>
+                    <a href={`https://wa.me/5544999999999?text=Olá! Preciso de ${service.title.toLowerCase()} no ${bairro}.`} target="_blank" rel="noopener noreferrer">
+                      Solicitar Orçamento Grátis
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Problems Section */}
+          <section className="py-20 bg-background">
+            <div className="container px-4">
+              <div className="text-center max-w-2xl mx-auto mb-14">
+                <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-4">Defeitos Comuns</span>
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+                  Problemas que Resolvemos no {bairro}
+                </h2>
+                <p className="text-muted-foreground text-lg">
+                  Nossos técnicos estão preparados para diagnosticar e reparar os defeitos mais comuns de {service.shortTitle.toLowerCase()} no {bairro}.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {service.problems.map((problem) => (
+                  <Card key={problem} className="border-border/50 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
+                    <CardContent className="p-5 flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-secondary mt-0.5 shrink-0" />
+                      <span className="text-foreground font-medium">{problem}</span>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* About / Long Description */}
+          <section className="py-20 bg-muted/30">
+            <div className="container px-4">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-4">Sobre o Serviço</span>
+                  <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
+                    {service.title} no {bairro}, Maringá
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-6">{service.longDescription(bairro)}</p>
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="text-center p-4 bg-background rounded-xl shadow-card">
+                      <Clock className="w-6 h-6 text-secondary mx-auto mb-2" />
+                      <strong className="text-foreground block text-sm">Mesmo Dia</strong>
+                      <span className="text-muted-foreground text-xs">Atendimento rápido</span>
+                    </div>
+                    <div className="text-center p-4 bg-background rounded-xl shadow-card">
+                      <Shield className="w-6 h-6 text-secondary mx-auto mb-2" />
+                      <strong className="text-foreground block text-sm">90 Dias</strong>
+                      <span className="text-muted-foreground text-xs">De garantia</span>
+                    </div>
+                    <div className="text-center p-4 bg-background rounded-xl shadow-card">
+                      <Wrench className="w-6 h-6 text-secondary mx-auto mb-2" />
+                      <strong className="text-foreground block text-sm">Peças Originais</strong>
+                      <span className="text-muted-foreground text-xs">Qualidade garantida</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-heading font-bold text-foreground mb-4">Marcas Atendidas no {bairro}</h3>
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    {service.brands.map((brand) => (
+                      <span key={brand} className="px-4 py-2 bg-background rounded-full border border-border text-foreground font-medium text-sm shadow-sm">
+                        {brand}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="bg-gradient-to-br from-primary to-accent rounded-2xl p-6 text-primary-foreground">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Star className="w-5 h-5" />
+                      <strong className="text-lg">Orçamento Gratuito</strong>
+                    </div>
+                    <p className="text-primary-foreground/80 mb-4">
+                      Solicite um orçamento sem compromisso para {service.title.toLowerCase()} no {bairro}. Nossos técnicos avaliam e informam o melhor custo-benefício.
+                    </p>
+                    <Button variant="hero-outline" asChild>
+                      <a href={`https://wa.me/5544999999999?text=Olá! Gostaria de orçamento para ${service.title.toLowerCase()} no ${bairro}.`} target="_blank" rel="noopener noreferrer">
+                        Pedir Orçamento
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ */}
+          <section className="py-20 bg-background">
+            <div className="container px-4 max-w-3xl">
+              <div className="text-center mb-14">
+                <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-4">Dúvidas Frequentes</span>
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+                  Perguntas sobre {service.title} no {bairro}
+                </h2>
+              </div>
+              <Accordion type="single" collapsible className="space-y-3">
+                {faqs.map((faq, i) => (
+                  <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-xl border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-heading font-semibold text-foreground hover:no-underline">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </section>
+
+          {/* Other Services in this Neighborhood */}
+          <section className="py-20 bg-muted/30">
+            <div className="container px-4">
+              <div className="text-center max-w-2xl mx-auto mb-14">
+                <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-4">Mais Serviços</span>
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+                  Outros Serviços no {bairro}
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {otherServices.map((s) => {
+                  const SIcon = s.icon;
+                  return (
+                    <Link key={s.slug} to={`/bairros/${neighborhood.slug}/${s.slug}`} className="group">
+                      <Card className="h-full border-border/50 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
+                        <CardContent className="p-6">
+                          <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <SIcon className="w-6 h-6 text-primary-foreground" />
+                          </div>
+                          <h3 className="text-lg font-heading font-bold text-foreground mb-2">
+                            {s.title} no {bairro}
+                          </h3>
+                          <p className="text-muted-foreground text-sm">{s.description(bairro)}</p>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* Nearby Neighborhoods */}
+          {nearbyNeighborhoods.length > 0 && (
+            <section className="py-20 bg-background">
+              <div className="container px-4">
+                <div className="text-center max-w-2xl mx-auto mb-14">
+                  <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-4">Regiões Próximas</span>
+                  <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+                    {service.title} em Bairros Próximos
+                  </h2>
+                </div>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {nearbyNeighborhoods.map((n) => (
+                    <Link
+                      key={n.slug}
+                      to={`/bairros/${n.slug}/${service.slug}`}
+                      className="px-4 py-2 bg-card rounded-full border border-border hover:border-primary hover:bg-primary/5 text-foreground text-sm font-medium transition-colors"
+                    >
+                      {service.title} no {n.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* Contact */}
+          <BairroContactSection bairro={bairro} />
+        </main>
+        <Footer />
+        <FloatingButtons />
+      </div>
+    </>
+  );
+};
+
+export default BairroServicePage;
