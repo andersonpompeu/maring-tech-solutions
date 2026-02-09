@@ -23,6 +23,7 @@ import {
   CreditCard,
 } from 'lucide-react';
 import { getGeladeiraServiceBySlug } from '@/data/geladeira-services';
+import BrandsCarousel from '@/components/BrandsCarousel';
 
 const advantages = [
   { title: 'Atendimento rápido', description: 'Chegamos em poucas horas após o contato para resolver o problema.', icon: Clock },
@@ -179,24 +180,8 @@ const GeladeiraServicePage = () => {
             </div>
           </section>
 
-          {/* Brands */}
-          <section className="py-12 bg-muted/30">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Marcas Atendidas</span>
-                <h3 className="text-xl md:text-2xl font-heading font-bold text-foreground mt-2 mb-8">
-                  Trabalhamos com Todas as Principais Marcas
-                </h3>
-                <div className="flex flex-wrap justify-center gap-4">
-                  {service.brands.map((brand, i) => (
-                    <span key={i} className="bg-card rounded-full px-6 py-3 border border-border/50 shadow-sm text-foreground font-semibold text-sm">
-                      {brand}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
+          {/* Brands Carousel */}
+          <BrandsCarousel />
 
           {/* CTA Banner */}
           <section className="py-14 bg-gradient-hero text-primary-foreground relative overflow-hidden">

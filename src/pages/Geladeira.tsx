@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import { geladeiraServices } from '@/data/geladeira-services';
+import BrandsCarousel from '@/components/BrandsCarousel';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import { Button } from '@/components/ui/button';
@@ -289,6 +290,9 @@ const Geladeira = () => {
               </div>
             </div>
           </section>
+
+          {/* Brands Carousel */}
+          <BrandsCarousel />
 
           {/* Appliance Types */}
           <section className="py-16 bg-muted/30">
