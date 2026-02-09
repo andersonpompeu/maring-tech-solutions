@@ -18,6 +18,8 @@ import Geladeira from "./pages/Geladeira";
 import GeladeiraServicePage from "./pages/GeladeiraServicePage";
 import Fogao from "./pages/Fogao";
 import FogaoServicePage from "./pages/FogaoServicePage";
+import Microondas from "./pages/Microondas";
+import MicroondasServicePage from "./pages/MicroondasServicePage";
 import CookieConsent from "./components/CookieConsent";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -39,6 +41,8 @@ const App = () => (
             <Route path="/geladeira/:slug" element={<GeladeiraServicePage />} />
             <Route path="/fogao" element={<Fogao />} />
             <Route path="/fogao/:slug" element={<FogaoServicePage />} />
+            <Route path="/micro-ondas" element={<Microondas />} />
+            <Route path="/micro-ondas/:slug" element={<MicroondasServicePage />} />
             <Route path="/televisores" element={<Televisores />} />
             <Route path="/celulares" element={<Celulares />} />
             <Route path="/bairros" element={<Bairros />} />
