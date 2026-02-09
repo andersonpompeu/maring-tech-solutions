@@ -119,13 +119,13 @@ const FogaoServicePage = () => {
                   {service.heroTitle}
                 </h1>
                 <p className="text-lg md:text-xl text-primary-foreground/90 mb-2 max-w-2xl mx-auto">
-                  {service.heroSubtitle}
+                  <strong>{service.heroSubtitle}</strong>
                 </p>
                 <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
                   {service.heroDescription}
                 </p>
                 <Button variant="hero" size="lg" className="rounded-full shadow-lg hover:shadow-secondary/30 text-base" asChild>
-                  <a href={`https://wa.me/5544999999999?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer">
+                  <a href={`https://wa.me/5544999999999?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" title={`Solicitar orçamento para ${service.title} em Maringá`}>
                     <MessageCircle className="w-5 h-5" />
                     Solicite Já
                   </a>
@@ -156,7 +156,7 @@ const FogaoServicePage = () => {
                   {service.introTitle}
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  {service.introDescription}
+                  <strong>{service.title} em Maringá</strong> — {service.introDescription}
                 </p>
               </div>
 
@@ -167,14 +167,14 @@ const FogaoServicePage = () => {
                     Serviços Incluídos
                   </h3>
                 </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 list-none p-0 m-0">
                   {service.details.map((detail, i) => (
-                    <div key={i} className="flex items-center gap-3 bg-card rounded-xl px-5 py-4 border border-border/50 shadow-sm">
+                    <li key={i} className="flex items-center gap-3 bg-card rounded-xl px-5 py-4 border border-border/50 shadow-sm">
                       <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
                       <span className="text-foreground font-medium text-sm">{detail}</span>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           </section>
@@ -208,10 +208,10 @@ const FogaoServicePage = () => {
                 {service.title} em Maringá
               </h2>
               <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
-                Resolvemos com atendimento rápido e garantia! Assistência técnica em Maringá com peças originais.
+                Resolvemos com <strong>atendimento rápido</strong> e garantia! <strong>Assistência técnica em Maringá</strong> com peças originais.
               </p>
               <Button variant="hero" size="lg" className="rounded-full shadow-lg hover:shadow-secondary/30" asChild>
-                <a href={`https://wa.me/5544999999999?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer">
+                <a href={`https://wa.me/5544999999999?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" title={`Solicitar orçamento para ${service.title} em Maringá`}>
                   <MessageCircle className="w-5 h-5" />
                   Solicite seu orçamento
                 </a>
@@ -230,13 +230,13 @@ const FogaoServicePage = () => {
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 {advantages.map((adv, i) => (
-                  <div key={i} className="bg-card rounded-2xl p-6 shadow-card border border-border/50 text-center">
+                  <article key={i} className="bg-card rounded-2xl p-6 shadow-card border border-border/50 text-center">
                     <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <adv.icon className="w-7 h-7 text-primary" />
                     </div>
                     <h3 className="font-heading font-semibold text-foreground mb-2">{adv.title}</h3>
                     <p className="text-muted-foreground text-sm">{adv.description}</p>
-                  </div>
+                  </article>
                 ))}
               </div>
             </div>
@@ -252,14 +252,14 @@ const FogaoServicePage = () => {
                     Sinais de que você precisa de {service.title}
                   </h2>
                 </div>
-                <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                <ul className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto list-none p-0 m-0">
                   {service.defectSigns.map((sign, i) => (
-                    <div key={i} className="flex items-start gap-3 bg-card rounded-xl px-5 py-4 border border-border/50 shadow-sm">
+                    <li key={i} className="flex items-start gap-3 bg-card rounded-xl px-5 py-4 border border-border/50 shadow-sm">
                       <AlertTriangle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                       <span className="text-foreground text-sm">{sign}</span>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           </section>
@@ -274,10 +274,10 @@ const FogaoServicePage = () => {
                 {service.title} Perto de Mim
               </h2>
               <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
-                Resolvemos com atendimento rápido e garantia! Assistência técnica em Maringá com peças originais.
+                Resolvemos com <strong>atendimento rápido</strong> e garantia! <strong>Assistência técnica em Maringá</strong> com peças originais.
               </p>
               <Button variant="hero" size="lg" className="rounded-full shadow-lg hover:shadow-secondary/30" asChild>
-                <a href={`https://wa.me/5544999999999?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer">
+                <a href={`https://wa.me/5544999999999?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" title={`Solicitar orçamento para ${service.title} perto de mim em Maringá`}>
                   <MessageCircle className="w-5 h-5" />
                   Solicite seu orçamento
                 </a>
@@ -325,17 +325,17 @@ const FogaoServicePage = () => {
                 {service.title} em Maringá
               </h2>
               <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
-                Resolvemos com atendimento rápido, peças originais e garantia de 90 dias!
+                Resolvemos com <strong>atendimento rápido</strong>, <strong>peças originais</strong> e <em>garantia de 90 dias</em>!
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button variant="hero" size="lg" className="rounded-full shadow-lg" asChild>
-                  <a href={`https://wa.me/5544999999999?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer">
+                  <a href={`https://wa.me/5544999999999?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" title={`Solicitar orçamento para ${service.title} em Maringá via WhatsApp`}>
                     <MessageCircle className="w-5 h-5" />
                     Solicite seu orçamento
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" className="rounded-full bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
-                  <a href="tel:+5544999999999">
+                  <a href="tel:+5544999999999" title="Ligar para assistência técnica em Maringá">
                     <Phone className="w-5 h-5" />
                     (44) 99999-9999
                   </a>
