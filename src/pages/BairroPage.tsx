@@ -82,7 +82,7 @@ const BairroPage = () => {
         <Header />
         <main>
           <BairroHeroSection bairro={bairro} />
-          <BairroServicesSection bairro={bairro} />
+          <BairroServicesSection bairro={bairro} bairroSlug={neighborhood.slug} />
           <BairroDifferentialsSection bairro={bairro} />
           <BairroGallerySection bairro={bairro} />
           <BairroTestimonialsSection bairro={bairro} />
