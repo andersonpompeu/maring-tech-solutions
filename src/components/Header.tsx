@@ -25,7 +25,7 @@ const Header = () => {
       description: 'Conserto de linha branca',
       href: '/eletrodomesticos',
       items: [
-        { name: 'Máquinas de Lavar', desc: 'Todas as marcas', href: '/eletrodomesticos' },
+        { name: 'Máquinas de Lavar', desc: 'Todas as marcas', href: '/maquina-de-lavar' },
         { name: 'Geladeiras', desc: 'Frost Free e convencionais', href: '/eletrodomesticos' },
         { name: 'Fogões', desc: 'Gás e elétricos', href: '/eletrodomesticos' },
         { name: 'Micro-ondas', desc: 'Reparo especializado', href: '/eletrodomesticos' },
