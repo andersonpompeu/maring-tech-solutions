@@ -101,8 +101,8 @@ const CTABanner = () => (
         Conserto de Fogão Perto de Mim
       </h2>
       <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
-        Fogão não acende, chama irregular ou forno com problema? Resolvemos com atendimento rápido e garantia!
-        Assistência técnica em Maringá com peças originais.
+        Fogão não acende, chama irregular ou forno com problema? Resolvemos com <strong className="font-normal">atendimento rápido</strong> e garantia!
+        <strong className="font-normal">Assistência técnica em Maringá</strong> com peças originais.
       </p>
       <Button
         variant="hero"
@@ -255,13 +255,13 @@ const Fogao = () => {
                   Assistência Técnica para Conserto de Fogão em Maringá-PR
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  Quando você busca por "conserto de fogão perto de mim" em Maringá, nós entregamos um serviço completo, com equipe experiente e atendimento rápido no melhor preço perto de você!
+                  Quando você busca por "<strong>conserto de fogão perto de mim</strong>" em <strong>Maringá</strong>, nós entregamos um serviço completo, com equipe experiente e atendimento rápido no melhor preço perto de você!
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {fogaoServices.map((service, index) => (
-                  <div
+                  <article
                     key={index}
                     className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border/50 group"
                   >
@@ -272,11 +272,12 @@ const Fogao = () => {
                     <p className="text-muted-foreground text-sm mb-4">{service.shortDescription}</p>
                     <Link
                       to={`/fogao/${service.slug}`}
+                      title={`Saiba mais sobre ${service.title} em Maringá`}
                       className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1"
                     >
                       Saiba Mais <ChevronRight className="w-4 h-4" />
                     </Link>
-                  </div>
+                  </article>
                 ))}
               </div>
             </div>
@@ -323,13 +324,13 @@ const Fogao = () => {
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 {advantages.map((adv, i) => (
-                  <div key={i} className="bg-card rounded-2xl p-6 shadow-card border border-border/50 text-center">
+                  <article key={i} className="bg-card rounded-2xl p-6 shadow-card border border-border/50 text-center">
                     <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <adv.icon className="w-7 h-7 text-primary" />
                     </div>
                     <h3 className="font-heading font-semibold text-foreground mb-2">{adv.title}</h3>
                     <p className="text-muted-foreground text-sm">{adv.description}</p>
-                  </div>
+                  </article>
                 ))}
               </div>
             </div>
