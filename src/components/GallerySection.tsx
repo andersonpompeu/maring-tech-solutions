@@ -106,7 +106,7 @@ const GallerySection = () => {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryItems.map((item) => (
-            <div
+            <article
               key={item.id}
               className="group relative bg-background rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-500 cursor-pointer"
               onMouseEnter={() => setHoveredId(item.id)}
@@ -115,9 +115,9 @@ const GallerySection = () => {
             >
               {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img
+              <img
                   src={item.image}
-                  alt={item.title}
+                  alt={`${item.title} - Serviço de assistência técnica em Maringá`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 
@@ -172,7 +172,7 @@ const GallerySection = () => {
                   {item.description}
                 </p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 

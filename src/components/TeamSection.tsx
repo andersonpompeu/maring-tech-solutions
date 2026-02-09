@@ -48,16 +48,16 @@ const TeamSection = () => {
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {team.map((member, index) => (
-            <div
+            <article
               key={member.name}
               className="group text-center animate-fade-in"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {/* Image */}
               <div className="relative mb-6 mx-auto w-48 h-48 overflow-hidden rounded-2xl shadow-card group-hover:shadow-card-hover transition-all duration-300">
-                <img
+              <img
                   src={member.image}
-                  alt={member.name}
+                  alt={`${member.name} - ${member.role} na TechFix Maringá`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -92,7 +92,7 @@ const TeamSection = () => {
                 <Award className="w-4 h-4 text-secondary" />
                 <span>Técnico Certificado</span>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

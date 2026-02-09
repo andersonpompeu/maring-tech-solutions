@@ -124,23 +124,23 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="font-heading font-bold text-lg mb-4">Contato</h4>
-            <ul className="space-y-4 text-white/80 text-sm">
-              <li className="flex items-start gap-3">
+            <address className="not-italic space-y-4 text-white/80 text-sm">
+              <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <span>
                   Av. Brasil, 1234 - Centro<br />
                   Maringá - PR, 87013-000
                 </span>
-              </li>
-              <li className="flex items-center gap-3">
+              </div>
+              <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-secondary shrink-0" />
-                <span>(44) 99999-9999</span>
-              </li>
-              <li className="flex items-center gap-3">
+                <a href="tel:+554499999999" className="hover:text-secondary transition-colors">(44) 99999-9999</a>
+              </div>
+              <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-secondary shrink-0" />
-                <span>contato@techfixmaringa.com.br</span>
-              </li>
-            </ul>
+                <a href="mailto:contato@techfixmaringa.com.br" className="hover:text-secondary transition-colors">contato@techfixmaringa.com.br</a>
+              </div>
+            </address>
           </div>
         </div>
       </div>

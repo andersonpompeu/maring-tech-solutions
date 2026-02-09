@@ -34,7 +34,7 @@ const LocationSection = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4">
+          <address className="not-italic space-y-4">
             <Card className="border-0 shadow-card">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
@@ -45,7 +45,7 @@ const LocationSection = () => {
                     <h3 className="font-semibold text-foreground mb-1">Endereço</h3>
                     <p className="text-muted-foreground">
                       Av. Brasil, 1234 - Centro<br />
-                      Maringá - PR, 87000-000
+                      <strong>Maringá</strong> - PR, 87000-000
                     </p>
                   </div>
                 </div>
@@ -61,8 +61,8 @@ const LocationSection = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Horário de Funcionamento</h3>
                     <p className="text-muted-foreground">
-                      Segunda a Sexta: 08h às 18h<br />
-                      Sábado: 08h às 12h
+                      Segunda a Sexta: <time dateTime="08:00">08h</time> às <time dateTime="18:00">18h</time><br />
+                      Sábado: <time dateTime="08:00">08h</time> às <time dateTime="12:00">12h</time>
                     </p>
                   </div>
                 </div>
@@ -77,7 +77,9 @@ const LocationSection = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Telefone</h3>
-                    <p className="text-muted-foreground">(44) 99999-9999</p>
+                    <p className="text-muted-foreground">
+                      <a href="tel:+554499999999" title="Ligar para assistência técnica em Maringá">(44) 99999-9999</a>
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -89,6 +91,7 @@ const LocationSection = () => {
                   href="https://wa.me/5544999999999?text=Olá! Gostaria de agendar um atendimento." 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  title="Agendar atendimento técnico em Maringá via WhatsApp"
                 >
                   <MessageCircle className="w-5 h-5" />
                   Chamar no WhatsApp
@@ -99,13 +102,14 @@ const LocationSection = () => {
                   href="https://www.google.com/maps/dir//Maringá,+PR" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  title="Ver rota para assistência técnica em Maringá"
                 >
                   <Navigation className="w-5 h-5" />
                   Como Chegar
                 </a>
               </Button>
             </div>
-          </div>
+          </address>
         </div>
       </div>
     </section>

@@ -42,7 +42,7 @@ const NeighborhoodsSection = () => {
             Bairros que Atendemos
           </h2>
           <p className="text-muted-foreground text-lg">
-            Atendemos em toda Maringá com rapidez e qualidade. Confira a cobertura na sua região.
+            Atendemos em toda <strong>Maringá</strong> com rapidez e qualidade. Confira a cobertura na sua região.
           </p>
         </div>
 

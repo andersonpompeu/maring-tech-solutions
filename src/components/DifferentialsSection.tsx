@@ -50,7 +50,7 @@ const DifferentialsSection = () => {
             Nossos Diferenciais
           </h2>
           <p className="text-white/80 text-lg">
-            Somos referência em assistência técnica em Maringá. 
+            Somos referência em <strong className="text-white">assistência técnica em Maringá</strong>. 
             Confira o que nos torna a melhor escolha para você.
           </p>
         </div>
@@ -60,7 +60,7 @@ const DifferentialsSection = () => {
           {differentials.map((item, index) => {
             const Icon = item.icon;
             return (
-              <div
+              <article
                 key={item.title}
                 className="group text-center p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -79,7 +79,7 @@ const DifferentialsSection = () => {
                 <p className="text-white/80 leading-relaxed">
                   {item.description}
                 </p>
-              </div>
+              </article>
             );
           })}
         </div>
