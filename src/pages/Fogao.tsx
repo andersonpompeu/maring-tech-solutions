@@ -130,8 +130,8 @@ const Fogao = () => {
     serviceType: 'Stove Repair Service',
     provider: {
       '@type': 'LocalBusiness',
-      name: 'TechFix Maringá',
-      url: 'https://techfixmaringa.com.br',
+      name: 'Assistência Técnica Maringá',
+      url: 'https://assistenciatecnica.maringa.br/',
       telephone: '+5544997398826',
       address: {
         '@type': 'PostalAddress',
@@ -165,7 +165,7 @@ const Fogao = () => {
         <title>Conserto de Fogão em Maringá | Assistência Técnica Especializada</title>
         <meta name="description" content="Conserto de fogão em Maringá-PR. Assistência técnica para fogões a gás, cooktops, fornos elétricos e embutidos. Atendimento rápido, peças originais e garantia de 90 dias." />
         <meta name="keywords" content="conserto fogão Maringá, assistência técnica fogão, conserto cooktop, reparo forno, técnico fogão Maringá" />
-        <link rel="canonical" href="https://techfixmaringa.com.br/fogao" />
+        <link rel="canonical" href="https://assistenciatecnica.maringa.br/fogao" />
         <meta property="og:title" content="Conserto de Fogão em Maringá" />
         <meta property="og:description" content="Assistência técnica especializada em fogões em Maringá-PR. Peças originais e garantia." />
         <meta property="og:type" content="website" />

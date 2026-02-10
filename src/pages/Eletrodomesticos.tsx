@@ -177,7 +177,7 @@ const Eletrodomesticos = () => {
       metaTitle="Conserto de Eletrodomésticos em Maringá | Geladeira, Máquina de Lavar, Fogão"
       metaDescription="Assistência técnica especializada em eletrodomésticos em Maringá-PR. Conserto de geladeiras, máquinas de lavar, fogões e micro-ondas. Garantia de 90 dias. Orçamento grátis!"
       keywords="conserto eletrodomésticos Maringá, assistência técnica linha branca, conserto geladeira Maringá, conserto máquina de lavar Maringá, conserto fogão Maringá, reparo eletrodomésticos PR, técnico eletrodomésticos Maringá"
-      canonical="https://techfixmaringa.com.br/eletrodomesticos"
+      canonical="https://assistenciatecnica.maringa.br/eletrodomesticos"
       heroTitle="Conserto de Eletrodomésticos em Maringá"
       heroSubtitle="Linha Branca"
       heroDescription="Assistência técnica especializada para geladeiras, máquinas de lavar, fogões e micro-ondas. Técnicos certificados, peças originais e garantia de 90 dias."

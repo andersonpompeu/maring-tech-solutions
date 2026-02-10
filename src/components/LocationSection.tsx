@@ -78,7 +78,7 @@ const LocationSection = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Telefone</h3>
                     <p className="text-muted-foreground">
-                      <a href="tel:+554499999999" title="Ligar para assistência técnica em Maringá">(44) 99999-9999</a>
+                      <a href="tel:+5544997398826" title="Ligar para assistência técnica em Maringá">(44) 99739-8826</a>
                     </p>
                   </div>
                 </div>

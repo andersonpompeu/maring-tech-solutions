@@ -133,8 +133,8 @@ const Microondas = () => {
     serviceType: 'Microwave Repair Service',
     provider: {
       '@type': 'LocalBusiness',
-      name: 'TechFix Maringá',
-      url: 'https://techfixmaringa.com.br',
+      name: 'Assistência Técnica Maringá',
+      url: 'https://assistenciatecnica.maringa.br/',
       telephone: '+5544997398826',
       address: {
         '@type': 'PostalAddress',
@@ -168,7 +168,7 @@ const Microondas = () => {
         <title>Conserto de Micro-ondas em Maringá | Assistência Técnica Especializada</title>
         <meta name="description" content="Conserto de micro-ondas em Maringá-PR. Assistência técnica para micro-ondas de bancada, embutir e com grill. Atendimento rápido, peças originais e garantia de 90 dias." />
         <meta name="keywords" content="conserto micro-ondas Maringá, assistência técnica micro-ondas, reparo microondas, conserto microondas perto de mim, técnico micro-ondas Maringá" />
-        <link rel="canonical" href="https://techfixmaringa.com.br/micro-ondas" />
+        <link rel="canonical" href="https://assistenciatecnica.maringa.br/micro-ondas" />
         <meta property="og:title" content="Conserto de Micro-ondas em Maringá" />
         <meta property="og:description" content="Assistência técnica especializada em micro-ondas em Maringá-PR. Peças originais e garantia." />
         <meta property="og:type" content="website" />

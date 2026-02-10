@@ -47,8 +47,8 @@ const GeladeiraServicePage = () => {
     serviceType: service.title,
     provider: {
       '@type': 'LocalBusiness',
-      name: 'TechFix Maringá',
-      url: 'https://techfixmaringa.com.br',
+      name: 'Assistência Técnica Maringá',
+      url: 'https://assistenciatecnica.maringa.br/',
       telephone: '+5544997398826',
       address: { '@type': 'PostalAddress', addressLocality: 'Maringá', addressRegion: 'PR', postalCode: '87013-000', addressCountry: 'BR' },
       aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
@@ -74,7 +74,7 @@ const GeladeiraServicePage = () => {
         <title>{service.metaTitle}</title>
         <meta name="description" content={service.metaDescription} />
         <meta name="keywords" content={service.metaKeywords} />
-        <link rel="canonical" href={`https://techfixmaringa.com.br/geladeira/${service.slug}`} />
+        <link rel="canonical" href={`https://assistenciatecnica.maringa.br/geladeira/${service.slug}`} />
         <meta property="og:title" content={service.metaTitle} />
         <meta property="og:description" content={service.metaDescription} />
         <meta property="og:type" content="website" />

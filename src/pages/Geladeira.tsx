@@ -138,8 +138,8 @@ const Geladeira = () => {
     serviceType: 'Refrigerator Repair Service',
     provider: {
       '@type': 'LocalBusiness',
-      name: 'TechFix Maringá',
-      url: 'https://techfixmaringa.com.br',
+      name: 'Assistência Técnica Maringá',
+      url: 'https://assistenciatecnica.maringa.br/',
       telephone: '+5544997398826',
       address: {
         '@type': 'PostalAddress',
@@ -173,7 +173,7 @@ const Geladeira = () => {
         <title>Conserto de Geladeira em Maringá | Assistência Técnica Especializada</title>
         <meta name="description" content="Conserto de geladeira em Maringá-PR. Assistência técnica para geladeiras Frost Free, Duplex, Inverse e Side by Side. Atendimento rápido, peças originais e garantia de 90 dias." />
         <meta name="keywords" content="conserto geladeira Maringá, assistência técnica geladeira, conserto refrigerador, reparo geladeira perto de mim, técnico geladeira Maringá" />
-        <link rel="canonical" href="https://techfixmaringa.com.br/geladeira" />
+        <link rel="canonical" href="https://assistenciatecnica.maringa.br/geladeira" />
         <meta property="og:title" content="Conserto de Geladeira em Maringá" />
         <meta property="og:description" content="Assistência técnica especializada em geladeiras em Maringá-PR. Peças originais e garantia." />
         <meta property="og:type" content="website" />

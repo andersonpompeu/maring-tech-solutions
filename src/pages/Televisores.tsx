@@ -67,7 +67,7 @@ const Televisores = () => {
       name: 'Lucas Mendes',
       location: 'Zona 3, Maringá',
       rating: 5,
-      text: 'Minha Smart TV Samsung ficou com a tela escura. Levei na TechFix e descobriram que era o backlight. Consertaram em 3 dias e ficou perfeita!',
+      text: 'Minha Smart TV Samsung ficou com a tela escura. Descobriram que era o backlight. Consertaram em 3 dias e ficou perfeita!',
       service: 'Reparo de Backlight',
     },
     {
@@ -110,10 +110,10 @@ const Televisores = () => {
   return (
     <ServicePageLayout
       title="Conserto de Televisores"
-      metaTitle="Conserto de TV em Maringá | Smart TV, LED, OLED, QLED - TechFix"
+      metaTitle="Conserto de TV em Maringá | Smart TV, LED, OLED, QLED"
       metaDescription="Conserto de TV em Maringá-PR. Assistência técnica para Smart TVs LED, OLED e QLED. Samsung, LG, Sony. Garantia de 90 dias. Orçamento grátis pelo WhatsApp!"
       keywords="conserto de TV Maringá, assistência técnica TV, conserto Smart TV Maringá, reparo TV LED, conserto TV OLED, conserto TV QLED, conserto TV Samsung LG Sony"
-      canonical="https://techfixmaringa.com.br/televisores"
+      canonical="https://assistenciatecnica.maringa.br/televisores"
       heroTitle="Conserto de Televisores em Maringá"
       heroSubtitle="Smart TVs e Monitores"
       heroDescription="Assistência técnica especializada para Smart TVs LED, OLED e QLED. Reparo de backlight, tela, placas e software. Garantia de 90 dias."
