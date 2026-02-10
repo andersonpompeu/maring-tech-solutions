@@ -65,8 +65,8 @@ const BairroTestimonialsSection = ({ bairro }: BairroTestimonialsSectionProps) =
               key={testimonial.name}
               className={`group relative bg-card rounded-2xl p-6 transition-all duration-500 border border-border/50 animate-fade-in cursor-default ${
                 activeIndex === index
-                  ? 'shadow-card-hover scale-[1.02] border-primary/30'
-                  : 'shadow-card hover:shadow-card-hover hover:border-primary/20'
+                  ? 'shadow-md scale-[1.02] border-primary/30'
+                  : 'shadow-sm hover:shadow-md hover:border-primary/20'
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
               onMouseEnter={() => setActiveIndex(index)}

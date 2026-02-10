@@ -56,10 +56,10 @@ const BairroServicesSection = ({ bairro, bairroSlug }: BairroServicesSectionProp
               <Link
                 key={service.title}
                 to={`/bairros/${resolvedSlug}/${service.slug}`}
-                className="group bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-2 border border-border/50 animate-fade-in block"
+                className="group bg-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-2 border border-border/50 animate-fade-in block"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                   <Icon className="w-7 h-7 text-primary-foreground" />
                 </div>
 
@@ -67,19 +67,19 @@ const BairroServicesSection = ({ bairro, bairroSlug }: BairroServicesSectionProp
                   Conserto de {service.title} no {bairro}
                 </h3>
 
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed text-[15px]">
                   {getDescription(service.title)}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-5">
                   {service.keywords.map((keyword) => (
-                    <span key={keyword} className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">
+                    <span key={keyword} className="text-xs bg-muted text-muted-foreground px-3 py-1.5 rounded-full border border-border/30">
                       {keyword}
                     </span>
                   ))}
                 </div>
 
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground">
+                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   Ver Detalhes e Orçamento
                 </Button>
               </Link>

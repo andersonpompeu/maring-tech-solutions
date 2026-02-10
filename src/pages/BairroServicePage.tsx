@@ -151,48 +151,51 @@ const BairroServicePage = () => {
           </section>
 
           {/* About / Long Description */}
-          <section className="py-20 bg-muted/30">
+          <section className="py-20 bg-gradient-to-b from-muted/20 via-background to-muted/10">
             <div className="container px-4">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid lg:grid-cols-2 gap-14 items-start">
                 <div>
                   <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-4">Sobre o Serviço</span>
                   <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
                     {service.title} no {bairro}, Maringá
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-6">{service.longDescription(bairro)}</p>
+                  <p className="text-muted-foreground leading-relaxed mb-8">{service.longDescription(bairro)}</p>
                   <div className="grid grid-cols-3 gap-4">
-                    <div className="text-center p-4 bg-background rounded-xl shadow-card">
-                      <Clock className="w-6 h-6 text-secondary mx-auto mb-2" />
-                      <strong className="text-foreground block text-sm">Mesmo Dia</strong>
-                      <span className="text-muted-foreground text-xs">Atendimento rápido</span>
-                    </div>
-                    <div className="text-center p-4 bg-background rounded-xl shadow-card">
-                      <Shield className="w-6 h-6 text-secondary mx-auto mb-2" />
-                      <strong className="text-foreground block text-sm">90 Dias</strong>
-                      <span className="text-muted-foreground text-xs">De garantia</span>
-                    </div>
-                    <div className="text-center p-4 bg-background rounded-xl shadow-card">
-                      <Wrench className="w-6 h-6 text-secondary mx-auto mb-2" />
-                      <strong className="text-foreground block text-sm">Peças Originais</strong>
-                      <span className="text-muted-foreground text-xs">Qualidade garantida</span>
-                    </div>
+                    {[
+                      { icon: Clock, label: 'Mesmo Dia', sub: 'Atendimento rápido' },
+                      { icon: Shield, label: '90 Dias', sub: 'De garantia' },
+                      { icon: Wrench, label: 'Peças Originais', sub: 'Qualidade garantida' },
+                    ].map((item) => {
+                      const ItemIcon = item.icon;
+                      return (
+                        <div key={item.label} className="text-center p-5 bg-card rounded-2xl shadow-sm border border-border/50 hover:shadow-md transition-shadow duration-300">
+                          <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                            <ItemIcon className="w-6 h-6 text-secondary" />
+                          </div>
+                          <strong className="text-foreground block text-sm font-heading">{item.label}</strong>
+                          <span className="text-muted-foreground text-xs">{item.sub}</span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-heading font-bold text-foreground mb-4">Marcas Atendidas no {bairro}</h3>
+                  <h3 className="text-xl font-heading font-bold text-foreground mb-5">Marcas Atendidas no {bairro}</h3>
                   <div className="flex flex-wrap gap-3 mb-8">
                     {service.brands.map((brand) => (
-                      <span key={brand} className="px-4 py-2 bg-background rounded-full border border-border text-foreground font-medium text-sm shadow-sm">
+                      <span key={brand} className="px-5 py-2.5 bg-card rounded-full border border-border/80 text-foreground font-medium text-sm hover:border-primary/40 transition-colors">
                         {brand}
                       </span>
                     ))}
                   </div>
-                  <div className="bg-gradient-to-br from-primary to-accent rounded-2xl p-6 text-primary-foreground">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Star className="w-5 h-5" />
-                      <strong className="text-lg">Orçamento Gratuito</strong>
+                  <div className="bg-gradient-to-br from-primary via-primary to-accent rounded-2xl p-7 text-primary-foreground shadow-lg">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 bg-white/15 rounded-xl flex items-center justify-center">
+                        <Star className="w-5 h-5" />
+                      </div>
+                      <strong className="text-lg font-heading">Orçamento Gratuito</strong>
                     </div>
-                    <p className="text-primary-foreground/80 mb-4">
+                    <p className="text-primary-foreground/85 mb-5 leading-relaxed">
                       Solicite um orçamento sem compromisso para {service.title.toLowerCase()} no {bairro}. Nossos técnicos avaliam e informam o melhor custo-benefício.
                     </p>
                     <Button variant="hero-outline" asChild>
