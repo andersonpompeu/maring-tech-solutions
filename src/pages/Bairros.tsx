@@ -97,16 +97,16 @@ const Bairros = () => {
 
               <div className="flex flex-wrap gap-4">
                 <Button variant="whatsapp" size="lg" className="group" asChild>
-                  <a href="https://wa.me/5544999999999?text=Olá! Gostaria de agendar um atendimento técnico no meu bairro." target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/5544997398826?text=Olá! Gostaria de agendar um atendimento técnico no meu bairro." target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-5 h-5" />
                     Agendar Visita
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
                 <Button variant="hero-outline" size="lg" asChild>
-                  <a href="tel:+5544999999999">
+                  <a href="tel:+5544997398826">
                     <Phone className="w-5 h-5" />
-                    (44) 99999-9999
+                    (44) 99739-8826
                   </a>
                 </Button>
               </div>
@@ -215,7 +215,7 @@ const Bairros = () => {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button variant="whatsapp" size="lg" asChild>
-                  <a href="https://wa.me/5544999999999?text=Olá! Gostaria de saber se vocês atendem meu bairro." target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/5544997398826?text=Olá! Gostaria de saber se vocês atendem meu bairro." target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-5 h-5" />
                     Consultar Disponibilidade
                   </a>

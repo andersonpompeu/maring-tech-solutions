@@ -90,7 +90,7 @@ const BairroServicesSection = ({ bairro, bairroSlug }: BairroServicesSectionProp
                     onClick={(e) => e.stopPropagation()}
                   >
                     <a
-                      href={`https://wa.me/5544999999999?text=${encodeURIComponent(`Olá! Preciso de conserto de ${service.title.toLowerCase()} no ${bairro}. Gostaria de solicitar um orçamento.`)}`}
+                      href={`https://wa.me/5544997398826?text=${encodeURIComponent(`Olá! Preciso de conserto de ${service.title.toLowerCase()} no ${bairro}. Gostaria de solicitar um orçamento.`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -109,7 +109,7 @@ const BairroServicesSection = ({ bairro, bairroSlug }: BairroServicesSectionProp
           </p>
           <Button variant="secondary" size="lg" asChild>
             <a
-              href={`https://wa.me/5544999999999?text=Olá! Moro no ${bairro} e preciso de um serviço não listado no site.`}
+              href={`https://wa.me/5544997398826?text=Olá! Moro no ${bairro} e preciso de um serviço não listado no site.`}
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -101,7 +101,7 @@ const ServicesSection = () => {
                 {/* CTA */}
                 <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground" asChild>
                   <a
-                    href={`https://wa.me/5544999999999?text=Olá! Preciso de conserto de ${service.title.toLowerCase()}.`}
+                    href={`https://wa.me/5544997398826?text=Olá! Preciso de conserto de ${service.title.toLowerCase()}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     title={`Solicitar orçamento para conserto de ${service.title.toLowerCase()} em Maringá`}
@@ -121,7 +121,7 @@ const ServicesSection = () => {
           </p>
           <Button variant="secondary" size="lg" asChild>
             <a
-              href="https://wa.me/5544999999999?text=Olá! Preciso de um serviço não listado no site."
+              href="https://wa.me/5544997398826?text=Olá! Preciso de um serviço não listado no site."
               target="_blank"
               rel="noopener noreferrer"
             >

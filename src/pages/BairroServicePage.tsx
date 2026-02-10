@@ -2,10 +2,12 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { findNeighborhoodBySlug, neighborhoods } from '@/data/neighborhoods';
 import { findBairroServiceBySlug, bairroServices } from '@/data/bairro-services';
+import { BUSINESS } from '@/data/business-info';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import BairroContactSection from '@/components/bairro/BairroContactSection';
+import BairroSchemaGenerator from '@/components/seo/BairroSchemaGenerator';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -29,7 +31,7 @@ const BairroServicePage = () => {
   const bairro = neighborhood.name;
   const Icon = service.icon;
   const faqs = service.faqs(bairro);
-  const pageTitle = `${service.title} no ${bairro} - Maringá | TechFix`;
+  const pageTitle = `${service.title} no ${bairro} - Maringá | ${BUSINESS.name}`;
   const pageDescription = service.description(bairro);
 
   const otherServices = bairroServices.filter(s => s.slug !== service.slug);
@@ -37,51 +39,30 @@ const BairroServicePage = () => {
     .filter(n => n.region === neighborhood.region && n.slug !== neighborhood.slug)
     .slice(0, 6);
 
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": `${service.title} no ${bairro}, Maringá`,
-    "description": pageDescription,
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "TechFix Maringá",
-      "telephone": "+554499999999",
-      "address": { "@type": "PostalAddress", "addressLocality": "Maringá", "addressRegion": "PR", "addressCountry": "BR" },
-    },
-    "areaServed": { "@type": "Place", "name": `${bairro}, Maringá-PR` },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": `${service.title} no ${bairro}`,
-      "itemListElement": service.problems.map(p => ({
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": `${p} - ${bairro}` },
-      })),
-    },
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(f => ({
-      "@type": "Question",
-      "name": f.question,
-      "acceptedAnswer": { "@type": "Answer", "text": f.answer },
-    })),
-  };
-
   return (
     <>
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <meta name="keywords" content={`${service.title.toLowerCase()} ${bairro}, conserto ${service.shortTitle.toLowerCase()} ${bairro} Maringá, assistência técnica ${bairro}`} />
-        <link rel="canonical" href={`https://techfixmaringa.com.br/bairros/${neighborhood.slug}/${service.slug}`} />
+        <link rel="canonical" href={`${BUSINESS.site}/bairros/${neighborhood.slug}/${service.slug}`} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
-        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+
+      <BairroSchemaGenerator
+        neighborhood={neighborhood}
+        pageType="bairro-service"
+        service={{
+          title: service.title,
+          shortTitle: service.shortTitle,
+          slug: service.slug,
+          description: pageDescription,
+          problems: service.problems,
+          faqs,
+        }}
+      />
 
       <div className="min-h-screen bg-background">
         <Header />
@@ -113,10 +94,10 @@ const BairroServicePage = () => {
                 <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
                   {service.title} em Maringá no {bairro}
                 </h1>
-                <p className="text-lg text-white/80 mb-8 max-w-xl">{pageDescription}</p>
+                <p className="text-lg text-white/80 mb-8 max-w-xl page-description">{pageDescription}</p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button variant="hero" size="xl" asChild>
-                    <a href={`https://wa.me/5544999999999?text=Olá! Preciso de ${service.title.toLowerCase()} no ${bairro}.`} target="_blank" rel="noopener noreferrer">
+                    <a href={`https://wa.me/${BUSINESS.whatsapp}?text=Olá! Preciso de ${service.title.toLowerCase()} no ${bairro}.`} target="_blank" rel="noopener noreferrer">
                       Solicitar Orçamento Grátis
                     </a>
                   </Button>
@@ -199,7 +180,7 @@ const BairroServicePage = () => {
                       Solicite um orçamento sem compromisso para {service.title.toLowerCase()} no {bairro}. Nossos técnicos avaliam e informam o melhor custo-benefício.
                     </p>
                     <Button variant="hero-outline" asChild>
-                      <a href={`https://wa.me/5544999999999?text=Olá! Gostaria de orçamento para ${service.title.toLowerCase()} no ${bairro}.`} target="_blank" rel="noopener noreferrer">
+                      <a href={`https://wa.me/${BUSINESS.whatsapp}?text=Olá! Gostaria de orçamento para ${service.title.toLowerCase()} no ${bairro}.`} target="_blank" rel="noopener noreferrer">
                         Pedir Orçamento
                       </a>
                     </Button>

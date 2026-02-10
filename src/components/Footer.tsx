@@ -128,17 +128,17 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <span>
-                  Av. Brasil, 1234 - Centro<br />
+                  Av. Brasil, 3278 - Zona 01<br />
                   Maringá - PR, 87013-000
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-secondary shrink-0" />
-                <a href="tel:+554499999999" className="hover:text-secondary transition-colors">(44) 99999-9999</a>
+                <a href="tel:+5544997398826" className="hover:text-secondary transition-colors">(44) 99739-8826</a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-secondary shrink-0" />
-                <a href="mailto:contato@techfixmaringa.com.br" className="hover:text-secondary transition-colors">contato@techfixmaringa.com.br</a>
+                <a href="mailto:contato@hassistenciatecnica.maringa.br" className="hover:text-secondary transition-colors">contato@hassistenciatecnica.maringa.br</a>
               </div>
             </address>
           </div>

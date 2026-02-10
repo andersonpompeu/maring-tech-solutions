@@ -257,7 +257,7 @@ const ServicePageLayout = ({
                     asChild
                   >
                     <a
-                      href="https://wa.me/5544999999999?text=Olá! Gostaria de um orçamento para conserto."
+                      href="https://wa.me/5544997398826?text=Olá! Gostaria de um orçamento para conserto."
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -271,9 +271,9 @@ const ServicePageLayout = ({
                     className="rounded-full bg-white/10 border-white/30 text-white hover:bg-white/20"
                     asChild
                   >
-                    <a href="tel:+5544999999999">
+                    <a href="tel:+5544997398826">
                       <Phone className="w-5 h-5" />
-                      (44) 99999-9999
+                      (44) 99739-8826
                     </a>
                   </Button>
                 </div>
@@ -352,7 +352,7 @@ const ServicePageLayout = ({
                   asChild
                 >
                   <a
-                    href="https://wa.me/5544999999999?text=Olá! Preciso de um orçamento."
+                    href="https://wa.me/5544997398826?text=Olá! Preciso de um orçamento."
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -517,7 +517,7 @@ const ServicePageLayout = ({
                     asChild
                   >
                     <a
-                      href="https://wa.me/5544999999999?text=Olá! Tenho uma dúvida sobre o serviço."
+                      href="https://wa.me/5544997398826?text=Olá! Tenho uma dúvida sobre o serviço."
                       target="_blank"
                       rel="noopener noreferrer"
                     >

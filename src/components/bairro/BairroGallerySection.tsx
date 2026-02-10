@@ -95,7 +95,7 @@ const BairroGallerySection = ({ bairro }: BairroGallerySectionProps) => {
             Precisa de um serviço semelhante no {bairro}? Entre em contato!
           </p>
           <a
-            href={`https://wa.me/5544999999999?text=Olá! Moro no ${bairro} e gostaria de solicitar um orçamento.`}
+            href={`https://wa.me/5544997398826?text=Olá! Moro no ${bairro} e gostaria de solicitar um orçamento.`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-whatsapp text-whatsapp-foreground font-semibold px-6 py-3 rounded-full hover:bg-whatsapp/90 transition-all duration-300 hover:-translate-y-1 shadow-whatsapp"
