@@ -79,9 +79,25 @@ const BairroServicesSection = ({ bairro, bairroSlug }: BairroServicesSectionProp
                   ))}
                 </div>
 
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  Ver Detalhes e Orçamento
-                </Button>
+                <div className="flex flex-col gap-2">
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    Ver Detalhes
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                    asChild
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <a
+                      href={`https://wa.me/5544999999999?text=${encodeURIComponent(`Olá! Preciso de conserto de ${service.title.toLowerCase()} no ${bairro}. Gostaria de solicitar um orçamento.`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Solicitar Orçamento
+                    </a>
+                  </Button>
+                </div>
               </Link>
             );
           })}
