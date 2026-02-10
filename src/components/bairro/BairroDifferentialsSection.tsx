@@ -63,16 +63,16 @@ const BairroDifferentialsSection = ({ bairro }: BairroDifferentialsSectionProps)
             return (
               <div
                 key={item.title}
-                className="group text-center p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 animate-fade-in"
+                className="group text-center p-7 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 hover:bg-white/20 hover:border-white/30 transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-secondary/90 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Icon className="w-8 h-8 text-secondary-foreground" />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-white mb-3">
                   {item.title}
                 </h3>
-                <p className="text-white/80 leading-relaxed">
+                <p className="text-white/80 leading-relaxed text-[15px]">
                   {item.description}
                 </p>
               </div>

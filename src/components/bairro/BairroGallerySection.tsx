@@ -44,7 +44,7 @@ const BairroGallerySection = ({ bairro }: BairroGallerySectionProps) => {
   };
 
   return (
-    <section id="galeria" className="py-20 bg-muted/30">
+    <section id="galeria" className="py-20 bg-gradient-to-b from-muted/20 via-background to-muted/10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
@@ -63,7 +63,7 @@ const BairroGallerySection = ({ bairro }: BairroGallerySectionProps) => {
           {galleryItems.map((item) => (
             <div
               key={item.id}
-              className="group relative bg-background rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-500 cursor-pointer"
+              className="group relative bg-card rounded-2xl overflow-hidden shadow-sm border border-border/50 hover:shadow-md transition-all duration-500 cursor-pointer"
               onMouseEnter={() => setHoveredId(item.id)}
               onMouseLeave={() => setHoveredId(null)}
               onClick={() => setSelectedImage(item)}
