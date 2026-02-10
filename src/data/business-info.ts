@@ -3,7 +3,7 @@ export const BUSINESS = {
   phone: '+5544997398826',
   phoneDisplay: '(44) 99739-8826',
   whatsapp: '5544997398826',
-  email: 'contato@hassistenciatecnica.maringa.br',
+  email: 'contato@assistenciatecnica.maringa.br',
   site: 'https://assistenciatecnica.maringa.br',
   address: {
     street: 'Av. Brasil, 3278 - Zona 01',

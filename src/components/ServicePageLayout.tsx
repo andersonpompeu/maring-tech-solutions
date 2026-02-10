@@ -93,7 +93,7 @@ const ServicePageLayout = ({
       name: 'Assistência Técnica Maringá',
       url: 'https://assistenciatecnica.maringa.br/',
       telephone: '+5544997398826',
-      email: 'contato@hassistenciatecnica.maringa.br',
+      email: 'contato@assistenciatecnica.maringa.br',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Av. Brasil, 3278 - Zona 01',

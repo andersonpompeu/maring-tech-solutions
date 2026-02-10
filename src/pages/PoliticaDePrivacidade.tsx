@@ -128,7 +128,7 @@ const PoliticaDePrivacidade = () => {
               <p className="text-muted-foreground leading-relaxed">
                 Para exercer seus direitos ou esclarecer dúvidas sobre esta Política de Privacidade, 
                 entre em contato com nosso Encarregado de Proteção de Dados (DPO) pelo e-mail 
-                contato@hassistenciatecnica.maringa.br ou pelo WhatsApp (44) 99739-8826.
+                contato@assistenciatecnica.maringa.br ou pelo WhatsApp (44) 99739-8826.
               </p>
             </section>
           </div>

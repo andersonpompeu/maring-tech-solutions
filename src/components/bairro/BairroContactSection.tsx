@@ -139,11 +139,11 @@ const BairroContactSection = ({ bairro }: BairroContactSectionProps) => {
                   <div>
                     <p className="font-semibold text-foreground">E-mail</p>
                     <a
-                      href="mailto:contato@hassistenciatecnica.maringa.br"
+                      href="mailto:contato@assistenciatecnica.maringa.br"
                       title={`Enviar e-mail para assistência técnica no ${bairro}`}
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      contato@hassistenciatecnica.maringa.br
+                      contato@assistenciatecnica.maringa.br
                     </a>
                   </div>
                 </div>
