@@ -96,7 +96,7 @@ const TermosDeUso = () => {
               <h2 className="text-xl font-heading font-semibold text-foreground mb-4">9. Contato</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Em caso de dúvidas sobre estes Termos de Uso, entre em contato conosco pelo WhatsApp 
-                (44) 99739-8826 ou pelo e-mail contato@hassistenciatecnica.maringa.br.
+                (44) 99739-8826 ou pelo e-mail contato@assistenciatecnica.maringa.br.
               </p>
             </section>
           </div>
