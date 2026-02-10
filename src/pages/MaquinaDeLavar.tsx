@@ -147,7 +147,7 @@ const CTABanner = () => (
         asChild
       >
         <a
-          href="https://wa.me/5544999999999?text=Olá! Gostaria de um orçamento para conserto de máquina de lavar."
+          href="https://wa.me/5544997398826?text=Olá! Gostaria de um orçamento para conserto de máquina de lavar."
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -168,7 +168,7 @@ const MaquinaDeLavar = () => {
       '@type': 'LocalBusiness',
       name: 'TechFix Maringá',
       url: 'https://techfixmaringa.com.br',
-      telephone: '+554499999999',
+      telephone: '+5544997398826',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Maringá',
@@ -257,7 +257,7 @@ const MaquinaDeLavar = () => {
                   asChild
                 >
                   <a
-                    href="https://wa.me/5544999999999?text=Olá! Gostaria de um orçamento para conserto de máquina de lavar."
+                    href="https://wa.me/5544997398826?text=Olá! Gostaria de um orçamento para conserto de máquina de lavar."
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -308,7 +308,7 @@ const MaquinaDeLavar = () => {
                     <h3 className="text-lg font-heading font-semibold text-foreground mb-2">{service.title}</h3>
                     <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
                     <a
-                      href="https://wa.me/5544999999999?text=Olá! Gostaria de saber mais sobre o serviço."
+                      href="https://wa.me/5544997398826?text=Olá! Gostaria de saber mais sobre o serviço."
                       target="_blank"
                       rel="noopener noreferrer"
                       title={`Solicitar orçamento para ${service.title} em Maringá`}
@@ -476,7 +476,7 @@ const MaquinaDeLavar = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button variant="hero" size="lg" className="rounded-full shadow-lg" asChild>
                   <a
-                    href="https://wa.me/5544999999999?text=Olá! Gostaria de um orçamento para conserto de máquina de lavar."
+                    href="https://wa.me/5544997398826?text=Olá! Gostaria de um orçamento para conserto de máquina de lavar."
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -485,9 +485,9 @@ const MaquinaDeLavar = () => {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" className="rounded-full bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
-                  <a href="tel:+5544999999999">
+                  <a href="tel:+5544997398826">
                     <Phone className="w-5 h-5" />
-                    (44) 99999-9999
+                    (44) 99739-8826
                   </a>
                 </Button>
               </div>

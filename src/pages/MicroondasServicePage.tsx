@@ -49,7 +49,7 @@ const MicroondasServicePage = () => {
       '@type': 'LocalBusiness',
       name: 'TechFix Maringá',
       url: 'https://techfixmaringa.com.br',
-      telephone: '+554499999999',
+      telephone: '+5544997398826',
       address: { '@type': 'PostalAddress', addressLocality: 'Maringá', addressRegion: 'PR', postalCode: '87013-000', addressCountry: 'BR' },
       aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
     },
@@ -126,7 +126,7 @@ const MicroondasServicePage = () => {
                   {service.heroDescription}
                 </p>
                 <Button variant="hero" size="lg" className="rounded-full shadow-lg hover:shadow-secondary/30 text-base" asChild>
-                  <a href={`https://wa.me/5544999999999?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" title={`Solicitar orçamento para ${service.title} em Maringá`}>
+                  <a href={`https://wa.me/5544997398826?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" title={`Solicitar orçamento para ${service.title} em Maringá`}>
                     <MessageCircle className="w-5 h-5" />
                     Solicite Já
                   </a>
@@ -196,7 +196,7 @@ const MicroondasServicePage = () => {
                 Resolvemos com <strong>atendimento rápido</strong> e garantia! <strong>Assistência técnica em Maringá</strong> com peças originais.
               </p>
               <Button variant="hero" size="lg" className="rounded-full shadow-lg hover:shadow-secondary/30" asChild>
-                <a href={`https://wa.me/5544999999999?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" title={`Solicitar orçamento para ${service.title} em Maringá`}>
+                <a href={`https://wa.me/5544997398826?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" title={`Solicitar orçamento para ${service.title} em Maringá`}>
                   <MessageCircle className="w-5 h-5" />
                   Solicite seu orçamento
                 </a>
@@ -262,7 +262,7 @@ const MicroondasServicePage = () => {
                 Resolvemos com <strong>atendimento rápido</strong> e garantia! <strong>Assistência técnica em Maringá</strong> com peças originais.
               </p>
               <Button variant="hero" size="lg" className="rounded-full shadow-lg hover:shadow-secondary/30" asChild>
-                <a href={`https://wa.me/5544999999999?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" title={`Solicitar orçamento para ${service.title} perto de mim em Maringá`}>
+                <a href={`https://wa.me/5544997398826?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" title={`Solicitar orçamento para ${service.title} perto de mim em Maringá`}>
                   <MessageCircle className="w-5 h-5" />
                   Solicite seu orçamento
                 </a>
@@ -314,15 +314,15 @@ const MicroondasServicePage = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button variant="hero" size="lg" className="rounded-full shadow-lg" asChild>
-                  <a href={`https://wa.me/5544999999999?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" title={`Solicitar orçamento para ${service.title} em Maringá via WhatsApp`}>
+                  <a href={`https://wa.me/5544997398826?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" title={`Solicitar orçamento para ${service.title} em Maringá via WhatsApp`}>
                     <MessageCircle className="w-5 h-5" />
                     Solicite seu orçamento
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" className="rounded-full bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
-                  <a href="tel:+5544999999999" title="Ligar para assistência técnica em Maringá">
+                  <a href="tel:+5544997398826" title="Ligar para assistência técnica em Maringá">
                     <Phone className="w-5 h-5" />
-                    (44) 99999-9999
+                    (44) 99739-8826
                   </a>
                 </Button>
               </div>

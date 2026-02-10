@@ -113,7 +113,7 @@ const SEOTopicsSection = ({
             </div>
             <Button variant="whatsapp" size="lg" className="rounded-full group whitespace-nowrap" asChild>
               <a
-                href={`https://wa.me/5544999999999?text=Olá! Gostaria de um orçamento para serviço em ${city}.`}
+                href={`https://wa.me/5544997398826?text=Olá! Gostaria de um orçamento para serviço em ${city}.`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

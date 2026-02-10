@@ -88,7 +88,7 @@ const LocationSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 pt-4">
               <Button variant="whatsapp" size="lg" className="flex-1" asChild>
                 <a 
-                  href="https://wa.me/5544999999999?text=Olá! Gostaria de agendar um atendimento." 
+                  href="https://wa.me/5544997398826?text=Olá! Gostaria de agendar um atendimento." 
                   target="_blank" 
                   rel="noopener noreferrer"
                   title="Agendar atendimento técnico em Maringá via WhatsApp"

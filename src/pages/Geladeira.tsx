@@ -119,7 +119,7 @@ const CTABanner = () => (
         asChild
       >
         <a
-          href="https://wa.me/5544999999999?text=Olá! Gostaria de um orçamento para conserto de geladeira."
+          href="https://wa.me/5544997398826?text=Olá! Gostaria de um orçamento para conserto de geladeira."
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -140,7 +140,7 @@ const Geladeira = () => {
       '@type': 'LocalBusiness',
       name: 'TechFix Maringá',
       url: 'https://techfixmaringa.com.br',
-      telephone: '+554499999999',
+      telephone: '+5544997398826',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Maringá',
@@ -229,7 +229,7 @@ const Geladeira = () => {
                   asChild
                 >
                   <a
-                    href="https://wa.me/5544999999999?text=Olá! Gostaria de um orçamento para conserto de geladeira."
+                    href="https://wa.me/5544997398826?text=Olá! Gostaria de um orçamento para conserto de geladeira."
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -461,7 +461,7 @@ const Geladeira = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button variant="hero" size="lg" className="rounded-full shadow-lg" asChild>
                   <a
-                    href="https://wa.me/5544999999999?text=Olá! Gostaria de um orçamento para conserto de geladeira."
+                    href="https://wa.me/5544997398826?text=Olá! Gostaria de um orçamento para conserto de geladeira."
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -470,9 +470,9 @@ const Geladeira = () => {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" className="rounded-full bg-white/10 border-white/30 text-white hover:bg-white/20" asChild>
-                  <a href="tel:+5544999999999">
+                  <a href="tel:+5544997398826">
                     <Phone className="w-5 h-5" />
-                    (44) 99999-9999
+                    (44) 99739-8826
                   </a>
                 </Button>
               </div>

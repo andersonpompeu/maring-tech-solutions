@@ -110,7 +110,7 @@ const BairroHeroSection = ({ bairro }: BairroHeroSectionProps) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up stagger-3">
             <Button variant="hero" size="xl" asChild>
               <a
-                href={`https://wa.me/5544999999999?text=Olá! Moro no ${bairro} e gostaria de solicitar um orçamento.`}
+                href={`https://wa.me/5544997398826?text=Olá! Moro no ${bairro} e gostaria de solicitar um orçamento.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"

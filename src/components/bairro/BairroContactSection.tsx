@@ -47,7 +47,7 @@ const services = [
   { value: 'outro', label: 'Outro' },
 ];
 
-const whatsappNumber = '5544999999999';
+const whatsappNumber = '5544997398826';
 
 const BairroContactSection = ({ bairro }: BairroContactSectionProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -127,7 +127,7 @@ const BairroContactSection = ({ bairro }: BairroContactSectionProps) => {
                       title={`Chamar assistência técnica no ${bairro} via WhatsApp`}
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      (44) 99999-9999
+                      (44) 99739-8826
                     </a>
                   </div>
                 </div>
@@ -139,11 +139,11 @@ const BairroContactSection = ({ bairro }: BairroContactSectionProps) => {
                   <div>
                     <p className="font-semibold text-foreground">E-mail</p>
                     <a
-                      href="mailto:contato@tecnicomaringa.com.br"
+                      href="mailto:contato@hassistenciatecnica.maringa.br"
                       title={`Enviar e-mail para assistência técnica no ${bairro}`}
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      contato@tecnicomaringa.com.br
+                      contato@hassistenciatecnica.maringa.br
                     </a>
                   </div>
                 </div>
@@ -155,10 +155,7 @@ const BairroContactSection = ({ bairro }: BairroContactSectionProps) => {
                   <div>
                     <p className="font-semibold text-foreground">Horário de Atendimento</p>
                     <p className="text-muted-foreground">
-                      Seg - Sex: <time dateTime="08:00">8h</time> às <time dateTime="18:00">18h</time>
-                    </p>
-                    <p className="text-muted-foreground">
-                      Sábado: <time dateTime="08:00">8h</time> às <time dateTime="12:00">12h</time>
+                      Atendimento <strong>24 horas</strong>
                     </p>
                   </div>
                 </div>
@@ -170,8 +167,8 @@ const BairroContactSection = ({ bairro }: BairroContactSectionProps) => {
                   <div>
                     <p className="font-semibold text-foreground">Endereço</p>
                     <p className="text-muted-foreground">
-                      Av. Brasil, 1234 - Centro<br />
-                      <strong>Maringá</strong> - PR, 87000-000
+                      Av. Brasil, 3278 - Zona 01<br />
+                      <strong>Maringá</strong> - PR, 87013-000
                     </p>
                   </div>
                 </div>

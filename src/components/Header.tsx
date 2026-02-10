@@ -79,12 +79,12 @@ const Header = () => {
               </span>
             </div>
             <div className="flex items-center gap-6">
-              <a href="tel:+5544999999999" className="flex items-center gap-2 hover:text-secondary transition-colors">
+              <a href="tel:+5544997398826" className="flex items-center gap-2 hover:text-secondary transition-colors">
                 <Phone className="w-4 h-4" />
-                (44) 99999-9999
+                (44) 99739-8826
               </a>
               <a 
-                href="https://wa.me/5544999999999" 
+                href="https://wa.me/5544997398826" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-secondary transition-colors"
@@ -212,7 +212,7 @@ const Header = () => {
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center gap-3">
               <a 
-                href="tel:+5544999999999" 
+                href="tel:+5544997398826" 
                 className="flex items-center gap-2 text-foreground hover:text-primary transition-colors px-3"
               >
                 <div className="w-9 h-9 rounded-full bg-muted flex items-center justify-center">
@@ -221,7 +221,7 @@ const Header = () => {
               </a>
               <Button variant="hero" size="default" className="rounded-full shadow-lg hover:shadow-secondary/30" asChild>
                 <a
-                  href="https://wa.me/5544999999999?text=Olá! Gostaria de solicitar um orçamento."
+                  href="https://wa.me/5544997398826?text=Olá! Gostaria de solicitar um orçamento."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -309,21 +309,21 @@ const Header = () => {
                 </div>
                 <div className="flex items-center gap-3 px-4 text-sm text-muted-foreground">
                   <Clock className="w-4 h-4" />
-                  <span>Seg-Sáb: 8h às 18h</span>
+                  <span>Atendimento 24h</span>
                 </div>
                 <a 
-                  href="tel:+5544999999999" 
+                  href="tel:+5544997398826" 
                   className="flex items-center gap-3 px-4 text-sm text-foreground font-medium"
                 >
                   <Phone className="w-4 h-4 text-primary" />
-                  (44) 99999-9999
+                  (44) 99739-8826
                 </a>
               </div>
 
               {/* CTA Button */}
               <Button variant="hero" className="w-full rounded-xl mt-4" size="lg" asChild>
                 <a
-                  href="https://wa.me/5544999999999?text=Olá! Gostaria de solicitar um orçamento."
+                  href="https://wa.me/5544997398826?text=Olá! Gostaria de solicitar um orçamento."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
