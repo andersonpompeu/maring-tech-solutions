@@ -21,6 +21,7 @@ import Fogao from "./pages/Fogao";
 import FogaoServicePage from "./pages/FogaoServicePage";
 import Microondas from "./pages/Microondas";
 import MicroondasServicePage from "./pages/MicroondasServicePage";
+import ServicoPorBairro from "./pages/ServicoPorBairro";
 import CookieConsent from "./components/CookieConsent";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -51,6 +52,7 @@ const App = () => (
             <Route path="/bairros/:slug/:serviceSlug" element={<BairroServicePage />} />
             <Route path="/termos-de-uso" element={<TermosDeUso />} />
             <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidade />} />
+            <Route path="/servicos-por-bairro" element={<ServicoPorBairro />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
