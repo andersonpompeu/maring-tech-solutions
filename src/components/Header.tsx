@@ -119,7 +119,7 @@ const Header = () => {
               </div>
               <div>
                 <span className="font-heading font-bold text-xl text-foreground block leading-tight tracking-tight">
-                  TechFix
+                  Assistência Técnica
                 </span>
                 <span className="text-xs text-muted-foreground font-medium">Maringá • PR</span>
               </div>

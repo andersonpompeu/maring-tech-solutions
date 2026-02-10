@@ -16,7 +16,7 @@ const Footer = () => {
                 <Wrench className="w-6 h-6 text-secondary-foreground" />
               </div>
               <div>
-                <span className="font-heading font-bold text-lg block leading-tight">TechFix</span>
+                <span className="font-heading font-bold text-lg block leading-tight">Assistência Técnica</span>
                 <span className="text-xs opacity-80">Maringá</span>
               </div>
             </div>
@@ -150,7 +150,7 @@ const Footer = () => {
         <div className="container px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
             <p>
-              © {currentYear} TechFix Maringá. Todos os direitos reservados.
+              © {currentYear} Assistência Técnica Maringá. Todos os direitos reservados.
             </p>
             <div className="flex gap-6">
               <Link to="/termos-de-uso" className="hover:text-white transition-colors">

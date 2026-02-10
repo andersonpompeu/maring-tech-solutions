@@ -7,8 +7,8 @@ const PoliticaDePrivacidade = () => {
   return (
     <>
       <Helmet>
-        <title>Política de Privacidade | TechFix Maringá</title>
-        <meta name="description" content="Política de Privacidade da TechFix Maringá. Saiba como coletamos, utilizamos e protegemos seus dados pessoais." />
+        <title>Política de Privacidade | Assistência Técnica Maringá</title>
+        <meta name="description" content="Política de Privacidade da Assistência Técnica Maringá. Saiba como coletamos, utilizamos e protegemos seus dados pessoais." />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />
@@ -24,7 +24,7 @@ const PoliticaDePrivacidade = () => {
             <section className="mb-8">
               <h2 className="text-xl font-heading font-semibold text-foreground mb-4">1. Introdução</h2>
               <p className="text-muted-foreground leading-relaxed">
-                A TechFix Maringá está comprometida com a proteção da privacidade dos seus clientes. 
+                A Assistência Técnica Maringá está comprometida com a proteção da privacidade dos seus clientes. 
                 Esta Política de Privacidade descreve como coletamos, utilizamos, armazenamos e 
                 protegemos suas informações pessoais, em conformidade com a Lei Geral de Proteção 
                 de Dados (LGPD - Lei nº 13.709/2018).
@@ -63,7 +63,7 @@ const PoliticaDePrivacidade = () => {
             <section className="mb-8">
               <h2 className="text-xl font-heading font-semibold text-foreground mb-4">4. Compartilhamento de Dados</h2>
               <p className="text-muted-foreground leading-relaxed">
-                A TechFix Maringá não vende, aluga ou compartilha seus dados pessoais com terceiros 
+                A Assistência Técnica Maringá não vende, aluga ou compartilha seus dados pessoais com terceiros 
                 para fins comerciais. Os dados podem ser compartilhados apenas com prestadores de 
                 serviço essenciais para nossa operação (como fornecedores de peças), sempre com as 
                 devidas proteções contratuais.
@@ -128,7 +128,7 @@ const PoliticaDePrivacidade = () => {
               <p className="text-muted-foreground leading-relaxed">
                 Para exercer seus direitos ou esclarecer dúvidas sobre esta Política de Privacidade, 
                 entre em contato com nosso Encarregado de Proteção de Dados (DPO) pelo e-mail 
-                contato@techfixmaringa.com.br ou pelo WhatsApp (44) 99999-9999.
+                contato@hassistenciatecnica.maringa.br ou pelo WhatsApp (44) 99739-8826.
               </p>
             </section>
           </div>

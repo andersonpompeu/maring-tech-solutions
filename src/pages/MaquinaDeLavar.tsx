@@ -166,8 +166,8 @@ const MaquinaDeLavar = () => {
     serviceType: 'Washing Machine Repair Service',
     provider: {
       '@type': 'LocalBusiness',
-      name: 'TechFix Maringá',
-      url: 'https://techfixmaringa.com.br',
+      name: 'Assistência Técnica Maringá',
+      url: 'https://assistenciatecnica.maringa.br/',
       telephone: '+5544997398826',
       address: {
         '@type': 'PostalAddress',
@@ -201,7 +201,7 @@ const MaquinaDeLavar = () => {
         <title>Conserto de Máquina de Lavar em Maringá | Assistência Técnica Especializada</title>
         <meta name="description" content="Conserto de máquina de lavar em Maringá-PR. Assistência técnica para lavadoras, lava e seca, secadoras. Atendimento rápido, peças originais e garantia de 90 dias." />
         <meta name="keywords" content="conserto máquina de lavar Maringá, assistência técnica lavadora, conserto lava e seca, reparo máquina de lavar perto de mim, técnico máquina de lavar Maringá" />
-        <link rel="canonical" href="https://techfixmaringa.com.br/maquina-de-lavar" />
+        <link rel="canonical" href="https://assistenciatecnica.maringa.br/maquina-de-lavar" />
         <meta property="og:title" content="Conserto de Máquina de Lavar em Maringá" />
         <meta property="og:description" content="Assistência técnica especializada em máquinas de lavar em Maringá-PR. Peças originais e garantia." />
         <meta property="og:type" content="website" />

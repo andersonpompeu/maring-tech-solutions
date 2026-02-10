@@ -67,7 +67,7 @@ const Celulares = () => {
       name: 'Beatriz Oliveira',
       location: 'Zona 7, Maringá',
       rating: 5,
-      text: 'Quebrei a tela do meu iPhone 14 e estava desesperada. A TechFix trocou em menos de 2 horas e ficou perfeita. Tela original e preço justo!',
+      text: 'Quebrei a tela do meu iPhone 14 e estava desesperada. Trocaram em menos de 2 horas e ficou perfeita. Tela original e preço justo!',
       service: 'Troca de Tela iPhone',
     },
     {
@@ -95,7 +95,7 @@ const Celulares = () => {
       name: 'Mariana Souza',
       location: 'Zona 5, Maringá',
       rating: 5,
-      text: 'iPad da minha filha com tela rachada. A TechFix fez a troca com qualidade e rapidez. Atendimento nota 10!',
+      text: 'iPad da minha filha com tela rachada. Fizeram a troca com qualidade e rapidez. Atendimento nota 10!',
       service: 'Conserto de Tablet',
     },
     {
@@ -110,10 +110,10 @@ const Celulares = () => {
   return (
     <ServicePageLayout
       title="Conserto de Celulares"
-      metaTitle="Conserto de Celular em Maringá | iPhone, Samsung, Xiaomi - TechFix"
+      metaTitle="Conserto de Celular em Maringá | iPhone, Samsung, Xiaomi"
       metaDescription="Conserto de celular em Maringá-PR. Assistência técnica para iPhone, Samsung, Motorola e Xiaomi. Troca de tela e bateria no mesmo dia. Garantia de 90 dias!"
       keywords="conserto celular Maringá, troca de tela celular, conserto iPhone Maringá, conserto Samsung Maringá, assistência técnica celular, troca bateria celular"
-      canonical="https://techfixmaringa.com.br/celulares"
+      canonical="https://assistenciatecnica.maringa.br/celulares"
       heroTitle="Conserto de Celulares em Maringá"
       heroSubtitle="Smartphones e Tablets"
       heroDescription="Assistência técnica especializada para iPhone, Samsung, Motorola e Xiaomi. Troca de tela, bateria e reparo de placa. Garantia de 90 dias."

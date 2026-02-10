@@ -90,13 +90,13 @@ const ServicePageLayout = ({
     serviceType: schemaType,
     provider: {
       '@type': 'LocalBusiness',
-      name: 'TechFix Maringá',
-      url: 'https://techfixmaringa.com.br',
-      telephone: '+554499999999',
-      email: 'contato@techfixmaringa.com.br',
+      name: 'Assistência Técnica Maringá',
+      url: 'https://assistenciatecnica.maringa.br/',
+      telephone: '+5544997398826',
+      email: 'contato@hassistenciatecnica.maringa.br',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Av. Brasil, 1234 - Centro',
+        streetAddress: 'Av. Brasil, 3278 - Zona 01',
         addressLocality: 'Maringá',
         addressRegion: 'PR',
         postalCode: '87013-000',
@@ -158,7 +158,7 @@ const ServicePageLayout = ({
         '@type': 'ListItem',
         position: 1,
         name: 'Início',
-        item: 'https://techfixmaringa.com.br',
+        item: 'https://assistenciatecnica.maringa.br/',
       },
       {
         '@type': 'ListItem',
