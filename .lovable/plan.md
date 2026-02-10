@@ -1,51 +1,121 @@
 
-# Redesign da Secao "Sobre o Servico" nas Paginas de Bairro
+# Schema SEO Avancado com Dados Reais do Negocio
 
-## Objetivo
-Modernizar a secao "Sobre o Servico" presente nas paginas de servico por bairro (`BairroServicePage`), seguindo o design de referencia enviado, e replicar esse padrao visual em todas as paginas de bairro.
+## Dados do Negocio (fornecidos pelo cliente)
 
-## Mudancas Visuais (Referencia vs Atual)
+| Campo | Valor |
+|-------|-------|
+| Telefone/WhatsApp | +5544997398826 |
+| E-mail | contato@hassistenciatecnica.maringa.br |
+| Site | https://assistenciatecnica.maringa.br/ |
+| Endereco (NAP) | Av. Brasil, 3278 - Zona 01, Maringa - PR, CEP 87013-000 |
+| Horario | 24 horas |
 
-A secao atual ja possui a estrutura de 2 colunas, mas o redesign trara refinamentos:
+---
 
-1. **Fundo da secao**: Trocar o `bg-muted/30` por um fundo mais limpo e claro (cinza sutil com gradiente)
-2. **Cards de diferenciais (Mesmo Dia, 90 Dias, Pecas Originais)**: Redesenhar com fundo branco, bordas arredondadas mais suaves, icones laranja/secondary mais proeminentes e layout centralizado
-3. **Pills de marcas**: Bordas mais definidas, estilos de pill mais limpos com borda solida
-4. **Card de Orcamento Gratuito**: Gradiente azul mais rico com cantos mais arredondados e tipografia refinada
-5. **Separador visual**: Adicionar linha divisoria sutil entre a secao e o restante do conteudo
+## Escopo das Mudancas
 
-## Arquivos a Modificar
+### 1. Criar constante centralizada de dados do negocio
 
-### 1. `src/pages/BairroServicePage.tsx`
-- Redesign da secao "Sobre o Servico" (linhas 153-207)
-- Fundo mais limpo com gradiente sutil
-- Cards de diferenciais com sombras mais suaves e icones maiores
-- Melhor espacamento e tipografia nos brand pills
-- Card CTA com gradiente mais sofisticado
+Criar `src/data/business-info.ts` com todos os dados do negocio em um unico lugar, evitando duplicacao e facilitando manutencao futura:
 
-### 2. `src/components/bairro/BairroDifferentialsSection.tsx`
-- Modernizar os cards de diferenciais para seguir o mesmo padrao visual
-- Cards com fundo mais limpo, icones com cores consistentes
-- Melhor contraste e legibilidade
+```text
+PHONE: +5544997398826
+PHONE_DISPLAY: (44) 99739-8826
+WHATSAPP: 5544997398826
+EMAIL: contato@hassistenciatecnica.maringa.br
+SITE: https://assistenciatecnica.maringa.br/
+ADDRESS: Av. Brasil, 3278 - Zona 01
+CITY: Maringa
+STATE: PR
+CEP: 87013-000
+HOURS: 24 horas
+```
 
-### 3. `src/components/bairro/BairroServicesSection.tsx`
-- Refinar os cards de servicos com o mesmo padrao de sombras e bordas
-- Consistencia visual com o novo design
+### 2. Atualizar coordenadas e CEP nos bairros (`neighborhoods.ts`)
 
-### 4. `src/components/bairro/BairroTeamSection.tsx`
-- Aplicar o mesmo padrao de cards e espacamentos modernizados
+Expandir a interface `Neighborhood` com `lat`, `lng` e `cep`, adicionando coordenadas reais de Maringa para os 67 bairros.
 
-### 5. `src/components/bairro/BairroGallerySection.tsx`
-- Ajustar bordas e sombras para manter consistencia visual
+### 3. Criar componente `BairroSchemaGenerator.tsx`
 
-### 6. `src/components/bairro/BairroTestimonialsSection.tsx`
-- Padronizar cards de depoimentos com o novo estilo
+Componente centralizado que gera schemas JSON-LD multi-camada:
+
+- **LocalBusiness**: com `geo` (lat/lng do bairro), `telephone` real (+5544997398826), `email`, `url`, `address` completo (Av. Brasil, 3278), `openingHoursSpecification` (24h), `priceRange`
+- **WebPage**: com `name`, `url`, `isPartOf` (WebSite), `breadcrumb`, `speakable`
+- **BreadcrumbList**: hierarquia completa (Inicio > Bairros > Bairro > Servico)
+- **Service** (nas paginas de servico): com `areaServed` usando `GeoCircle`, `availableChannel` (WhatsApp real), `aggregateRating`, `review`
+- **FAQPage**: vinculado ao conteudo de perguntas frequentes existente
+- **Organization**: com `sameAs`, `logo`, `contactPoint` (telefone real e email real)
+
+### 4. Atualizar `BairroPage.tsx`
+
+- Substituir schema inline pelo `BairroSchemaGenerator`
+- Adicionar meta tags geo dinamicas (`geo.position`, `geo.region`, `ICBM`, `geo.placename`)
+- Atualizar telefone de `+554499999999` para `+5544997398826`
+
+### 5. Atualizar `BairroServicePage.tsx`
+
+- Substituir schema inline pelo `BairroSchemaGenerator`
+- Adicionar meta tags geo dinamicas
+- Atualizar telefone no schema
+
+### 6. Atualizar WhatsApp e telefone em TODOS os arquivos
+
+Substituir o numero placeholder `5544999999999` pelo numero real `5544997398826` em todos os 24 arquivos que o utilizam, incluindo:
+
+- Componentes de contato (`ContactSection`, `BairroContactSection`, `FloatingButtons`)
+- Paginas de servico (`Fogao`, `Geladeira`, `Microondas`, `MaquinaDeLavar`, `Celulares`, `Televisores`, `Eletrodomesticos`)
+- Paginas de servico por bairro (`BairroServicePage`, `FogaoServicePage`, `GeladeiraServicePage`, `MicroondasServicePage`)
+- Componentes de bairro (`BairroServicesSection`, `BairroHeroSection`)
+- Secao de bairros (`NeighborhoodsSection`)
+- Pagina de listagem (`ServicoPorBairro`)
+- Header e Footer
+
+O numero exibido sera formatado como `(44) 99739-8826`.
 
 ## Detalhes Tecnicos
 
-- Todas as mudancas sao puramente de CSS/Tailwind, sem alteracao de logica ou dados
-- Padrao de cards: `bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md`
-- Icones diferenciais: cor `text-secondary` (laranja) com tamanho aumentado
-- Card CTA: `bg-gradient-to-br from-primary via-primary to-accent` com bordas `rounded-2xl`
-- Brand pills: `border border-gray-200 rounded-full px-5 py-2.5`
-- Separadores: `border-t border-border/30` entre secoes quando necessario
+### Arquivos a criar:
+- `src/data/business-info.ts` - constantes centralizadas do negocio
+- `src/components/seo/BairroSchemaGenerator.tsx` - gerador de schema multi-camada
+
+### Arquivos a modificar:
+- `src/data/neighborhoods.ts` - adicionar lat, lng, cep aos 67 bairros
+- `src/pages/BairroPage.tsx` - usar BairroSchemaGenerator + meta geo
+- `src/pages/BairroServicePage.tsx` - usar BairroSchemaGenerator + meta geo
+- ~24 arquivos com substituicao do numero de WhatsApp/telefone placeholder pelo real
+
+### Exemplo de schema gerado (BairroServicePage):
+
+```text
+LocalBusiness:
+  name: "Assistencia Tecnica Maringa"
+  telephone: "+5544997398826"
+  email: "contato@hassistenciatecnica.maringa.br"
+  url: "https://assistenciatecnica.maringa.br/"
+  address: Av. Brasil, 3278 - Zona 01, Maringa-PR, 87013-000
+  geo: lat/lng do bairro especifico
+  openingHours: Mo-Su 00:00-23:59 (24h)
+  areaServed: GeoCircle com raio de 3km do bairro
+
+WebPage:
+  url canonica da pagina
+  breadcrumb vinculado
+  speakable: h1 + descricao
+
+BreadcrumbList:
+  Inicio > Bairros > [Bairro] > [Servico]
+
+Service:
+  provider -> LocalBusiness
+  areaServed -> GeoCircle do bairro
+  availableChannel -> WhatsApp (+5544997398826)
+  aggregateRating: 4.9 / 127 reviews
+```
+
+### Impacto SEO esperado:
+- Rich snippets com breadcrumbs e estrelas no Google
+- Presenca no Google Maps / Local Pack com NAP consistente
+- Sinais de geolocalizacao precisos por bairro
+- Horario 24h destacado nos resultados de busca
+- Autoridade topica com WebPage + Organization + Service interligados
