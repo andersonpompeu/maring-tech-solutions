@@ -29,14 +29,14 @@ const BairroPage = () => {
   return (
     <>
       <Helmet>
-        <title>{`Técnico de Geladeira ${noBairro(bairro)} - Assistência Técnica Maringá-PR`}</title>
+        <title>{`Assistência Técnica ${noBairro(bairro)} - Maringá-PR`}</title>
         <meta
           name="description"
-          content={`Técnico de geladeira ${noBairro(bairro)}, Maringá. Assistência técnica da geladeira Continental, Brastemp, Electrolux e mais. Técnico geladeira em Maringá com garantia.`}
+          content={`Assistência técnica ${noBairro(bairro)}, Maringá-PR. Conserto de geladeiras, máquinas de lavar, fogões, TVs e celulares. Garantia de 90 dias.`}
         />
         <meta
           name="keywords"
-          content={`assistência técnica da geladeira continental, técnico geladeira em Maringá, técnico de geladeira, assistência técnica ${bairro} Maringá, conserto geladeira ${bairro}, reparo geladeira ${bairro}, técnico ${bairro} Maringá`}
+          content={`assistência técnica ${bairro} Maringá, conserto eletrodomésticos ${bairro}, reparo geladeira ${bairro}, conserto TV ${bairro}, conserto celular ${bairro}, técnico ${bairro} Maringá`}
         />
         <link rel="canonical" href={`${BUSINESS.site}/bairros/${neighborhood.slug}`} />
         <meta property="og:title" content={`Assistência Técnica ${noBairro(bairro)} - Maringá`} />
