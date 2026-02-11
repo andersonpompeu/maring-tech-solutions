@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown, Wrench, Tv, Smartphone, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -108,21 +109,14 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="relative">
-                <div className="w-11 h-11 bg-gradient-to-br from-primary via-primary to-accent rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-primary/30 transition-all duration-300 group-hover:scale-105">
-                  <Wrench className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-secondary rounded-full flex items-center justify-center">
-                  <span className="text-[8px] font-bold text-secondary-foreground">✓</span>
-                </div>
-              </div>
-              <div>
-                <span className="font-heading font-bold text-xl text-foreground block leading-tight tracking-tight">
-                  Assistência Técnica
-                </span>
-                <span className="text-xs text-muted-foreground font-medium">Maringá • PR</span>
-              </div>
+            <Link to="/" className="flex items-center group">
+              <img 
+                src={logo} 
+                alt="Assistência Técnica Maringá" 
+                width={300} 
+                height={90} 
+                className="h-14 lg:h-16 w-auto object-contain"
+              />
             </Link>
 
             {/* Desktop Navigation */}

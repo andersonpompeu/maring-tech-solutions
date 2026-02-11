@@ -1,7 +1,8 @@
 import { Tv, Smartphone, Refrigerator, Flame, Microwave, WashingMachine } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { findNeighborhoodBySlug, neighborhoods } from '@/data/neighborhoods';
+import { neighborhoods } from '@/data/neighborhoods';
+import { noBairro } from '@/lib/utils';
 
 interface BairroServicesSectionProps {
   bairro: string;
@@ -21,12 +22,12 @@ const BairroServicesSection = ({ bairro, bairroSlug }: BairroServicesSectionProp
   const resolvedSlug = bairroSlug || neighborhoods.find(n => n.name === bairro)?.slug || '';
   const getDescription = (title: string) => {
     const descriptions: Record<string, string> = {
-      'Máquinas de Lavar': `Conserto de máquinas de lavar no ${bairro}. Lavadoras e lava e seca de todas as marcas.`,
-      'Geladeiras': `Reparo de geladeiras, freezers e refrigeradores no ${bairro}. Vazamentos e motor.`,
-      'Fogões': `Manutenção de fogões a gás, cooktops e fornos elétricos no ${bairro}.`,
-      'Micro-ondas': `Conserto de micro-ondas e fornos elétricos no ${bairro}. Garantia em todas as peças.`,
-      'Smart TVs': `Reparo em TVs LED, OLED e QLED no ${bairro}. Telas, placas e software.`,
-      'Celulares': `Conserto de iPhone e Android no ${bairro}. Telas, baterias, conectores e mais.`,
+      'Máquinas de Lavar': `Conserto de máquinas de lavar ${noBairro(bairro)}. Lavadoras e lava e seca de todas as marcas.`,
+      'Geladeiras': `Reparo de geladeiras, freezers e refrigeradores ${noBairro(bairro)}. Vazamentos e motor.`,
+      'Fogões': `Manutenção de fogões a gás, cooktops e fornos elétricos ${noBairro(bairro)}.`,
+      'Micro-ondas': `Conserto de micro-ondas e fornos elétricos ${noBairro(bairro)}. Garantia em todas as peças.`,
+      'Smart TVs': `Reparo em TVs LED, OLED e QLED ${noBairro(bairro)}. Telas, placas e software.`,
+      'Celulares': `Conserto de iPhone e Android ${noBairro(bairro)}. Telas, baterias, conectores e mais.`,
     };
     return descriptions[title] || '';
   };
@@ -41,10 +42,10 @@ const BairroServicesSection = ({ bairro, bairroSlug }: BairroServicesSectionProp
             Nossos Serviços
           </span>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-            Assistência Técnica Especializada no {bairro}
+            Assistência Técnica Especializada {noBairro(bairro)}
           </h2>
           <p className="text-muted-foreground text-lg">
-            Consertamos eletrodomésticos, Smart TVs e celulares no {bairro}, Maringá. 
+            Consertamos eletrodomésticos, Smart TVs e celulares {noBairro(bairro)}, Maringá. 
             Técnicos certificados e peças originais.
           </p>
         </div>
@@ -64,7 +65,7 @@ const BairroServicesSection = ({ bairro, bairroSlug }: BairroServicesSectionProp
                 </div>
 
                 <h3 className="text-xl font-heading font-bold text-foreground mb-3">
-                  Conserto de {service.title} no {bairro}
+                  Conserto de {service.title} {noBairro(bairro)}
                 </h3>
 
                 <p className="text-muted-foreground mb-4 leading-relaxed text-[15px]">
@@ -90,7 +91,7 @@ const BairroServicesSection = ({ bairro, bairroSlug }: BairroServicesSectionProp
                     onClick={(e) => e.stopPropagation()}
                   >
                     <a
-                      href={`https://wa.me/5544997398826?text=${encodeURIComponent(`Olá! Preciso de conserto de ${service.title.toLowerCase()} no ${bairro}. Gostaria de solicitar um orçamento.`)}`}
+                      href={`https://wa.me/5544997398826?text=${encodeURIComponent(`Olá! Preciso de conserto de ${service.title.toLowerCase()} ${noBairro(bairro)}. Gostaria de solicitar um orçamento.`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -105,11 +106,11 @@ const BairroServicesSection = ({ bairro, bairroSlug }: BairroServicesSectionProp
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">
-            Não encontrou o serviço que procura no {bairro}? Entre em contato!
+            Não encontrou o serviço que procura {noBairro(bairro)}? Entre em contato!
           </p>
           <Button variant="secondary" size="lg" asChild>
             <a
-              href={`https://wa.me/5544997398826?text=Olá! Moro no ${bairro} e preciso de um serviço não listado no site.`}
+              href={`https://wa.me/5544997398826?text=Olá! Moro ${noBairro(bairro)} e preciso de um serviço não listado no site.`}
               target="_blank"
               rel="noopener noreferrer"
             >

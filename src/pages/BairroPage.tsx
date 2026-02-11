@@ -2,6 +2,7 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { findNeighborhoodBySlug, neighborhoods } from '@/data/neighborhoods';
 import { BUSINESS } from '@/data/business-info';
+import { noBairro } from '@/lib/utils';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
@@ -28,18 +29,18 @@ const BairroPage = () => {
   return (
     <>
       <Helmet>
-        <title>{`Assistência Técnica no ${bairro} - Maringá | Conserto de Eletrodomésticos, TVs e Celulares`}</title>
+        <title>{`Assistência Técnica ${noBairro(bairro)} - Maringá | Conserto de Eletrodomésticos, TVs e Celulares`}</title>
         <meta
           name="description"
-          content={`Assistência técnica especializada no ${bairro}, Maringá-PR. Conserto de geladeiras, máquinas de lavar, fogões, Smart TVs e celulares. Garantia de 90 dias. Orçamento grátis!`}
+          content={`Assistência técnica especializada ${noBairro(bairro)}, Maringá-PR. Conserto de geladeiras, máquinas de lavar, fogões, Smart TVs e celulares. Garantia de 90 dias. Orçamento grátis!`}
         />
         <meta
           name="keywords"
           content={`assistência técnica ${bairro} Maringá, conserto eletrodomésticos ${bairro}, reparo geladeira ${bairro}, conserto TV ${bairro}, conserto celular ${bairro}, técnico ${bairro} Maringá`}
         />
         <link rel="canonical" href={`${BUSINESS.site}/bairros/${neighborhood.slug}`} />
-        <meta property="og:title" content={`Assistência Técnica no ${bairro} - Maringá`} />
-        <meta property="og:description" content={`Conserto de eletrodomésticos, TVs e celulares no ${bairro}, Maringá-PR. Orçamento grátis!`} />
+        <meta property="og:title" content={`Assistência Técnica ${noBairro(bairro)} - Maringá`} />
+        <meta property="og:description" content={`Conserto de eletrodomésticos, TVs e celulares ${noBairro(bairro)}, Maringá-PR. Orçamento grátis!`} />
         <meta property="og:type" content="website" />
       </Helmet>
 

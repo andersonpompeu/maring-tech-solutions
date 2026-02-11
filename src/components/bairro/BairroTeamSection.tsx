@@ -1,4 +1,5 @@
 import { Award, Briefcase } from 'lucide-react';
+import { noBairro } from '@/lib/utils';
 import technician1 from '@/assets/technician-1.jpg';
 import technician2 from '@/assets/technician-2.jpg';
 import technician3 from '@/assets/technician-3.jpg';

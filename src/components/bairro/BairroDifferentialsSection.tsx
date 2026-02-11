@@ -1,4 +1,5 @@
 import { Clock, Shield, Award, MapPin, Zap, ThumbsUp } from 'lucide-react';
+import { noBairro } from '@/lib/utils';
 
 interface BairroDifferentialsSectionProps {
   bairro: string;
@@ -8,13 +9,13 @@ const BairroDifferentialsSection = ({ bairro }: BairroDifferentialsSectionProps)
   const differentials = [
     {
       icon: Clock,
-      title: `Atendimento Rápido no ${bairro}`,
-      description: `Conserto no mesmo dia para a maioria dos serviços no ${bairro}. Agilidade sem perder qualidade.`,
+      title: `Atendimento Rápido ${noBairro(bairro)}`,
+      description: `Conserto no mesmo dia para a maioria dos serviços ${noBairro(bairro)}. Agilidade sem perder qualidade.`,
     },
     {
       icon: Shield,
       title: 'Garantia de 90 Dias',
-      description: `Todos os serviços no ${bairro} possuem garantia estendida. Sua segurança é nossa prioridade.`,
+      description: `Todos os serviços ${noBairro(bairro)} possuem garantia estendida. Sua segurança é nossa prioridade.`,
     },
     {
       icon: Award,
@@ -24,7 +25,7 @@ const BairroDifferentialsSection = ({ bairro }: BairroDifferentialsSectionProps)
     {
       icon: MapPin,
       title: `Atendemos o ${bairro}`,
-      description: `Atendimento local no ${bairro} e toda a região de Maringá com eficiência.`,
+      description: `Atendimento local ${noBairro(bairro)} e toda a região de Maringá com eficiência.`,
     },
     {
       icon: Zap,
@@ -34,7 +35,7 @@ const BairroDifferentialsSection = ({ bairro }: BairroDifferentialsSectionProps)
     {
       icon: ThumbsUp,
       title: 'Orçamento Grátis',
-      description: `Orçamento sem compromisso no ${bairro}. Você só paga se aprovar o serviço.`,
+      description: `Orçamento sem compromisso ${noBairro(bairro)}. Você só paga se aprovar o serviço.`,
     },
   ];
 
@@ -49,10 +50,10 @@ const BairroDifferentialsSection = ({ bairro }: BairroDifferentialsSectionProps)
             Por Que Nos Escolher
           </span>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
-            Nossos Diferenciais no {bairro}
+            Nossos Diferenciais {noBairro(bairro)}
           </h2>
           <p className="text-white/80 text-lg">
-            Somos referência em assistência técnica no {bairro}, Maringá. 
+            Somos referência em assistência técnica {noBairro(bairro)}, Maringá. 
             Confira o que nos torna a melhor escolha para você.
           </p>
         </div>

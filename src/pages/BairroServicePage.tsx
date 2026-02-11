@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { findNeighborhoodBySlug, neighborhoods } from '@/data/neighborhoods';
 import { findBairroServiceBySlug, bairroServices } from '@/data/bairro-services';
 import { BUSINESS } from '@/data/business-info';
+import { noBairro } from '@/lib/utils';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
@@ -31,7 +32,7 @@ const BairroServicePage = () => {
   const bairro = neighborhood.name;
   const Icon = service.icon;
   const faqs = service.faqs(bairro);
-  const pageTitle = `${service.title} no ${bairro} - Maringá | ${BUSINESS.name}`;
+  const pageTitle = `${service.title} ${noBairro(bairro)} - Maringá | ${BUSINESS.name}`;
   const pageDescription = service.description(bairro);
 
   const otherServices = bairroServices.filter(s => s.slug !== service.slug);
@@ -70,7 +71,7 @@ const BairroServicePage = () => {
           {/* Hero */}
           <section className="relative min-h-[50vh] flex items-center overflow-hidden">
             <div className="absolute inset-0">
-              <img src={heroImage} alt={`${service.title} no ${bairro}`} className="w-full h-full object-cover" />
+              <img src={heroImage} alt={`${service.title} ${noBairro(bairro)}`} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/60" />
             </div>
             <div className="container relative z-10 px-4 py-16">
@@ -92,12 +93,12 @@ const BairroServicePage = () => {
                   <span className="text-white/90 text-sm font-medium">{service.shortTitle}</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-4">
-                  {service.title} em Maringá no {bairro}
+                  {service.title} em Maringá {noBairro(bairro)}
                 </h1>
                 <p className="text-lg text-white/80 mb-8 max-w-xl page-description">{pageDescription}</p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button variant="hero" size="xl" asChild>
-                    <a href={`https://wa.me/${BUSINESS.whatsapp}?text=Olá! Preciso de ${service.title.toLowerCase()} no ${bairro}.`} target="_blank" rel="noopener noreferrer">
+                    <a href={`https://wa.me/${BUSINESS.whatsapp}?text=Olá! Preciso de ${service.title.toLowerCase()} ${noBairro(bairro)}.`} target="_blank" rel="noopener noreferrer">
                       Solicitar Orçamento Grátis
                     </a>
                   </Button>
@@ -112,10 +113,10 @@ const BairroServicePage = () => {
               <div className="text-center max-w-2xl mx-auto mb-14">
                 <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-4">Defeitos Comuns</span>
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-                  Problemas que Resolvemos no {bairro}
+                  Problemas que Resolvemos {noBairro(bairro)}
                 </h2>
                 <p className="text-muted-foreground text-lg">
-                  Nossos técnicos estão preparados para diagnosticar e reparar os defeitos mais comuns de {service.shortTitle.toLowerCase()} no {bairro}.
+                  Nossos técnicos estão preparados para diagnosticar e reparar os defeitos mais comuns de {service.shortTitle.toLowerCase()} {noBairro(bairro)}.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -138,7 +139,7 @@ const BairroServicePage = () => {
                 <div>
                   <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-4">Sobre o Serviço</span>
                   <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-                    {service.title} no {bairro}, Maringá
+                    {service.title} {noBairro(bairro)}, Maringá
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-8">{service.longDescription(bairro)}</p>
                   <div className="grid grid-cols-3 gap-4">
@@ -161,7 +162,7 @@ const BairroServicePage = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-heading font-bold text-foreground mb-5">Marcas Atendidas no {bairro}</h3>
+                  <h3 className="text-xl font-heading font-bold text-foreground mb-5">Marcas Atendidas {noBairro(bairro)}</h3>
                   <div className="flex flex-wrap gap-3 mb-8">
                     {service.brands.map((brand) => (
                       <span key={brand} className="px-5 py-2.5 bg-card rounded-full border border-border/80 text-foreground font-medium text-sm hover:border-primary/40 transition-colors">
@@ -177,10 +178,10 @@ const BairroServicePage = () => {
                       <strong className="text-lg font-heading">Orçamento Gratuito</strong>
                     </div>
                     <p className="text-primary-foreground/85 mb-5 leading-relaxed">
-                      Solicite um orçamento sem compromisso para {service.title.toLowerCase()} no {bairro}. Nossos técnicos avaliam e informam o melhor custo-benefício.
+                      Solicite um orçamento sem compromisso para {service.title.toLowerCase()} {noBairro(bairro)}. Nossos técnicos avaliam e informam o melhor custo-benefício.
                     </p>
                     <Button variant="hero-outline" asChild>
-                      <a href={`https://wa.me/${BUSINESS.whatsapp}?text=Olá! Gostaria de orçamento para ${service.title.toLowerCase()} no ${bairro}.`} target="_blank" rel="noopener noreferrer">
+                      <a href={`https://wa.me/${BUSINESS.whatsapp}?text=Olá! Gostaria de orçamento para ${service.title.toLowerCase()} ${noBairro(bairro)}.`} target="_blank" rel="noopener noreferrer">
                         Pedir Orçamento
                       </a>
                     </Button>
@@ -196,7 +197,7 @@ const BairroServicePage = () => {
               <div className="text-center mb-14">
                 <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-4">Dúvidas Frequentes</span>
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-                  Perguntas sobre {service.title} no {bairro}
+                  Perguntas sobre {service.title} {noBairro(bairro)}
                 </h2>
               </div>
               <Accordion type="single" collapsible className="space-y-3">
@@ -220,7 +221,7 @@ const BairroServicePage = () => {
               <div className="text-center max-w-2xl mx-auto mb-14">
                 <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-wider mb-4">Mais Serviços</span>
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-                  Outros Serviços no {bairro}
+                  Outros Serviços {noBairro(bairro)}
                 </h2>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -234,7 +235,7 @@ const BairroServicePage = () => {
                             <SIcon className="w-6 h-6 text-primary-foreground" />
                           </div>
                           <h3 className="text-lg font-heading font-bold text-foreground mb-2">
-                            {s.title} no {bairro}
+                            {s.title} {noBairro(bairro)}
                           </h3>
                           <p className="text-muted-foreground text-sm">{s.description(bairro)}</p>
                         </CardContent>
@@ -263,7 +264,7 @@ const BairroServicePage = () => {
                       to={`/bairros/${n.slug}/${service.slug}`}
                       className="px-4 py-2 bg-card rounded-full border border-border hover:border-primary hover:bg-primary/5 text-foreground text-sm font-medium transition-colors"
                     >
-                      {service.title} no {n.name}
+                      {service.title} {noBairro(n.name)}
                     </Link>
                   ))}
                 </div>
