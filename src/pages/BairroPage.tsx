@@ -29,7 +29,7 @@ const BairroPage = () => {
   return (
     <>
       <Helmet>
-        <title>{`Assistência Técnica ${noBairro(bairro)} - Maringá | Conserto de Eletrodomésticos, TVs e Celulares`}</title>
+        <title>{`Assistência Técnica ${noBairro(bairro)} - Maringá-PR`}</title>
         <meta
           name="description"
           content={`Assistência técnica ${noBairro(bairro)}, Maringá-PR. Conserto de geladeiras, máquinas de lavar, fogões, TVs e celulares. Garantia de 90 dias.`}

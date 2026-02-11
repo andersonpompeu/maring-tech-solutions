@@ -170,7 +170,7 @@ const Geladeira = () => {
   return (
     <>
       <Helmet>
-        <title>Conserto de Geladeira em Maringá | Assistência Técnica Especializada</title>
+        <title>Conserto de Geladeira em Maringá-PR</title>
         <meta name="description" content="Conserto de geladeira em Maringá-PR. Frost Free, Duplex, Inverse e Side by Side. Peças originais, atendimento rápido e garantia." />
         <meta name="keywords" content="conserto geladeira Maringá, assistência técnica geladeira, conserto refrigerador, reparo geladeira perto de mim, técnico geladeira Maringá" />
         <link rel="canonical" href="https://assistenciatecnica.maringa.br/geladeira" />
