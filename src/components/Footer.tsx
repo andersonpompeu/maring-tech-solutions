@@ -1,5 +1,6 @@
-import { Wrench, Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import logo2 from '@/assets/logo2.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,14 +12,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
-                <Wrench className="w-6 h-6 text-secondary-foreground" />
-              </div>
-              <div>
-                <span className="font-heading font-bold text-lg block leading-tight">Assistência Técnica</span>
-                <span className="text-xs opacity-80">Maringá</span>
-              </div>
+            <div className="mb-4">
+              <img 
+                src={logo2} 
+                alt="Assistência Técnica Maringá" 
+                width={300} 
+                height={90} 
+                className="h-14 w-auto object-contain"
+              />
             </div>
             <p className="text-white/80 text-sm leading-relaxed mb-6">
               Assistência técnica premium em Maringá. Especialistas em conserto de 

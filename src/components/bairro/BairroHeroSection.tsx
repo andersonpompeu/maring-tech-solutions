@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Clock, Shield, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { noBairro } from '@/lib/utils';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -18,23 +19,23 @@ interface BairroHeroSectionProps {
 
 const getSlides = (bairro: string) => [
   {
-    title: `Conserto no Mesmo Dia no ${bairro}`,
-    subtitle: `Assistência Técnica Premium no ${bairro}, Maringá`,
-    description: `Eletrodomésticos, Smart TVs e Celulares no ${bairro}. Atendimento rápido com técnicos certificados.`,
+    title: `Conserto no Mesmo Dia ${noBairro(bairro)}`,
+    subtitle: `Assistência Técnica Premium ${noBairro(bairro)}, Maringá`,
+    description: `Eletrodomésticos, Smart TVs e Celulares ${noBairro(bairro)}. Atendimento rápido com técnicos certificados.`,
     icon: Zap,
     highlight: 'Mesmo Dia',
   },
   {
-    title: `Garantia de 90 Dias no ${bairro}`,
+    title: `Garantia de 90 Dias ${noBairro(bairro)}`,
     subtitle: 'Qualidade que você pode confiar',
-    description: `Todos os nossos serviços no ${bairro} possuem garantia estendida. Sua satisfação é nossa prioridade.`,
+    description: `Todos os nossos serviços ${noBairro(bairro)} possuem garantia estendida. Sua satisfação é nossa prioridade.`,
     icon: Shield,
     highlight: '90 Dias',
   },
   {
-    title: `Atendimento Especializado no ${bairro}`,
+    title: `Atendimento Especializado ${noBairro(bairro)}`,
     subtitle: 'Mais de 10 anos de experiência',
-    description: `Equipe técnica qualificada para resolver qualquer problema no ${bairro}. Linha branca e eletrônicos.`,
+    description: `Equipe técnica qualificada para resolver qualquer problema ${noBairro(bairro)}. Linha branca e eletrônicos.`,
     icon: Clock,
     highlight: '10+ Anos',
   },
@@ -60,7 +61,7 @@ const BairroHeroSection = ({ bairro }: BairroHeroSectionProps) => {
   return (
     <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroImage} alt={`Técnico consertando eletrodoméstico no ${bairro}`} className="w-full h-full object-cover" />
+        <img src={heroImage} alt={`Técnico consertando eletrodoméstico ${noBairro(bairro)}`} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent" />
       </div>
@@ -110,7 +111,7 @@ const BairroHeroSection = ({ bairro }: BairroHeroSectionProps) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up stagger-3">
             <Button variant="hero" size="xl" asChild>
               <a
-                href={`https://wa.me/5544997398826?text=Olá! Moro no ${bairro} e gostaria de solicitar um orçamento.`}
+                href={`https://wa.me/5544997398826?text=Olá! Moro ${noBairro(bairro)} e gostaria de solicitar um orçamento.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"

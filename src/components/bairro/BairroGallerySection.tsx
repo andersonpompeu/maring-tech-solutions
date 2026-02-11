@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { X, ZoomIn, ChevronLeft, ChevronRight, Camera } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { noBairro } from '@/lib/utils';
 
 import serviceWashingMachine from '@/assets/gallery/service-washing-machine.jpg';
 import serviceRefrigerator from '@/assets/gallery/service-refrigerator.jpg';
@@ -26,12 +27,12 @@ const BairroGallerySection = ({ bairro }: BairroGallerySectionProps) => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   const galleryItems: GalleryItem[] = [
-    { id: 1, image: serviceWashingMachine, title: `Máquina de Lavar - ${bairro}`, description: `Reparo completo do sistema de drenagem no ${bairro}. Cliente satisfeito com funcionamento perfeito.`, category: 'Eletrodomésticos' },
-    { id: 2, image: serviceRefrigerator, title: `Geladeira Frost Free - ${bairro}`, description: `Diagnóstico e reparo do sistema de refrigeração no ${bairro}. Troca do compressor e recarga de gás.`, category: 'Eletrodomésticos' },
-    { id: 3, image: serviceTv, title: `Smart TV OLED - ${bairro}`, description: `Conserto da placa principal no ${bairro}. Imagem restaurada com qualidade original.`, category: 'Televisores' },
-    { id: 4, image: serviceSmartphone, title: `iPhone - ${bairro}`, description: `Substituição de tela e bateria no ${bairro}. Aparelho devolvido como novo.`, category: 'Celulares' },
-    { id: 5, image: serviceMicrowave, title: `Micro-ondas - ${bairro}`, description: `Reparo do magnetron e painel de controle no ${bairro}.`, category: 'Eletrodomésticos' },
-    { id: 6, image: serviceStove, title: `Fogão Cooktop - ${bairro}`, description: `Manutenção dos queimadores e válvulas de segurança no ${bairro}.`, category: 'Eletrodomésticos' },
+    { id: 1, image: serviceWashingMachine, title: `Máquina de Lavar - ${bairro}`, description: `Reparo completo do sistema de drenagem ${noBairro(bairro)}. Cliente satisfeito com funcionamento perfeito.`, category: 'Eletrodomésticos' },
+    { id: 2, image: serviceRefrigerator, title: `Geladeira Frost Free - ${bairro}`, description: `Diagnóstico e reparo do sistema de refrigeração ${noBairro(bairro)}. Troca do compressor e recarga de gás.`, category: 'Eletrodomésticos' },
+    { id: 3, image: serviceTv, title: `Smart TV OLED - ${bairro}`, description: `Conserto da placa principal ${noBairro(bairro)}. Imagem restaurada com qualidade original.`, category: 'Televisores' },
+    { id: 4, image: serviceSmartphone, title: `iPhone - ${bairro}`, description: `Substituição de tela e bateria ${noBairro(bairro)}. Aparelho devolvido como novo.`, category: 'Celulares' },
+    { id: 5, image: serviceMicrowave, title: `Micro-ondas - ${bairro}`, description: `Reparo do magnetron e painel de controle ${noBairro(bairro)}.`, category: 'Eletrodomésticos' },
+    { id: 6, image: serviceStove, title: `Fogão Cooktop - ${bairro}`, description: `Manutenção dos queimadores e válvulas de segurança ${noBairro(bairro)}.`, category: 'Eletrodomésticos' },
   ];
 
   const navigateImage = (direction: 'prev' | 'next') => {
@@ -52,10 +53,10 @@ const BairroGallerySection = ({ bairro }: BairroGallerySectionProps) => {
             <span className="text-sm font-medium text-primary">Nossos Trabalhos</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-            Serviços Realizados no {bairro}
+            Serviços Realizados {noBairro(bairro)}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Confira alguns dos nossos trabalhos realizados no {bairro} e região. Cada conserto é realizado com dedicação e garantia.
+            Confira alguns dos nossos trabalhos realizados {noBairro(bairro)} e região. Cada conserto é realizado com dedicação e garantia.
           </p>
         </div>
 
@@ -92,10 +93,10 @@ const BairroGallerySection = ({ bairro }: BairroGallerySectionProps) => {
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">
-            Precisa de um serviço semelhante no {bairro}? Entre em contato!
+            Precisa de um serviço semelhante {noBairro(bairro)}? Entre em contato!
           </p>
           <a
-            href={`https://wa.me/5544997398826?text=Olá! Moro no ${bairro} e gostaria de solicitar um orçamento.`}
+            href={`https://wa.me/5544997398826?text=Olá! Moro ${noBairro(bairro)} e gostaria de solicitar um orçamento.`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-whatsapp text-whatsapp-foreground font-semibold px-6 py-3 rounded-full hover:bg-whatsapp/90 transition-all duration-300 hover:-translate-y-1 shadow-whatsapp"
