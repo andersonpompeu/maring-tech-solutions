@@ -81,8 +81,13 @@ const TestimonialsSection = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
             O Que Nossos Clientes Dizem
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-lg mb-4">
             A satisfação dos nossos clientes é nossa maior conquista.
+          </p>
+          <p className="text-muted-foreground">
+            Ao longo dos anos, atendemos centenas de famílias em Maringá e região, sempre priorizando a transparência, 
+            o respeito e a excelência no serviço. Confira o que nossos clientes dizem sobre a experiência com a nossa 
+            assistência técnica de eletrodomésticos, Smart TVs e celulares.
           </p>
         </div>
 

@@ -4,32 +4,32 @@ const differentials = [
   {
     icon: Clock,
     title: 'Atendimento Rápido',
-    description: 'Conserto no mesmo dia para a maioria dos serviços. Agilidade sem perder qualidade.',
+    description: 'Realizamos o conserto no mesmo dia para a maioria dos serviços de eletrodomésticos em Maringá. Nossa logística permite atender com rapidez sem comprometer a qualidade do reparo.',
   },
   {
     icon: Shield,
     title: 'Garantia de 90 Dias',
-    description: 'Todos os serviços possuem garantia estendida. Sua segurança é nossa prioridade.',
+    description: 'Todos os serviços possuem garantia de 90 dias na mão de obra e nas peças substituídas. Caso o problema persista, retornamos sem custo adicional para o cliente.',
   },
   {
     icon: Award,
     title: 'Técnicos Certificados',
-    description: 'Equipe treinada e certificada pelas principais marcas do mercado.',
+    description: 'Nossa equipe é formada por técnicos com certificações das principais fabricantes brasileiras, como Brastemp, Electrolux, Samsung e LG, garantindo diagnósticos precisos.',
   },
   {
     icon: MapPin,
     title: 'Atendimento Local',
-    description: 'Atendemos Maringá e toda a região metropolitana com eficiência.',
+    description: 'Atendemos todos os bairros de Maringá e cidades da região metropolitana, incluindo Sarandi, Paiçandu e Marialva, com deslocamento rápido e sem taxa extra.',
   },
   {
     icon: Zap,
     title: 'Peças Originais',
-    description: 'Trabalhamos apenas com peças originais e de primeira qualidade.',
+    description: 'Utilizamos exclusivamente peças originais de distribuidores autorizados, assegurando o desempenho correto e a durabilidade do equipamento após o conserto.',
   },
   {
     icon: ThumbsUp,
     title: 'Orçamento Grátis',
-    description: 'Orçamento sem compromisso. Você só paga se aprovar o serviço.',
+    description: 'Oferecemos orçamento gratuito e sem compromisso. Nosso técnico avalia o equipamento, informa o valor do reparo e você decide se aprova o serviço.',
   },
 ];
 
@@ -49,9 +49,14 @@ const DifferentialsSection = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
             Nossos Diferenciais
           </h2>
-          <p className="text-white/80 text-lg">
+          <p className="text-white/80 text-lg mb-4">
             Somos referência em <strong className="text-white">assistência técnica em Maringá</strong>. 
             Confira o que nos torna a melhor escolha para você.
+          </p>
+          <p className="text-white/70">
+            Com mais de 500 clientes atendidos e avaliação média de 4.9 estrelas, nos destacamos pela combinação de agilidade, 
+            qualidade técnica e atendimento humanizado. Nosso compromisso é resolver o problema do seu equipamento no menor tempo 
+            possível, com transparência no orçamento e respeito ao seu bolso.
           </p>
         </div>
 

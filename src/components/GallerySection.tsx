@@ -98,8 +98,13 @@ const GallerySection = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
             Galeria de Serviços Realizados
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">
             Confira alguns dos nossos trabalhos recentes. Cada conserto é realizado com dedicação e garantia de qualidade.
+          </p>
+          <p className="text-muted-foreground max-w-3xl mx-auto">
+            Nosso processo de trabalho começa com um diagnóstico detalhado do equipamento, seguido pela identificação das peças 
+            necessárias e execução do reparo com ferramentas profissionais. Documentamos cada etapa para que você acompanhe a 
+            evolução do serviço e tenha total transparência sobre o que foi feito no seu aparelho.
           </p>
         </div>
 

@@ -55,9 +55,14 @@ const ServicesSection = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
             Assistência Técnica Especializada
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-lg mb-4">
             Consertamos <strong>eletrodomésticos</strong>, <strong>Smart TVs</strong> e <strong>celulares</strong> em <strong>Maringá</strong> e região. 
             Técnicos certificados e peças originais.
+          </p>
+          <p className="text-muted-foreground">
+            Nossa assistência técnica em Maringá oferece serviços completos de reparo e manutenção para aparelhos das principais marcas do mercado. 
+            Cada equipamento passa por um diagnóstico detalhado antes do conserto, garantindo que o problema seja resolvido de forma definitiva. 
+            Utilizamos ferramentas profissionais e peças originais em todos os reparos, com garantia de 90 dias na mão de obra e nos componentes substituídos.
           </p>
         </div>
 

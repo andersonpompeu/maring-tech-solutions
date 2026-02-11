@@ -39,9 +39,14 @@ const TeamSection = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
             Nossos Técnicos Especializados
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-lg mb-4">
             Conheça os profissionais que fazem a diferença no conserto do seu equipamento. 
             Equipe treinada e certificada.
+          </p>
+          <p className="text-muted-foreground">
+            Nossos técnicos passam por treinamentos periódicos junto às principais fabricantes de eletrodomésticos e eletrônicos 
+            do Brasil. Com especializações em linha branca, eletrônicos e smartphones, cada profissional é referência na sua área 
+            de atuação, garantindo que seu equipamento será reparado por quem realmente entende do assunto.
           </p>
         </div>
 
