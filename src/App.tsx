@@ -21,6 +21,7 @@ import Fogao from "./pages/Fogao";
 import FogaoServicePage from "./pages/FogaoServicePage";
 import Microondas from "./pages/Microondas";
 import MicroondasServicePage from "./pages/MicroondasServicePage";
+import MaquinaDeLavarServicePage from "./pages/MaquinaDeLavarServicePage";
 import ServicoPorBairro from "./pages/ServicoPorBairro";
 import CookieConsent from "./components/CookieConsent";
 import ScrollToTop from "./components/ScrollToTop";
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/eletrodomesticos" element={<Eletrodomesticos />} />
             <Route path="/maquina-de-lavar" element={<MaquinaDeLavar />} />
+            <Route path="/maquina-de-lavar/:slug" element={<MaquinaDeLavarServicePage />} />
             <Route path="/geladeira" element={<Geladeira />} />
             <Route path="/geladeira/:slug" element={<GeladeiraServicePage />} />
             <Route path="/fogao" element={<Fogao />} />

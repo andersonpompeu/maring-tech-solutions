@@ -36,31 +36,37 @@ const heroServices = [
     title: 'Manutenção de Lava e Seca',
     description: 'Problemas na lavagem ou secagem? Fazemos manutenção com peças originais.',
     icon: Settings,
+    slug: 'manutencao-de-lava-e-seca',
   },
   {
     title: 'Manutenção de Máquina de Lavar',
     description: 'Lavadora fazendo barulho? Realizamos diagnóstico e conserto imediato.',
     icon: Wrench,
+    slug: 'manutencao-de-maquina-de-lavar',
   },
   {
     title: 'Conserto de Painel Eletrônico',
     description: 'Painel sem resposta? Reparamos placas eletrônicas no mesmo dia em Maringá.',
     icon: Zap,
+    slug: 'conserto-de-painel-eletronico-maquina-de-lavar',
   },
   {
     title: 'Assistência Técnica',
     description: 'Atendimento em Maringá com reparos rápidos e garantia no serviço prestado.',
     icon: Shield,
+    slug: 'assistencia-tecnica-maquina-de-lavar',
   },
   {
     title: 'Conserto de Secadora',
     description: 'Secadora desregulada? Trocamos peças e regulamos o sistema na hora.',
     icon: Droplets,
+    slug: 'conserto-de-secadora',
   },
   {
     title: 'Problema na Centrifugação',
     description: 'Máquina não gira, faz ruído ou acumula água? Resolvemos imediatamente.',
     icon: AlertTriangle,
+    slug: 'problema-na-centrifugacao',
   },
 ];
 
@@ -307,15 +313,13 @@ const MaquinaDeLavar = () => {
                     </div>
                     <h3 className="text-lg font-heading font-semibold text-foreground mb-2">{service.title}</h3>
                     <p className="text-muted-foreground text-sm mb-4">{service.description}</p>
-                    <a
-                      href="https://wa.me/5544997398826?text=Olá! Gostaria de saber mais sobre o serviço."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={`Solicitar orçamento para ${service.title} em Maringá`}
+                    <Link
+                      to={`/maquina-de-lavar/${service.slug}`}
+                      title={`Saiba mais sobre ${service.title} em Maringá`}
                       className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors inline-flex items-center gap-1"
                     >
                       Saiba Mais <ChevronRight className="w-4 h-4" />
-                    </a>
+                    </Link>
                   </article>
                 ))}
               </div>
