@@ -9,7 +9,7 @@ interface SEOHeadProps {
 
 const SEOHead = ({
   title = 'Assistência Técnica Maringá - Conserto de Eletrodomésticos, TVs e Celulares',
-  description = 'Assistência técnica especializada em Maringá-PR. Conserto de máquinas de lavar, geladeiras, fogões, Smart TVs e celulares. Garantia de 90 dias. Orçamento grátis pelo WhatsApp!',
+  description = 'Assistência Técnica de Eletrodoméstico em Maringá. Conserto rápido de geladeira, máquina de lavar, fogão e micro-ondas. Atendimento ágil!',
   keywords = 'conserto de celular em Maringá, assistência técnica geladeira Maringá, conserto de TV Maringá, assistência técnica linha branca PR, conserto máquina de lavar Maringá, reparo de eletrodomésticos, assistência técnica Samsung, LG, Brastemp, Electrolux',
   canonical = 'https://assistenciatecnica.maringa.br',
 }: SEOHeadProps) => {
