@@ -159,4 +159,148 @@ export const articles: Article[] = [
 <p>A <strong>manutenção elétrica preventiva</strong> é o investimento mais inteligente que um proprietário de imóvel em Maringá pode fazer. Ela combina economia, segurança e tranquilidade em um único pacote. Não espere um problema acontecer para agir. Agende uma inspeção elétrica preventiva e garanta que sua residência está protegida e funcionando com máxima eficiência.</p>
     `,
   },
+  {
+    slug: 'conserto-de-geladeira-maringa',
+    title: 'Conserto de Geladeira em Maringá: Diagnóstico Rápido e Reparo Garantido',
+    metaDescription: 'Conserto de geladeira em Maringá com diagnóstico rápido. Reparo de todas as marcas com peças originais e garantia de serviço.',
+    keywords: 'conserto de geladeira, conserto geladeira Maringá, reparo geladeira, assistência técnica geladeira Maringá',
+    heading: 'Conserto de Geladeira em Maringá: Diagnóstico Rápido e Reparo Garantido',
+    content: `
+<p>A geladeira é, sem dúvida, o eletrodoméstico mais essencial de qualquer residência. Quando ela apresenta defeito, a urgência em resolver o problema é imediata. Em <strong>Maringá</strong>, contar com um serviço de <strong>conserto de geladeira</strong> ágil e confiável faz toda a diferença para evitar desperdício de alimentos e transtornos no dia a dia.</p>
+
+<h2>Principais Defeitos em Geladeiras</h2>
+
+<p>Ao longo dos anos de uso, diversos problemas podem surgir em uma geladeira. Conhecer os sintomas mais comuns ajuda a identificar a necessidade de reparo antes que o problema se agrave e gere custos maiores.</p>
+
+<h3>Geladeira Não Gela ou Gela Pouco</h3>
+<p>Esse é o defeito mais relatado pelos moradores de Maringá. As causas podem ser variadas: gás refrigerante insuficiente, compressor com defeito, termostato desregulado ou borracha de vedação desgastada. Um técnico especializado em <strong>conserto de geladeira</strong> consegue diagnosticar a causa exata e realizar o reparo adequado, devolvendo o desempenho original do aparelho.</p>
+
+<h3>Geladeira Fazendo Barulho Excessivo</h3>
+<p>Ruídos anormais como estalos, zumbidos ou vibrações indicam problemas mecânicos. Pode ser o ventilador interno, o motor do compressor ou até mesmo um nivelamento inadequado do aparelho. Ignorar esses sinais pode levar a falhas mais graves e custosas.</p>
+
+<h3>Formação Excessiva de Gelo</h3>
+<p>A formação de gelo no freezer ou nas paredes internas pode indicar defeito no sistema de degelo automático, problema no sensor de temperatura ou na resistência de degelo. Esse problema afeta diretamente a eficiência energética do aparelho e aumenta o consumo de eletricidade.</p>
+
+<h3>Vazamento de Água</h3>
+<p>Poças de água embaixo ou dentro da geladeira são sinais de dreno entupido, bandeja de evaporação quebrada ou problemas no sistema de degelo. Além de ser inconveniente, a umidade excessiva pode danificar o piso e criar ambiente propício para mofo.</p>
+
+<h2>Por Que Escolher um Técnico Especializado?</h2>
+
+<p>O <a href="https://consertodegeladeira.maringa.br/" rel="dofollow" title="Conserto de Geladeira em Maringá">conserto de geladeira em Maringá</a> deve ser realizado por profissionais qualificados que conhecem as especificidades de cada marca e modelo. Técnicos especializados possuem ferramentas adequadas, acesso a peças originais e conhecimento das normas de segurança para manipulação de gases refrigerantes.</p>
+
+<h2>Marcas Mais Atendidas em Maringá</h2>
+
+<p>Os serviços de conserto atendem todas as principais marcas do mercado: <strong>Brastemp</strong>, <strong>Consul</strong>, <strong>Electrolux</strong>, <strong>Samsung</strong>, <strong>LG</strong>, <strong>Panasonic</strong> e <strong>Midea</strong>. Cada fabricante possui características técnicas distintas, e um bom técnico conhece as particularidades de cada uma para oferecer um reparo preciso e duradouro.</p>
+
+<h2>Manutenção Preventiva da Geladeira</h2>
+
+<p>Além do conserto quando há defeito, a manutenção preventiva é essencial para prolongar a vida útil da geladeira. Algumas práticas recomendadas incluem: limpar o condensador traseiro a cada seis meses, verificar periodicamente as borrachas de vedação, não sobrecarregar o interior do aparelho, manter distância adequada da parede para ventilação e evitar colocar alimentos quentes diretamente dentro da geladeira.</p>
+
+<h2>Quando Vale a Pena Consertar?</h2>
+
+<p>Uma dúvida comum é se vale mais a pena consertar ou comprar uma geladeira nova. Como regra geral, se o custo do reparo for inferior a 40% do valor de um aparelho novo e a geladeira tiver menos de 10 anos de uso, o conserto é a opção mais econômica e sustentável. Geladeiras mais antigas, além de possivelmente utilizarem gases refrigerantes menos eficientes, tendem a consumir mais energia.</p>
+
+<h2>Conclusão</h2>
+
+<p>O <strong>conserto de geladeira em Maringá</strong> é um serviço essencial que deve ser tratado com prioridade. Ao primeiro sinal de defeito, procure um técnico especializado para evitar que o problema se agrave. Com diagnóstico rápido, peças de qualidade e garantia de serviço, sua geladeira volta a funcionar perfeitamente, preservando seus alimentos e seu bolso.</p>
+    `,
+  },
+  {
+    slug: 'conserto-maquina-de-lavar-samsung-maringa',
+    title: 'Conserto de Máquina de Lavar Samsung em Maringá: Especialistas na Marca',
+    metaDescription: 'Conserto de máquina de lavar Samsung em Maringá. Técnicos especializados na marca com peças originais e atendimento rápido.',
+    keywords: 'conserto de máquina de lavar Samsung, máquina de lavar Samsung Maringá, reparo lavadora Samsung, assistência Samsung Maringá',
+    heading: 'Conserto de Máquina de Lavar Samsung em Maringá: Especialistas na Marca',
+    content: `
+<p>As máquinas de lavar <strong>Samsung</strong> estão entre as mais vendidas em <strong>Maringá</strong> graças à sua tecnologia avançada e eficiência. No entanto, como qualquer equipamento eletrônico, elas podem apresentar defeitos ao longo do tempo. Contar com um serviço especializado de <strong>conserto de máquina de lavar Samsung</strong> é fundamental para garantir um reparo correto e duradouro.</p>
+
+<h2>Defeitos Mais Comuns nas Lavadoras Samsung</h2>
+
+<p>As máquinas de lavar Samsung possuem tecnologias exclusivas como o Wobble e o Eco Bubble, que exigem conhecimento técnico específico para diagnóstico e reparo. Veja os problemas mais frequentes:</p>
+
+<h3>Erro de Drenagem (Códigos 5E ou SE)</h3>
+<p>Esse código de erro indica que a máquina não está conseguindo drenar a água. As causas mais comuns são mangueira de drenagem obstruída, bomba de drenagem com defeito ou filtro de detritos entupido. Um técnico especializado em máquinas Samsung sabe exatamente onde localizar e resolver cada uma dessas falhas.</p>
+
+<h3>Máquina Não Centrifuga</h3>
+<p>Quando a lavadora Samsung não realiza o ciclo de centrifugação, o problema pode estar no sensor de carga, no motor, na placa eletrônica ou no amortecedor. A centrifugação inadequada resulta em roupas encharcadas e ciclos de lavagem incompletos, afetando a rotina doméstica.</p>
+
+<h3>Vazamento de Água</h3>
+<p>Vazamentos podem ocorrer por desgaste das mangueiras de entrada ou saída, problemas na bomba ou defeito na vedação da porta (em modelos front load). As máquinas Samsung de abertura frontal são especialmente sensíveis a problemas na borracha do mangote, que pode acumular mofo e perder a capacidade de vedação.</p>
+
+<h3>Vibração e Barulho Excessivos</h3>
+<p>Vibrações anormais durante o funcionamento podem indicar amortecedores desgastados, rolamentos com defeito ou desnivelamento do aparelho. Nas lavadoras Samsung, o sistema de suspensão é projetado para absorver impactos, mas com o uso contínuo pode perder eficiência.</p>
+
+<h3>Placa Eletrônica com Defeito</h3>
+<p>As máquinas Samsung são equipadas com placas eletrônicas sofisticadas que controlam todos os ciclos de lavagem. Picos de energia, umidade excessiva ou desgaste natural podem causar falhas na placa, resultando em códigos de erro diversos ou mau funcionamento geral.</p>
+
+<h2>Por Que Procurar um Especialista Samsung?</h2>
+
+<p>O <a href="https://consertodegeladeira.maringa.br/" rel="dofollow" title="Conserto de Eletrodomésticos em Maringá">conserto de máquina de lavar Samsung em Maringá</a> exige profissionais que conheçam as particularidades da marca. A Samsung utiliza tecnologias proprietárias e componentes específicos que demandam treinamento especializado para manuseio correto. Um técnico genérico pode até resolver o problema temporariamente, mas sem o conhecimento adequado, corre o risco de causar danos adicionais.</p>
+
+<h2>Peças Originais: Garantia de Qualidade</h2>
+
+<p>Utilizar peças originais ou homologadas pela Samsung é essencial para manter a garantia e a performance da lavadora. Peças paralelas podem parecer mais baratas, mas frequentemente possuem vida útil inferior e podem comprometer o funcionamento de outros componentes da máquina.</p>
+
+<h2>Modelos Samsung Mais Atendidos em Maringá</h2>
+
+<p>Os modelos mais comuns nos domicílios de Maringá incluem as linhas <strong>WW11K</strong>, <strong>WD11M</strong> (lava e seca), <strong>WF431</strong> e as lavadoras de abertura superior da linha <strong>WA13T</strong>. Cada linha possui características técnicas distintas que exigem abordagens específicas de diagnóstico e reparo.</p>
+
+<h2>Dicas de Manutenção para Lavadoras Samsung</h2>
+
+<p>Para prolongar a vida útil da sua máquina de lavar Samsung, siga estas recomendações: utilize a quantidade correta de sabão (excesso gera espuma que danifica componentes), execute o ciclo de limpeza do tambor mensalmente, deixe a porta aberta após o uso para evitar mofo, limpe o filtro de detritos regularmente e utilize um estabilizador de tensão para proteger a placa eletrônica.</p>
+
+<h2>Conclusão</h2>
+
+<p>O <strong>conserto de máquina de lavar Samsung em Maringá</strong> deve ser confiado a profissionais que realmente conhecem a marca. Com diagnóstico preciso, peças originais e garantia de serviço, sua lavadora volta a funcionar com toda a tecnologia e eficiência que a Samsung oferece. Não arrisque o funcionamento do seu equipamento com técnicos sem experiência na marca.</p>
+    `,
+  },
+  {
+    slug: 'conserto-de-microondas-maringa',
+    title: 'Conserto de Micro-ondas em Maringá: Reparo Rápido e Seguro',
+    metaDescription: 'Conserto de micro-ondas em Maringá. Reparo de todas as marcas com segurança, agilidade e garantia. Atendimento no mesmo dia.',
+    keywords: 'conserto de micro-ondas, conserto microondas Maringá, reparo micro-ondas, assistência técnica microondas Maringá',
+    heading: 'Conserto de Micro-ondas em Maringá: Reparo Rápido e Seguro',
+    content: `
+<p>O <strong>micro-ondas</strong> se tornou um dos eletrodomésticos mais utilizados nas residências de <strong>Maringá</strong>. Presente em mais de 90% dos lares brasileiros, ele é essencial para aquecer refeições, descongelar alimentos e preparar receitas rápidas. Quando apresenta defeito, o impacto na rotina da família é imediato. Contar com um serviço de <strong>conserto de micro-ondas</strong> confiável é fundamental.</p>
+
+<h2>Defeitos Mais Frequentes em Micro-ondas</h2>
+
+<p>Apesar de parecer um aparelho simples, o micro-ondas possui componentes de alta tensão que exigem conhecimento técnico específico para reparo. Conheça os problemas mais comuns:</p>
+
+<h3>Micro-ondas Não Aquece</h3>
+<p>Esse é o defeito mais reportado. O aparelho liga, o prato gira, a luz acende, mas o alimento não aquece. A causa mais provável é o <strong>magnetron</strong> queimado, componente responsável por gerar as micro-ondas que aquecem os alimentos. Outras possibilidades incluem diodo de alta tensão defeituoso ou capacitor danificado.</p>
+
+<h3>Prato Giratório Não Funciona</h3>
+<p>Quando o prato não gira, o aquecimento fica irregular, com partes do alimento quentes e outras frias. O problema geralmente está no motor do prato, no acoplamento ou no rolamento de suporte. É um reparo relativamente simples quando feito por um técnico qualificado.</p>
+
+<h3>Faíscas Dentro do Aparelho</h3>
+<p>Faíscas no interior do micro-ondas são um sinal de alerta sério. Podem ser causadas por mica da guia de ondas danificada, resíduos de alimentos carbonizados ou utensílios metálicos inadvertidamente colocados dentro do aparelho. Continuar usando o micro-ondas nessa condição pode danificar o magnetron e outros componentes.</p>
+
+<h3>Painel ou Teclado Não Responde</h3>
+<p>Problemas no painel de controle podem ser causados por membrana do teclado desgastada, placa de controle com defeito ou mau contato na fiação. Em alguns casos, a troca da membrana resolve o problema; em outros, é necessário substituir toda a placa eletrônica.</p>
+
+<h3>Porta Não Fecha Corretamente</h3>
+<p>O micro-ondas possui travas de segurança que impedem o funcionamento com a porta aberta. Se as travas ou dobradiças estiverem danificadas, o aparelho não liga. Esse é um mecanismo de proteção fundamental que não deve ser improvisado ou burlado.</p>
+
+<h2>Segurança no Conserto de Micro-ondas</h2>
+
+<p>O <a href="https://consertodegeladeira.maringa.br/" rel="dofollow" title="Conserto de Eletrodomésticos em Maringá">conserto de micro-ondas em Maringá</a> deve ser realizado exclusivamente por técnicos qualificados. O aparelho trabalha com tensões extremamente altas — o capacitor pode armazenar cargas letais mesmo com o aparelho desligado da tomada. Tentar consertar um micro-ondas sem o conhecimento adequado representa risco real de choque elétrico fatal.</p>
+
+<h2>Marcas Atendidas em Maringá</h2>
+
+<p>Os serviços de conserto atendem todas as marcas presentes no mercado: <strong>Electrolux</strong>, <strong>Panasonic</strong>, <strong>LG</strong>, <strong>Samsung</strong>, <strong>Brastemp</strong>, <strong>Consul</strong>, <strong>Midea</strong> e <strong>Philco</strong>. Cada marca possui características construtivas próprias, e o conhecimento específico de cada uma garante um diagnóstico mais preciso e um reparo mais eficiente.</p>
+
+<h2>Consertar ou Comprar Novo?</h2>
+
+<p>A decisão entre consertar ou substituir o micro-ondas depende de alguns fatores. Se o aparelho tem menos de cinco anos de uso e o custo do reparo não ultrapassa 35% do valor de um modelo novo equivalente, o conserto é vantajoso. Para aparelhos mais antigos, especialmente quando o problema está no magnetron, pode ser mais econômico investir em um modelo novo com melhor eficiência energética.</p>
+
+<h2>Cuidados para Prolongar a Vida Útil</h2>
+
+<p>Algumas práticas simples ajudam a manter o micro-ondas funcionando por mais tempo: limpe o interior regularmente para evitar acúmulo de resíduos, nunca ligue o aparelho vazio, não utilize recipientes metálicos, verifique periodicamente a vedação da porta, evite bater a porta com força e utilize protetor de surto na tomada para proteger contra picos de energia.</p>
+
+<h2>Conclusão</h2>
+
+<p>O <strong>conserto de micro-ondas em Maringá</strong> é um serviço que exige técnicos capacitados e atenção redobrada à segurança. Ao primeiro sinal de defeito, procure assistência especializada. Com diagnóstico rápido e peças de qualidade, seu micro-ondas volta a funcionar com segurança e eficiência, sem comprometer a rotina da sua família.</p>
+    `,
+  },
 ];
