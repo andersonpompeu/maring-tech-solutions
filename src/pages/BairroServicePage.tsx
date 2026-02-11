@@ -32,7 +32,7 @@ const BairroServicePage = () => {
   const bairro = neighborhood.name;
   const Icon = service.icon;
   const faqs = service.faqs(bairro);
-  const pageTitle = `${service.title} ${noBairro(bairro)} - Maringá | ${BUSINESS.name}`;
+  const pageTitle = `${service.title} ${noBairro(bairro)} | Maringá`;
   const fullDescription = service.description(bairro);
   const pageDescription = fullDescription.length > 155 ? fullDescription.substring(0, 152) + '...' : fullDescription;
 
