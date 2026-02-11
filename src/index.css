@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
   :root {
@@ -45,18 +45,18 @@
     --success-foreground: 0 0% 100%;
     --whatsapp: 142 70% 45%;
     --whatsapp-foreground: 0 0% 100%;
-    
+
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(215 80% 25%) 0%, hsl(215 70% 35%) 50%, hsl(200 85% 45%) 100%);
     --gradient-cta: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(30 90% 48%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
-    
+
     /* Shadows */
     --shadow-sm: 0 2px 8px hsl(215 25% 15% / 0.06);
     --shadow-md: 0 4px 16px hsl(215 25% 15% / 0.1);
     --shadow-lg: 0 8px 32px hsl(215 25% 15% / 0.15);
     --shadow-glow: 0 0 40px hsl(25 95% 53% / 0.3);
-    
+
     /* Fonts */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -99,7 +99,7 @@
     --border: 215 20% 22%;
     --input: 215 20% 22%;
     --ring: 200 85% 55%;
-    
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -125,7 +125,12 @@
     font-family: var(--font-body);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     @apply font-bold tracking-tight;
   }
@@ -135,7 +140,7 @@
   .font-heading {
     font-family: var(--font-heading);
   }
-  
+
   .font-body {
     font-family: var(--font-body);
   }
@@ -173,28 +178,61 @@
 
 /* Animations */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px hsl(142 70% 45% / 0.4); }
-  50% { box-shadow: 0 0 35px hsl(142 70% 45% / 0.7); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsl(142 70% 45% / 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 35px hsl(142 70% 45% / 0.7);
+  }
 }
 
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scale-in {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .animate-float {
@@ -218,9 +256,26 @@
 }
 
 /* Staggered animations */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
-.stagger-6 { animation-delay: 0.6s; }
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+
+.stagger-5 {
+  animation-delay: 0.5s;
+}
+
+.stagger-6 {
+  animation-delay: 0.6s;
+}

@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
+import StructuredData from '@/components/StructuredData';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
@@ -69,20 +70,14 @@ const FogaoServicePage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{service.metaTitle}</title>
-        <meta name="description" content={service.metaDescription} />
-        <meta name="keywords" content={service.metaKeywords} />
-        <link rel="canonical" href={`https://assistenciatecnica.maringa.br/fogao/${service.slug}`} />
-        <meta property="og:title" content={service.metaTitle} />
-        <meta property="og:description" content={service.metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="pt_BR" />
-        <meta name="geo.region" content="BR-PR" />
-        <meta name="geo.placename" content="Maringá" />
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      <SEOHead
+        title={service.metaTitle}
+        description={service.metaDescription}
+        keywords={service.metaKeywords}
+        canonical={`https://assistenciatecnica.maringa.br/fogao/${service.slug}`}
+      />
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={faqSchema} />
 
       <div className="min-h-screen bg-background">
         <Header />

@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
 import { findNeighborhoodBySlug, neighborhoods } from '@/data/neighborhoods';
 import { findBairroServiceBySlug, bairroServices } from '@/data/bairro-services';
 import { BUSINESS } from '@/data/business-info';
@@ -43,15 +43,12 @@ const BairroServicePage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content={`${service.title.toLowerCase()} ${bairro}, conserto ${service.shortTitle.toLowerCase()} ${bairro} Maringá, assistência técnica ${bairro}`} />
-        <link rel="canonical" href={`${BUSINESS.site}/bairros/${neighborhood.slug}/${service.slug}`} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <SEOHead
+        title={pageTitle}
+        description={pageDescription}
+        keywords={`${service.title.toLowerCase()} ${bairro}, conserto ${service.shortTitle.toLowerCase()} ${bairro} Maringá, assistência técnica ${bairro}`}
+        canonical={`${BUSINESS.site}/bairros/${neighborhood.slug}/${service.slug}`}
+      />
 
       <BairroSchemaGenerator
         neighborhood={neighborhood}

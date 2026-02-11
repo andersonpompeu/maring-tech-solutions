@@ -1,23 +1,24 @@
 import { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from './SEOHead';
+import StructuredData from './StructuredData';
 import { Link } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import FloatingButtons from './FloatingButtons';
 import SEOTopicsSection, { type SEOTopic } from './SEOTopicsSection';
 import { Button } from './ui/button';
-import { 
-  Accordion, 
-  AccordionContent, 
-  AccordionItem, 
-  AccordionTrigger 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
 } from './ui/accordion';
-import { 
-  MessageCircle, 
-  Phone, 
-  CheckCircle2, 
-  Clock, 
-  Shield, 
+import {
+  MessageCircle,
+  Phone,
+  CheckCircle2,
+  Clock,
+  Shield,
   Award,
   ChevronRight,
   MapPin,
@@ -171,40 +172,15 @@ const ServicePageLayout = ({
 
   return (
     <>
-      <Helmet>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={keywords} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={canonical} />
-
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:locale" content="pt_BR" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metaTitle} />
-        <meta name="twitter:description" content={metaDescription} />
-
-        {/* Geo Tags */}
-        <meta name="geo.region" content="BR-PR" />
-        <meta name="geo.placename" content="Maringá" />
-
-        {/* Schemas */}
-        <script type="application/ld+json">
-          {JSON.stringify(serviceSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title={metaTitle}
+        description={metaDescription}
+        keywords={keywords}
+        canonical={canonical}
+      />
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={faqSchema} />
+      <StructuredData data={breadcrumbSchema} />
 
       <div className="min-h-screen bg-background">
         <Header />
@@ -214,8 +190,8 @@ const ServicePageLayout = ({
           <div className="bg-muted/50 border-b border-border/50">
             <div className="container mx-auto px-4 py-3">
               <nav className="flex items-center gap-2 text-sm">
-                <Link 
-                  to="/" 
+                <Link
+                  to="/"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Início
@@ -250,9 +226,9 @@ const ServicePageLayout = ({
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Button 
-                    variant="hero" 
-                    size="lg" 
+                  <Button
+                    variant="hero"
+                    size="lg"
                     className="rounded-full shadow-lg hover:shadow-secondary/30 text-base"
                     asChild
                   >
@@ -265,9 +241,9 @@ const ServicePageLayout = ({
                       Orçamento pelo WhatsApp
                     </a>
                   </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
+                  <Button
+                    variant="outline"
+                    size="lg"
                     className="rounded-full bg-white/10 border-white/30 text-white hover:bg-white/20"
                     asChild
                   >
@@ -314,7 +290,7 @@ const ServicePageLayout = ({
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {services.map((service, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="bg-card rounded-2xl p-6 shadow-card hover-lift border border-border/50"
                   >
@@ -330,7 +306,7 @@ const ServicePageLayout = ({
                     {service.brands && (
                       <div className="flex flex-wrap gap-2">
                         {service.brands.map((brand, i) => (
-                          <span 
+                          <span
                             key={i}
                             className="text-xs bg-muted px-2 py-1 rounded-full text-muted-foreground"
                           >
@@ -345,9 +321,9 @@ const ServicePageLayout = ({
 
               {/* CTA */}
               <div className="text-center mt-12">
-                <Button 
-                  variant="hero" 
-                  size="lg" 
+                <Button
+                  variant="hero"
+                  size="lg"
                   className="rounded-full"
                   asChild
                 >
@@ -391,7 +367,7 @@ const ServicePageLayout = ({
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 {testimonials.map((testimonial, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="bg-card rounded-2xl p-6 shadow-card border border-border/50 relative"
                   >
@@ -405,9 +381,9 @@ const ServicePageLayout = ({
                     {/* Rating */}
                     <div className="flex items-center gap-1 mt-4 mb-4">
                       {[...Array(5)].map((_, i) => (
-                        <Star 
-                          key={i} 
-                          className={`w-4 h-4 ${i < testimonial.rating ? 'text-secondary fill-secondary' : 'text-muted-foreground'}`} 
+                        <Star
+                          key={i}
+                          className={`w-4 h-4 ${i < testimonial.rating ? 'text-secondary fill-secondary' : 'text-muted-foreground'}`}
                         />
                       ))}
                     </div>
@@ -487,8 +463,8 @@ const ServicePageLayout = ({
 
                 <Accordion type="single" collapsible className="space-y-4">
                   {faqs.map((faq, index) => (
-                    <AccordionItem 
-                      key={index} 
+                    <AccordionItem
+                      key={index}
                       value={`faq-${index}`}
                       className="bg-card rounded-xl border border-border/50 px-6 shadow-sm"
                     >
@@ -510,9 +486,9 @@ const ServicePageLayout = ({
                   <p className="text-primary-foreground/90 mb-6">
                     Entre em contato conosco pelo WhatsApp e tire todas as suas dúvidas.
                   </p>
-                  <Button 
-                    variant="hero" 
-                    size="lg" 
+                  <Button
+                    variant="hero"
+                    size="lg"
                     className="rounded-full"
                     asChild
                   >

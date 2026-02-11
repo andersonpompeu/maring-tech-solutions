@@ -1,4 +1,5 @@
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
+import StructuredData from '@/components/StructuredData';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import { fogaoServices } from '@/data/fogao-services';
@@ -161,20 +162,14 @@ const Fogao = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Conserto de Fogão em Maringá-PR</title>
-        <meta name="description" content="Conserto de fogão em Maringá-PR. Fogões a gás, cooktops, fornos elétricos e embutidos. Peças originais e garantia de 90 dias." />
-        <meta name="keywords" content="conserto fogão Maringá, assistência técnica fogão, conserto cooktop, reparo forno, técnico fogão Maringá" />
-        <link rel="canonical" href="https://assistenciatecnica.maringa.br/fogao" />
-        <meta property="og:title" content="Conserto de Fogão em Maringá" />
-        <meta property="og:description" content="Assistência técnica especializada em fogões em Maringá-PR. Peças originais e garantia." />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="pt_BR" />
-        <meta name="geo.region" content="BR-PR" />
-        <meta name="geo.placename" content="Maringá" />
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      <SEOHead
+        title="Conserto de Fogão em Maringá-PR"
+        description="Conserto de fogão em Maringá-PR. Fogões a gás, cooktops, fornos elétricos e embutidos. Peças originais e garantia de 90 dias."
+        keywords="conserto fogão Maringá, assistência técnica fogão, conserto cooktop, reparo forno, técnico fogão Maringá"
+        canonical="https://assistenciatecnica.maringa.br/fogao"
+      />
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={faqSchema} />
 
       <div className="min-h-screen bg-background">
         <Header />

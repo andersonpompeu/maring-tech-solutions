@@ -1,4 +1,5 @@
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
+import StructuredData from '@/components/StructuredData';
 import { MapPin, Phone, MessageCircle, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -42,21 +43,13 @@ const Bairros = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Bairros Atendidos em Maringá | Assistência Técnica</title>
-        <meta 
-          name="description" 
-          content="Atendemos todos os bairros de Maringá-PR. Assistência técnica para eletrodomésticos, televisores e celulares com atendimento rápido na sua região." 
-        />
-        <meta name="keywords" content="assistência técnica Maringá, bairros atendidos, técnico zona 7, conserto zona 5, reparo Jardim Alvorada" />
-        <link rel="canonical" href="https://maringa-tech-care.lovable.app/bairros" />
-        <meta property="og:title" content="Bairros Atendidos em Maringá | Assistência Técnica" />
-        <meta property="og:description" content="Atendemos todos os bairros de Maringá-PR com rapidez e qualidade." />
-        <meta property="og:type" content="website" />
-        <script type="application/ld+json">
-          {JSON.stringify(schemaData)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="Bairros Atendidos em Maringá | Assistência Técnica"
+        description="Atendemos todos os bairros de Maringá-PR. Assistência técnica para eletrodomésticos, televisores e celulares com atendimento rápido na sua região."
+        keywords="assistência técnica Maringá, bairros atendidos, técnico zona 7, conserto zona 5, reparo Jardim Alvorada"
+        canonical="https://assistenciatecnica.maringa.br/bairros"
+      />
+      <StructuredData data={schemaData} />
 
       <Header />
 
@@ -64,7 +57,7 @@ const Bairros = () => {
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary-dark pt-24 pb-16 overflow-hidden">
           <div className="absolute inset-0 bg-grid-white/5 opacity-50"></div>
-          
+
           <div className="container mx-auto px-4 relative z-10">
             <Breadcrumb className="mb-6">
               <BreadcrumbList>
@@ -85,13 +78,13 @@ const Bairros = () => {
                 <MapPin className="w-4 h-4" />
                 <span>Cobertura completa em Maringá-PR</span>
               </div>
-              
+
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
                 Bairros Atendidos
               </h1>
-              
+
               <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed max-w-2xl">
-                Oferecemos atendimento técnico especializado em <strong className="text-secondary">todos os bairros de Maringá</strong>. 
+                Oferecemos atendimento técnico especializado em <strong className="text-secondary">todos os bairros de Maringá</strong>.
                 Agende uma visita técnica na sua região.
               </p>
 
@@ -165,25 +158,24 @@ const Bairros = () => {
                       {regionNeighborhoods.length} bairros
                     </span>
                   </div>
-                  
+
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                     {regionNeighborhoods.map((neighborhood) => (
-                      <Link 
+                      <Link
                         key={neighborhood.slug}
                         to={`/bairros/${neighborhood.slug}`}
                         className={`
                           relative p-4 rounded-xl border transition-all duration-300 cursor-pointer
                           hover:border-primary hover:shadow-md hover:-translate-y-0.5
-                          ${neighborhood.popular 
-                            ? 'bg-primary/5 border-primary/20' 
+                          ${neighborhood.popular
+                            ? 'bg-primary/5 border-primary/20'
                             : 'bg-card border-border'
                           }
                         `}
                       >
                         <div className="flex items-start gap-2">
-                          <CheckCircle className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
-                            neighborhood.popular ? 'text-primary' : 'text-muted-foreground'
-                          }`} />
+                          <CheckCircle className={`w-4 h-4 mt-0.5 flex-shrink-0 ${neighborhood.popular ? 'text-primary' : 'text-muted-foreground'
+                            }`} />
                           <span className="text-sm font-medium text-foreground leading-tight">
                             {neighborhood.name}
                           </span>
