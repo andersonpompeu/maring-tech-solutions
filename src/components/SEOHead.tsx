@@ -93,8 +93,9 @@ const SEOHead = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
       <meta name="author" content="Assistência Técnica Maringá" />
+      <meta name="google-site-verification" content="7nGJadzW9HIUITaZYVoEpFdTk1eRGCqR9MIuDf35Bog" />
       <link rel="canonical" href={canonical} />
 
       {/* Viewport */}
