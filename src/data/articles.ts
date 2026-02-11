@@ -166,6 +166,11 @@ export const articles: Article[] = [
     keywords: 'conserto de geladeira, conserto geladeira Maringá, reparo geladeira, assistência técnica geladeira Maringá',
     heading: 'Conserto de Geladeira em Maringá: Diagnóstico Rápido e Reparo Garantido',
     content: `
+<figure class="my-8">
+<img src="/images/blog/geladeira-conserto.png" alt="Técnico realizando conserto de geladeira Samsung em Maringá" class="w-full rounded-lg shadow-md" loading="lazy" />
+<figcaption class="text-sm text-center mt-2 text-gray-500">Técnico especializado realizando diagnóstico e reparo em geladeira Frost Free Samsung</figcaption>
+</figure>
+
 <p>A geladeira é, sem dúvida, o eletrodoméstico mais essencial de qualquer residência. Quando ela apresenta defeito, a urgência em resolver o problema é imediata. Em <strong>Maringá</strong>, contar com um serviço de <strong>conserto de geladeira</strong> ágil e confiável faz toda a diferença para evitar desperdício de alimentos e transtornos no dia a dia.</p>
 
 <h2>Principais Defeitos em Geladeiras</h2>
@@ -199,6 +204,12 @@ export const articles: Article[] = [
 <h2>Quando Vale a Pena Consertar?</h2>
 
 <p>Uma dúvida comum é se vale mais a pena consertar ou comprar uma geladeira nova. Como regra geral, se o custo do reparo for inferior a 40% do valor de um aparelho novo e a geladeira tiver menos de 10 anos de uso, o conserto é a opção mais econômica e sustentável. Geladeiras mais antigas, além de possivelmente utilizarem gases refrigerantes menos eficientes, tendem a consumir mais energia.</p>
+
+<h2>Veja Como Funciona o Conserto de Geladeira</h2>
+
+<div class="my-8 aspect-video">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/v-FWZaeFnTQ" title="Conserto de Geladeira em Maringá" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:8px;aspect-ratio:16/9;"></iframe>
+</div>
 
 <h2>Conclusão</h2>
 
