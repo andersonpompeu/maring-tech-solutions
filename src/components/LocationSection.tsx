@@ -1,6 +1,7 @@
 import { MapPin, Clock, Phone, MessageCircle, Navigation } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { BUSINESS } from '@/data/business-info';
 
 const LocationSection = () => {
   return (
@@ -44,8 +45,8 @@ const LocationSection = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Endereço</h3>
                     <p className="text-muted-foreground">
-                      Av. Brasil, 1234 - Centro<br />
-                      <strong>Maringá</strong> - PR, 87000-000
+                      {BUSINESS.address.street}<br />
+                      <strong>{BUSINESS.address.city}</strong> - {BUSINESS.address.state}, {BUSINESS.address.cep}
                     </p>
                   </div>
                 </div>
@@ -61,8 +62,7 @@ const LocationSection = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Horário de Funcionamento</h3>
                     <p className="text-muted-foreground">
-                      Segunda a Sexta: <time dateTime="08:00">08h</time> às <time dateTime="18:00">18h</time><br />
-                      Sábado: <time dateTime="08:00">08h</time> às <time dateTime="12:00">12h</time>
+                      {BUSINESS.hours}
                     </p>
                   </div>
                 </div>
@@ -78,7 +78,7 @@ const LocationSection = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Telefone</h3>
                     <p className="text-muted-foreground">
-                      <a href="tel:+5544997398826" title="Ligar para assistência técnica em Maringá">(44) 99739-8826</a>
+                      <a href={`tel:${BUSINESS.phone}`} title="Ligar para assistência técnica em Maringá">{BUSINESS.phoneDisplay}</a>
                     </p>
                   </div>
                 </div>
@@ -88,7 +88,7 @@ const LocationSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 pt-4">
               <Button variant="whatsapp" size="lg" className="flex-1" asChild>
                 <a 
-                  href="https://wa.me/5544997398826?text=Olá! Gostaria de agendar um atendimento." 
+                  href={`https://wa.me/${BUSINESS.whatsapp}?text=Olá! Gostaria de agendar um atendimento.`} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   title="Agendar atendimento técnico em Maringá via WhatsApp"
@@ -99,7 +99,7 @@ const LocationSection = () => {
               </Button>
               <Button variant="outline" size="lg" className="flex-1" asChild>
                 <a 
-                  href="https://www.google.com/maps/dir//Maringá,+PR" 
+                  href={`https://www.google.com/maps/dir//${encodeURIComponent(BUSINESS.address.full)}`} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   title="Ver rota para assistência técnica em Maringá"
