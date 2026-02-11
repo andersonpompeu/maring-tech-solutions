@@ -68,7 +68,7 @@ const ServicoPorBairro = () => {
                           <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">Popular</span>
                         )}
                       </div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                         {bairroServices.map(service => (
                           <Link
                             key={service.slug}
