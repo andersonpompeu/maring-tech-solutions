@@ -96,12 +96,24 @@ export default {
           "0%, 100%": { transform: "scale(1)" },
           "50%": { transform: "scale(1.05)" },
         },
+        "whatsapp-pulse": {
+          "0%": { transform: "scale(1)", boxShadow: "0 0 0 0 hsl(142 70% 45% / 0.4)" },
+          "50%": { transform: "scale(1.05)", boxShadow: "0 0 0 8px hsl(142 70% 45% / 0)" },
+          "100%": { transform: "scale(1)", boxShadow: "0 0 0 0 hsl(142 70% 45% / 0)" },
+        },
+        "bounce-subtle": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "25%": { transform: "translateY(-2px)" },
+          "75%": { transform: "translateY(1px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 3s ease-in-out infinite",
         "pulse-scale": "pulse-scale 2s ease-in-out infinite",
+        "whatsapp-pulse": "whatsapp-pulse 2s ease-in-out infinite",
+        "bounce-subtle": "bounce-subtle 1.5s ease-in-out infinite",
       },
       boxShadow: {
         'card': '0 4px 16px hsl(215 25% 15% / 0.1)',
