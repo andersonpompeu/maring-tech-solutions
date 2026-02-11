@@ -43,8 +43,8 @@ const SEOHead = ({
     priceRange: '$$',
     image: 'https://assistenciatecnica.maringa.br/og-image.jpg',
     sameAs: [
-      'https://facebook.com/assistenciatecnicamaringa',
-      'https://instagram.com/assistenciatecnicamaringa',
+      'https://www.facebook.com/assistenciatecnicamaringa',
+      'https://www.instagram.com/assistenciatecnicamaringa',
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
