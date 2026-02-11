@@ -5,7 +5,7 @@ import heroImage from '@/assets/hero-technician.jpg';
 
 const slides = [
   {
-    title: 'Conserto no Mesmo Dia',
+    title: 'Assistência Técnica de Eletrodoméstico em Maringá',
     subtitle: 'Assistência Técnica Premium em Maringá',
     description: 'Eletrodomésticos, Smart TVs e Celulares. Atendimento rápido com técnicos certificados.',
     icon: Zap,

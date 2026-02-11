@@ -19,7 +19,7 @@ interface BairroHeroSectionProps {
 
 const getSlides = (bairro: string) => [
   {
-    title: `Conserto no Mesmo Dia ${noBairro(bairro)}`,
+    title: `Assistência Técnica de Eletrodoméstico ${noBairro(bairro)}`,
     subtitle: `Assistência Técnica Premium ${noBairro(bairro)}, Maringá`,
     description: `Eletrodomésticos, Smart TVs e Celulares ${noBairro(bairro)}. Atendimento rápido com técnicos certificados.`,
     icon: Zap,
