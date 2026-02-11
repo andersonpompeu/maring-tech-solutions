@@ -166,7 +166,7 @@ const Microondas = () => {
     <>
       <Helmet>
         <title>Conserto de Micro-ondas em Maringá | Assistência Técnica Especializada</title>
-        <meta name="description" content="Conserto de micro-ondas em Maringá-PR. Assistência técnica para micro-ondas de bancada, embutir e com grill. Atendimento rápido, peças originais e garantia de 90 dias." />
+        <meta name="description" content="Conserto de micro-ondas em Maringá-PR. Bancada, embutir e com grill. Peças originais, atendimento rápido e garantia de 90 dias." />
         <meta name="keywords" content="conserto micro-ondas Maringá, assistência técnica micro-ondas, reparo microondas, conserto microondas perto de mim, técnico micro-ondas Maringá" />
         <link rel="canonical" href="https://assistenciatecnica.maringa.br/micro-ondas" />
         <meta property="og:title" content="Conserto de Micro-ondas em Maringá" />

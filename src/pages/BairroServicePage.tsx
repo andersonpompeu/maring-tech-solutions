@@ -33,7 +33,8 @@ const BairroServicePage = () => {
   const Icon = service.icon;
   const faqs = service.faqs(bairro);
   const pageTitle = `${service.title} ${noBairro(bairro)} - Maringá | ${BUSINESS.name}`;
-  const pageDescription = service.description(bairro);
+  const fullDescription = service.description(bairro);
+  const pageDescription = fullDescription.length > 155 ? fullDescription.substring(0, 152) + '...' : fullDescription;
 
   const otherServices = bairroServices.filter(s => s.slug !== service.slug);
   const nearbyNeighborhoods = neighborhoods

@@ -205,7 +205,7 @@ const MaquinaDeLavar = () => {
     <>
       <Helmet>
         <title>Conserto de Máquina de Lavar em Maringá | Assistência Técnica Especializada</title>
-        <meta name="description" content="Conserto de máquina de lavar em Maringá-PR. Assistência técnica para lavadoras, lava e seca, secadoras. Atendimento rápido, peças originais e garantia de 90 dias." />
+        <meta name="description" content="Conserto de máquina de lavar em Maringá-PR. Lavadoras, lava e seca e secadoras. Peças originais e garantia de 90 dias." />
         <meta name="keywords" content="conserto máquina de lavar Maringá, assistência técnica lavadora, conserto lava e seca, reparo máquina de lavar perto de mim, técnico máquina de lavar Maringá" />
         <link rel="canonical" href="https://assistenciatecnica.maringa.br/maquina-de-lavar" />
         <meta property="og:title" content="Conserto de Máquina de Lavar em Maringá" />

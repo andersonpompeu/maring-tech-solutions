@@ -111,7 +111,7 @@ const Televisores = () => {
     <ServicePageLayout
       title="Conserto de Televisores"
       metaTitle="Conserto de TV em Maringá | Smart TV, LED, OLED, QLED"
-      metaDescription="Conserto de TV em Maringá-PR. Assistência técnica para Smart TVs LED, OLED e QLED. Samsung, LG, Sony. Garantia de 90 dias. Orçamento grátis pelo WhatsApp!"
+      metaDescription="Conserto de TV em Maringá-PR. Smart TVs LED, OLED e QLED. Samsung, LG, Sony. Peças originais e garantia de 90 dias."
       keywords="conserto de TV Maringá, assistência técnica TV, conserto Smart TV Maringá, reparo TV LED, conserto TV OLED, conserto TV QLED, conserto TV Samsung LG Sony"
       canonical="https://assistenciatecnica.maringa.br/televisores"
       heroTitle="Conserto de Televisores em Maringá"

@@ -175,7 +175,7 @@ const Eletrodomesticos = () => {
     <ServicePageLayout
       title="Conserto de Eletrodomésticos"
       metaTitle="Conserto de Eletrodomésticos em Maringá | Geladeira, Máquina de Lavar, Fogão"
-      metaDescription="Assistência técnica especializada em eletrodomésticos em Maringá-PR. Conserto de geladeiras, máquinas de lavar, fogões e micro-ondas. Garantia de 90 dias. Orçamento grátis!"
+      metaDescription="Conserto de eletrodomésticos em Maringá-PR. Geladeira, máquina de lavar, fogão e micro-ondas. Peças originais e garantia de 90 dias."
       keywords="conserto eletrodomésticos Maringá, assistência técnica linha branca, conserto geladeira Maringá, conserto máquina de lavar Maringá, conserto fogão Maringá, reparo eletrodomésticos PR, técnico eletrodomésticos Maringá"
       canonical="https://assistenciatecnica.maringa.br/eletrodomesticos"
       heroTitle="Conserto de Eletrodomésticos em Maringá"
