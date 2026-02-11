@@ -338,6 +338,88 @@ export const bairroServices: BairroService[] = [
       { question: `Quanto tempo leva para resolver o problema de centrifugação no ${bairro}?`, answer: `Na maioria dos casos, resolvemos no mesmo dia no ${bairro}. Casos com troca de peças podem levar até 3 dias úteis.` },
     ],
   },
+  // === Serviços de Geladeira por Bairro ===
+  {
+    slug: 'assistencia-tecnica-geladeira-continental',
+    title: 'Assistência Técnica da Geladeira Continental',
+    shortTitle: 'Geladeira Continental',
+    icon: Refrigerator,
+    brands: ['Continental', 'Consul', 'Brastemp', 'Electrolux', 'Samsung', 'LG'],
+    problems: [
+      'Geladeira Continental não gela',
+      'Compressor Continental com defeito',
+      'Vazamento de gás na Continental',
+      'Motor Continental não para',
+      'Borracha de vedação ressecada',
+      'Geladeira Continental fazendo barulho',
+      'Freezer Continental não congela',
+      'Painel eletrônico Continental com erro',
+    ],
+    description: (bairro) =>
+      `Assistência técnica da geladeira Continental no ${bairro}, Maringá-PR. Conserto especializado com peças originais e garantia de 90 dias.`,
+    longDescription: (bairro) =>
+      `Precisa de assistência técnica da geladeira Continental no ${bairro}? Nossa equipe é especializada no reparo de geladeiras e refrigeradores Continental. Diagnosticamos e consertamos todos os modelos: frost free, duplex, side by side e freezers Continental. Atendemos no ${bairro} com agilidade, peças originais e garantia de 90 dias. Não deixe sua geladeira Continental parada — entre em contato agora!`,
+    faqs: (bairro) => [
+      { question: `Vocês consertam geladeira Continental no ${bairro}?`, answer: `Sim! Somos especializados em assistência técnica de geladeira Continental e atendemos no ${bairro} com orçamento gratuito.` },
+      { question: 'A Continental ainda fabrica peças de reposição?', answer: 'A marca Continental foi incorporada pela Bosch/Continental. Trabalhamos com peças originais e compatíveis para todos os modelos, mesmo os mais antigos.' },
+      { question: `Quanto custa o conserto de geladeira Continental no ${bairro}?`, answer: `O valor varia conforme o defeito. Oferecemos orçamento gratuito no ${bairro}. Chame no WhatsApp para agendar a visita técnica.` },
+      { question: 'Vale a pena consertar geladeira Continental antiga?', answer: 'Depende do defeito. Geladeiras Continental são robustas e duráveis. Nossos técnicos avaliam e orientam sobre a viabilidade do conserto.' },
+    ],
+  },
+  {
+    slug: 'tecnico-geladeira-maringa',
+    title: 'Técnico de Geladeira em Maringá',
+    shortTitle: 'Técnico Geladeira',
+    icon: Refrigerator,
+    brands: ['Brastemp', 'Electrolux', 'Consul', 'Samsung', 'LG', 'Midea', 'Continental', 'Panasonic'],
+    problems: [
+      'Geladeira não gela',
+      'Geladeira fazendo barulho',
+      'Vazamento de água na geladeira',
+      'Compressor com defeito',
+      'Geladeira congela demais',
+      'Motor não para de funcionar',
+      'Luz interna apagada',
+      'Geladeira com mau cheiro',
+    ],
+    description: (bairro) =>
+      `Técnico de geladeira em Maringá no ${bairro}. Conserto rápido de todas as marcas com garantia de 90 dias e orçamento grátis.`,
+    longDescription: (bairro) =>
+      `Procurando técnico de geladeira em Maringá no ${bairro}? Nossos técnicos especializados atendem no ${bairro} e região com rapidez e profissionalismo. Realizamos conserto, manutenção preventiva e corretiva de geladeiras de todas as marcas e modelos. Seja frost free, duplex, side by side ou freezer — resolvemos qualquer defeito com peças originais e garantia de 90 dias. Atendimento no mesmo dia!`,
+    faqs: (bairro) => [
+      { question: `Tem técnico de geladeira disponível no ${bairro}?`, answer: `Sim! Temos técnicos de geladeira prontos para atender no ${bairro} no mesmo dia, sujeito à disponibilidade.` },
+      { question: 'O técnico vai até minha casa?', answer: `Sim! Nosso técnico de geladeira faz atendimento em domicílio no ${bairro}. O orçamento é gratuito e sem compromisso.` },
+      { question: 'Quanto cobra um técnico de geladeira em Maringá?', answer: 'O valor depende do defeito encontrado. Oferecemos orçamento gratuito antes de qualquer serviço. Consulte pelo WhatsApp.' },
+      { question: 'O técnico conserta todas as marcas de geladeira?', answer: 'Sim! Nossos técnicos consertam Brastemp, Electrolux, Consul, Samsung, LG, Midea, Continental e todas as demais marcas.' },
+    ],
+  },
+  {
+    slug: 'tecnico-de-geladeira',
+    title: 'Técnico de Geladeira',
+    shortTitle: 'Técnico Geladeira',
+    icon: Refrigerator,
+    brands: ['Brastemp', 'Electrolux', 'Consul', 'Samsung', 'LG', 'Midea', 'Continental', 'Bosch'],
+    problems: [
+      'Geladeira parou de funcionar',
+      'Geladeira não gela direito',
+      'Formação excessiva de gelo',
+      'Geladeira com vazamento',
+      'Porta não fecha corretamente',
+      'Consumo elevado de energia',
+      'Geladeira liga e desliga sozinha',
+      'Temperatura desregulada',
+    ],
+    description: (bairro) =>
+      `Técnico de geladeira no ${bairro}, Maringá-PR. Diagnóstico e reparo rápido com peças originais, garantia de 90 dias e orçamento grátis.`,
+    longDescription: (bairro) =>
+      `Sua geladeira apresentou defeito no ${bairro}? Conte com nosso técnico de geladeira para diagnóstico preciso e reparo rápido. Atendemos no ${bairro} com toda a estrutura necessária para resolver qualquer problema: compressor, termostato, placa eletrônica, borracha de vedação, gás refrigerante e muito mais. Técnico de geladeira com experiência em todas as marcas, peças originais e garantia de 90 dias.`,
+    faqs: (bairro) => [
+      { question: `Como chamar um técnico de geladeira no ${bairro}?`, answer: `É simples! Entre em contato pelo nosso WhatsApp e agende a visita do técnico de geladeira no ${bairro}. O orçamento é gratuito.` },
+      { question: 'O técnico de geladeira atende no mesmo dia?', answer: `Sim! Na maioria dos casos nosso técnico de geladeira atende no mesmo dia no ${bairro} e região.` },
+      { question: 'Qual a garantia do serviço do técnico de geladeira?', answer: 'Oferecemos garantia de 90 dias em todos os serviços e peças substituídas pelo nosso técnico de geladeira.' },
+      { question: `O técnico de geladeira atende aos sábados no ${bairro}?`, answer: `Sim! Nosso técnico de geladeira atende de segunda a sábado no ${bairro}. Aos sábados, consulte horários disponíveis.` },
+    ],
+  },
 ];
 
 export const findBairroServiceBySlug = (slug: string): BairroService | undefined => {
