@@ -32,7 +32,7 @@ const BairroPage = () => {
         <title>{`Assistência Técnica ${noBairro(bairro)} - Maringá | Conserto de Eletrodomésticos, TVs e Celulares`}</title>
         <meta
           name="description"
-          content={`Assistência técnica especializada ${noBairro(bairro)}, Maringá-PR. Conserto de geladeiras, máquinas de lavar, fogões, Smart TVs e celulares. Garantia de 90 dias. Orçamento grátis!`}
+          content={`Assistência técnica ${noBairro(bairro)}, Maringá-PR. Conserto de geladeiras, máquinas de lavar, fogões, TVs e celulares. Garantia de 90 dias.`}
         />
         <meta
           name="keywords"

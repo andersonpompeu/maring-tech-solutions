@@ -163,7 +163,7 @@ const Fogao = () => {
     <>
       <Helmet>
         <title>Conserto de Fogão em Maringá | Assistência Técnica Especializada</title>
-        <meta name="description" content="Conserto de fogão em Maringá-PR. Assistência técnica para fogões a gás, cooktops, fornos elétricos e embutidos. Atendimento rápido, peças originais e garantia de 90 dias." />
+        <meta name="description" content="Conserto de fogão em Maringá-PR. Fogões a gás, cooktops, fornos elétricos e embutidos. Peças originais e garantia de 90 dias." />
         <meta name="keywords" content="conserto fogão Maringá, assistência técnica fogão, conserto cooktop, reparo forno, técnico fogão Maringá" />
         <link rel="canonical" href="https://assistenciatecnica.maringa.br/fogao" />
         <meta property="og:title" content="Conserto de Fogão em Maringá" />
