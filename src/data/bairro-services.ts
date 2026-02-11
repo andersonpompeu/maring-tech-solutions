@@ -175,6 +175,169 @@ export const bairroServices: BairroService[] = [
       { question: `Consertam celular Xiaomi no ${bairro}?`, answer: `Sim, consertamos Xiaomi, Motorola, Samsung e todas as demais marcas no ${bairro}.` },
     ],
   },
+  // === Sub-serviços de Máquina de Lavar ===
+  {
+    slug: 'manutencao-de-lava-e-seca',
+    title: 'Manutenção de Lava e Seca',
+    shortTitle: 'Lava e Seca',
+    icon: WashingMachine,
+    brands: ['Brastemp', 'Electrolux', 'LG', 'Samsung', 'Midea', 'Panasonic'],
+    problems: [
+      'Lava e seca não seca as roupas',
+      'Barulho excessivo ao centrifugar',
+      'Vazamento de água pela porta',
+      'Erro no painel eletrônico',
+      'Não inicia o ciclo de secagem',
+      'Roupas saem com mau cheiro',
+      'Tambor não gira',
+      'Aquecimento insuficiente na secagem',
+    ],
+    description: (bairro) =>
+      `Manutenção especializada de lava e seca no ${bairro}, Maringá-PR. Reparamos todas as marcas com peças originais e garantia de 90 dias.`,
+    longDescription: (bairro) =>
+      `Sua lava e seca parou de funcionar no ${bairro}? Nossa equipe técnica é especializada em manutenção de lavadoras e secadoras combinadas. Diagnosticamos e reparamos problemas de secagem, centrifugação, vazamentos e erros no painel eletrônico. Atendemos no ${bairro} com agilidade, utilizando peças originais e oferecendo garantia de 90 dias. Não deixe a roupa acumular — entre em contato agora!`,
+    faqs: (bairro) => [
+      { question: `Quanto custa a manutenção de lava e seca no ${bairro}?`, answer: `O valor depende do defeito identificado. Oferecemos orçamento gratuito no ${bairro}. Chame no WhatsApp para agendar a visita.` },
+      { question: `Vocês atendem lava e seca no ${bairro} no mesmo dia?`, answer: `Sim! Temos técnicos disponíveis para atendimento no mesmo dia no ${bairro}, sujeito à disponibilidade da agenda.` },
+      { question: 'Minha lava e seca não está secando, qual o problema?', answer: 'Pode ser resistência queimada, sensor de temperatura defeituoso ou filtro entupido. Nossos técnicos fazem o diagnóstico completo.' },
+      { question: 'A garantia cobre quais tipos de reparo?', answer: 'Nossa garantia de 90 dias cobre o serviço realizado e todas as peças substituídas durante o reparo.' },
+    ],
+  },
+  {
+    slug: 'manutencao-de-maquina-de-lavar',
+    title: 'Manutenção de Máquina de Lavar',
+    shortTitle: 'Manutenção Lavadora',
+    icon: WashingMachine,
+    brands: ['Brastemp', 'Electrolux', 'LG', 'Samsung', 'Consul', 'Midea'],
+    problems: [
+      'Máquina não liga',
+      'Ciclo de lavagem não completa',
+      'Vazamento de água',
+      'Barulho durante a lavagem',
+      'Não enche de água',
+      'Mau cheiro na máquina',
+      'Não drena a água',
+      'Excesso de espuma',
+    ],
+    description: (bairro) =>
+      `Manutenção preventiva e corretiva de máquinas de lavar no ${bairro}, Maringá-PR. Todas as marcas com garantia e orçamento grátis.`,
+    longDescription: (bairro) =>
+      `Precisa de manutenção na sua máquina de lavar no ${bairro}? Nossos técnicos certificados realizam manutenção preventiva e corretiva em lavadoras automáticas e semi-automáticas de todas as marcas. Resolvemos problemas como vazamentos, falhas no ciclo, barulhos anormais e mau cheiro. Atendemos no ${bairro} e arredores com rapidez e garantia de 90 dias.`,
+    faqs: (bairro) => [
+      { question: `Fazem manutenção preventiva no ${bairro}?`, answer: `Sim! Realizamos manutenção preventiva no ${bairro} para evitar defeitos e prolongar a vida útil da sua lavadora.` },
+      { question: 'Qual a diferença entre manutenção preventiva e corretiva?', answer: 'A preventiva é feita periodicamente para evitar problemas. A corretiva é quando já existe um defeito a ser reparado.' },
+      { question: `Quanto custa a manutenção de máquina de lavar no ${bairro}?`, answer: `Depende do tipo de serviço. Oferecemos orçamento gratuito no ${bairro}. Consulte pelo WhatsApp.` },
+      { question: 'Atendem todas as marcas de lavadora?', answer: 'Sim, trabalhamos com Brastemp, Electrolux, LG, Samsung, Consul, Midea e todas as demais marcas.' },
+    ],
+  },
+  {
+    slug: 'conserto-de-painel-eletronico-maquina-de-lavar',
+    title: 'Conserto de Painel Eletrônico de Máquina de Lavar',
+    shortTitle: 'Painel Eletrônico',
+    icon: WashingMachine,
+    brands: ['Brastemp', 'Electrolux', 'LG', 'Samsung', 'Consul', 'Midea'],
+    problems: [
+      'Painel não responde ao toque',
+      'Erro de código no display',
+      'Luzes piscando sem parar',
+      'Botões não funcionam',
+      'Display apagado',
+      'Painel travado em um programa',
+      'Erro E1, E2, F5 ou similar',
+      'Placa eletrônica queimada',
+    ],
+    description: (bairro) =>
+      `Conserto de painel eletrônico de máquina de lavar no ${bairro}, Maringá-PR. Reparo de placas, displays e módulos com garantia.`,
+    longDescription: (bairro) =>
+      `O painel da sua máquina de lavar está com erro no ${bairro}? Somos especialistas em reparo de painéis eletrônicos e placas de lavadoras. Resolvemos códigos de erro, displays apagados, botões sem resposta e placas queimadas de todas as marcas. Atendimento rápido no ${bairro} com diagnóstico preciso e garantia de 90 dias.`,
+    faqs: (bairro) => [
+      { question: `Consertam placa eletrônica de máquina de lavar no ${bairro}?`, answer: `Sim! Reparamos e substituímos placas eletrônicas de todas as marcas no ${bairro} com garantia.` },
+      { question: 'Minha máquina mostra erro no painel, o que pode ser?', answer: 'Códigos de erro indicam falhas específicas como problemas na drenagem, sensor ou motor. Nosso diagnóstico identifica a causa exata.' },
+      { question: 'Vale a pena consertar o painel ou trocar a máquina?', answer: 'Na maioria dos casos o conserto do painel custa uma fração do valor de uma máquina nova. Nossos técnicos orientam a melhor decisão.' },
+      { question: `Quanto tempo leva o conserto do painel no ${bairro}?`, answer: `Reparos simples são feitos no mesmo dia. Substituição de placa pode levar de 2 a 5 dias úteis dependendo da peça.` },
+    ],
+  },
+  {
+    slug: 'assistencia-tecnica-maquina-de-lavar',
+    title: 'Assistência Técnica de Máquina de Lavar',
+    shortTitle: 'Assistência Técnica',
+    icon: WashingMachine,
+    brands: ['Brastemp', 'Electrolux', 'LG', 'Samsung', 'Consul', 'Midea'],
+    problems: [
+      'Máquina não funciona',
+      'Necessidade de revisão geral',
+      'Peça de reposição necessária',
+      'Instalação incorreta',
+      'Problema intermitente',
+      'Máquina fora da garantia de fábrica',
+      'Ruído excessivo no motor',
+      'Vibração excessiva ao centrifugar',
+    ],
+    description: (bairro) =>
+      `Assistência técnica especializada de máquina de lavar no ${bairro}, Maringá-PR. Diagnóstico, reparo e peças originais com garantia.`,
+    longDescription: (bairro) =>
+      `Procurando assistência técnica de máquina de lavar no ${bairro}? Somos referência em Maringá no atendimento técnico de lavadoras de todas as marcas. Oferecemos diagnóstico completo, reparo com peças originais, revisão geral e orientação técnica. Nossa equipe atende no ${bairro} com pontualidade, profissionalismo e garantia de 90 dias em todos os serviços.`,
+    faqs: (bairro) => [
+      { question: `Vocês são assistência técnica autorizada no ${bairro}?`, answer: `Somos assistência técnica multimarcas com mais de 10 anos de experiência, atendendo no ${bairro} com peças originais e garantia.` },
+      { question: 'Fazem orçamento gratuito?', answer: `Sim! Oferecemos orçamento gratuito e sem compromisso no ${bairro}. Entre em contato pelo WhatsApp.` },
+      { question: 'Minha máquina está fora da garantia, vocês consertam?', answer: 'Sim, consertamos máquinas de lavar de qualquer idade e marca, mesmo fora da garantia de fábrica.' },
+      { question: `Qual o prazo de atendimento no ${bairro}?`, answer: `Atendemos no ${bairro} geralmente no mesmo dia ou no dia seguinte, conforme disponibilidade.` },
+    ],
+  },
+  {
+    slug: 'conserto-de-secadora',
+    title: 'Conserto de Secadora de Roupas',
+    shortTitle: 'Secadoras',
+    icon: WashingMachine,
+    brands: ['Brastemp', 'Electrolux', 'LG', 'Samsung', 'Midea', 'Fischer'],
+    problems: [
+      'Secadora não seca as roupas',
+      'Não liga',
+      'Barulho excessivo',
+      'Aquecimento insuficiente',
+      'Secadora desliga sozinha',
+      'Filtro entupido',
+      'Tambor não gira',
+      'Cheiro de queimado',
+    ],
+    description: (bairro) =>
+      `Conserto de secadoras de roupas no ${bairro}, Maringá-PR. Reparamos secadoras a gás e elétricas de todas as marcas com garantia.`,
+    longDescription: (bairro) =>
+      `Sua secadora parou de funcionar no ${bairro}? Nossos técnicos são especialistas em conserto de secadoras de roupas elétricas e a gás. Resolvemos problemas como falta de aquecimento, barulhos, tambor parado e erros no painel. Atendemos no ${bairro} com rapidez, peças originais e garantia de 90 dias. Não fique sem secar suas roupas!`,
+    faqs: (bairro) => [
+      { question: `Consertam secadora a gás no ${bairro}?`, answer: `Sim! Reparamos secadoras a gás e elétricas de todas as marcas no ${bairro}.` },
+      { question: 'Minha secadora está fazendo barulho, é grave?', answer: 'Pode ser problema no rolamento, correia ou ventilador. Recomendamos avaliação técnica para evitar danos maiores.' },
+      { question: `Quanto custa o conserto de secadora no ${bairro}?`, answer: `O valor varia conforme o defeito. Oferecemos orçamento gratuito no ${bairro}. Consulte-nos pelo WhatsApp.` },
+      { question: 'A secadora está com cheiro de queimado, o que fazer?', answer: 'Desligue imediatamente e entre em contato conosco. Pode ser acúmulo de fiapos, problema na resistência ou no motor.' },
+    ],
+  },
+  {
+    slug: 'problema-na-centrifugacao',
+    title: 'Problema na Centrifugação da Máquina de Lavar',
+    shortTitle: 'Centrifugação',
+    icon: WashingMachine,
+    brands: ['Brastemp', 'Electrolux', 'LG', 'Samsung', 'Consul', 'Midea'],
+    problems: [
+      'Não centrifuga',
+      'Centrifugação fraca',
+      'Roupas saem encharcadas',
+      'Barulho forte na centrifugação',
+      'Vibração excessiva',
+      'Máquina se desloca durante centrifugação',
+      'Centrifugação intermitente',
+      'Para no meio do ciclo',
+    ],
+    description: (bairro) =>
+      `Conserto de problemas na centrifugação de máquinas de lavar no ${bairro}, Maringá-PR. Diagnóstico rápido e garantia de 90 dias.`,
+    longDescription: (bairro) =>
+      `Sua máquina de lavar não está centrifugando direito no ${bairro}? Somos especialistas em resolver problemas de centrifugação: roupas encharcadas, vibrações, barulhos e máquina que para no meio do ciclo. Nossos técnicos atendem no ${bairro} com diagnóstico rápido, peças originais e garantia de 90 dias. Resolva hoje e pare de torcer roupa na mão!`,
+    faqs: (bairro) => [
+      { question: `Minha máquina não centrifuga no ${bairro}, vocês consertam?`, answer: `Sim! Somos especialistas em problemas de centrifugação e atendemos no ${bairro} com orçamento gratuito.` },
+      { question: 'Por que minha máquina não centrifuga?', answer: 'Pode ser problema na correia, motor, placa eletrônica, sensor de carga ou presostato. Nosso diagnóstico identifica a causa exata.' },
+      { question: 'Roupas saem encharcadas, tem conserto?', answer: 'Sim! Geralmente é um problema na centrifugação que pode ser resolvido com troca de peças ou ajustes técnicos.' },
+      { question: `Quanto tempo leva para resolver o problema de centrifugação no ${bairro}?`, answer: `Na maioria dos casos, resolvemos no mesmo dia no ${bairro}. Casos com troca de peças podem levar até 3 dias úteis.` },
+    ],
+  },
 ];
 
 export const findBairroServiceBySlug = (slug: string): BairroService | undefined => {
