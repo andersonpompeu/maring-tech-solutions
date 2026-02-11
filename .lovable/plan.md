@@ -1,64 +1,55 @@
 
-# Paginas de Sub-Servicos de Maquina de Lavar com Estrategia de Conteudo On-Page
+
+# Paginas de Sub-Servicos de Maquina de Lavar por Bairro
 
 ## Objetivo
 
-Criar 6 sub-paginas de servico para Maquina de Lavar (`/maquina-de-lavar/:slug`), replicando a arquitetura de Geladeira (`geladeira-services.ts` + `GeladeiraServicePage.tsx`), com conteudo otimizado para alivio de ansiedade, autoridade tecnica e headings H1-H6 otimizados para CTR e relevancia geografica.
+Adicionar os 6 sub-servicos de maquina de lavar ao sistema de bairros existente, gerando automaticamente **67 x 6 = 402 novas paginas** com URLs como:
 
-## Estrategia de Conteudo Aplicada
+- `/bairros/zona-01/manutencao-de-lava-e-seca`
+- `/bairros/jardim-alvorada/conserto-de-painel-eletronico-maquina-de-lavar`
+- `/bairros/centro/conserto-de-secadora`
 
-Cada pagina seguira as diretrizes de psicologia e tecnica:
+## Como funciona
 
-- **H1**: Palavra-chave principal + localizacao (ex: "Conserto de Painel Eletronico de Maquina de Lavar em Maringa")
-- **H2**: Topicos de beneficio e urgencia (ex: "Por que sua maquina parou de centrifugar?", "Sinais de que voce precisa de reparo")
-- **H3**: Detalhamento tecnico (ex: "Servicos Incluidos", "Problemas no motor")
-- **Subtitulos Hero**: Linguagem empática focada no problema urgente do usuario (roupa acumulando, comida estragando)
-- **Descricoes**: Tom direto, transmitindo autoridade tecnica e facilitando o contato
+O sistema de bairros ja possui a infraestrutura pronta (`BairroServicePage.tsx` renderiza `/bairros/:slug/:serviceSlug`). Basta adicionar os 6 sub-servicos ao array `bairroServices` em `src/data/bairro-services.ts`. Nenhuma nova pagina ou rota precisa ser criada -- o sistema dinamico faz tudo automaticamente.
 
-## Sub-servicos a Criar
+## Sub-servicos a adicionar
 
-| Servico | Slug | H1 Otimizado |
-|---------|------|-------------|
-| Manutencao de Lava e Seca | `manutencao-de-lava-e-seca` | Manutencao de Lava e Seca em Maringa |
-| Manutencao de Maquina de Lavar | `manutencao-de-maquina-de-lavar` | Manutencao de Maquina de Lavar em Maringa |
-| Conserto de Painel Eletronico | `conserto-de-painel-eletronico-maquina-de-lavar` | Conserto de Painel Eletronico de Maquina de Lavar em Maringa |
-| Assistencia Tecnica | `assistencia-tecnica-maquina-de-lavar` | Assistencia Tecnica de Maquina de Lavar em Maringa |
-| Conserto de Secadora | `conserto-de-secadora` | Conserto de Secadora de Roupas em Maringa |
-| Problema na Centrifugacao | `problema-na-centrifugacao` | Conserto de Centrifugacao de Maquina de Lavar em Maringa |
+| Servico | Slug |
+|---------|------|
+| Manutencao de Lava e Seca | `manutencao-de-lava-e-seca` |
+| Manutencao de Maquina de Lavar | `manutencao-de-maquina-de-lavar` |
+| Conserto de Painel Eletronico | `conserto-de-painel-eletronico-maquina-de-lavar` |
+| Assistencia Tecnica de Maquina de Lavar | `assistencia-tecnica-maquina-de-lavar` |
+| Conserto de Secadora | `conserto-de-secadora` |
+| Problema na Centrifugacao | `problema-na-centrifugacao` |
 
-Cada servico incluira: heroTitle, heroSubtitle (empatico/urgente), introDescription, 6 detalhes de servico, marcas atendidas, 6 sinais de defeito, 4 FAQs com precos e metaTitle/metaDescription/metaKeywords otimizados.
+Cada um tera: titulo localizado, descricao com nome do bairro, descricao longa, 8 problemas comuns, marcas atendidas e 4 FAQs contextualizadas com o bairro.
 
 ## Detalhes Tecnicos
 
-### Arquivos a criar:
+### Arquivo a modificar:
 
-1. **`src/data/maquina-de-lavar-services.ts`** -- Dados dos 6 sub-servicos com interface `MaquinaDeLavarService` identica a `GeladeiraService`, conteudo completo de SEO com linguagem empática (alivio de ansiedade) e palavras-chave geolocalizadas.
+**`src/data/bairro-services.ts`** -- Adicionar 6 novos objetos ao array `bairroServices`, seguindo a interface `BairroService` existente (com `slug`, `title`, `shortTitle`, `icon`, `brands`, `problems`, `description(bairro)`, `longDescription(bairro)`, `faqs(bairro)`).
 
-2. **`src/pages/MaquinaDeLavarServicePage.tsx`** -- Pagina dinamica identica em layout ao `GeladeiraServicePage.tsx`:
-   - Breadcrumb: Inicio > Eletrodomesticos > Maquina de Lavar > [Servico]
-   - Hero com gradiente, icone, subtitle empatico e CTA WhatsApp
-   - Secao intro com H2 otimizado + detalhes/servicos incluidos
-   - Carrossel de marcas (BrandsCarousel)
-   - CTA Banner intermediario
-   - Vantagens (5 cards)
-   - Sinais de defeito com icone AlertTriangle
-   - CTA Banner 2
-   - FAQ com Accordion + schema FAQPage JSON-LD
-   - CTA final com WhatsApp + telefone
-   - Schemas JSON-LD: Service + FAQPage
+### Arquivos a atualizar:
 
-### Arquivos a modificar:
+**`src/pages/ServicoPorBairro.tsx`** -- A pagina de indice ja lista todos os `bairroServices` dinamicamente, entao mostrara automaticamente os novos servicos. Porem, o grid atual usa `lg:grid-cols-6` que ficara apertado com 12 servicos. Ajustar para `lg:grid-cols-4` para acomodar os 12 itens.
 
-3. **`src/App.tsx`** -- Adicionar rota `/maquina-de-lavar/:slug` apontando para `MaquinaDeLavarServicePage`
+**`public/sitemap.xml`** -- Adicionar as 402 novas URLs ao sitemap para garantir indexacao.
 
-4. **`src/pages/MaquinaDeLavar.tsx`** -- Atualizar os 6 cards de `heroServices` para que "Saiba Mais" aponte para `/maquina-de-lavar/:slug` em vez do WhatsApp generico. Adicionar propriedade `slug` a cada item e transformar o link em `<Link to={...}>`.
+### Impacto automatico (sem alteracoes necessarias):
 
-### Schemas JSON-LD por pagina:
-- `Service` com `provider` (LocalBusiness com dados reais do BUSINESS)
-- `FAQPage` com perguntas especificas de cada sub-servico
+- `BairroServicePage.tsx` -- ja renderiza qualquer servico encontrado em `bairroServices`
+- `BairroPage.tsx` -- ja lista todos os servicos disponiveis no bairro
+- `BairroSchemaGenerator.tsx` -- ja gera schemas para qualquer servico passado
+- Rota `/bairros/:slug/:serviceSlug` -- ja existe em `App.tsx`
 
-### Paginas geradas:
-- 6 paginas em `/maquina-de-lavar/:slug`
-- Todas com SEO completo (meta tags, canonical, Open Graph, FAQPage schema, Service schema)
-- WhatsApp com mensagem personalizada por servico
-- Titulos H1-H3 seguindo a diretriz de conteudo on-page
+### Resultado final:
+
+- 402 novas landing pages SEO (67 bairros x 6 sub-servicos)
+- Total de servicos por bairro: 12 (6 existentes + 6 novos)
+- Total de paginas de bairro-servico: ~804 (67 x 12)
+- Sitemap atualizado com todas as URLs
+
