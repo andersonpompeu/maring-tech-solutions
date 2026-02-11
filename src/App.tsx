@@ -1,0 +1,72 @@
+import { HelmetProvider } from 'react-helmet-async';
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
+import Eletrodomesticos from "./pages/Eletrodomesticos";
+import Televisores from "./pages/Televisores";
+import Celulares from "./pages/Celulares";
+import Bairros from "./pages/Bairros";
+import BairroPage from "./pages/BairroPage";
+import BairroServicePage from "./pages/BairroServicePage";
+import TermosDeUso from "./pages/TermosDeUso";
+import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade";
+import MaquinaDeLavar from "./pages/MaquinaDeLavar";
+import Geladeira from "./pages/Geladeira";
+import GeladeiraServicePage from "./pages/GeladeiraServicePage";
+import Fogao from "./pages/Fogao";
+import FogaoServicePage from "./pages/FogaoServicePage";
+import Microondas from "./pages/Microondas";
+import MicroondasServicePage from "./pages/MicroondasServicePage";
+import MaquinaDeLavarServicePage from "./pages/MaquinaDeLavarServicePage";
+import ServicoPorBairro from "./pages/ServicoPorBairro";
+import Blog from "./pages/Blog";
+import ArtigoPage from "./pages/ArtigoPage";
+import CookieConsent from "./components/CookieConsent";
+import ScrollToTop from "./components/ScrollToTop";
+
+const queryClient = new QueryClient();
+
+const App = () => (
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/eletrodomesticos" element={<Eletrodomesticos />} />
+            <Route path="/maquina-de-lavar" element={<MaquinaDeLavar />} />
+            <Route path="/maquina-de-lavar/:slug" element={<MaquinaDeLavarServicePage />} />
+            <Route path="/geladeira" element={<Geladeira />} />
+            <Route path="/geladeira/:slug" element={<GeladeiraServicePage />} />
+            <Route path="/fogao" element={<Fogao />} />
+            <Route path="/fogao/:slug" element={<FogaoServicePage />} />
+            <Route path="/micro-ondas" element={<Microondas />} />
+            <Route path="/micro-ondas/:slug" element={<MicroondasServicePage />} />
+            <Route path="/televisores" element={<Televisores />} />
+            <Route path="/celulares" element={<Celulares />} />
+            <Route path="/bairros" element={<Bairros />} />
+            <Route path="/bairros/:slug" element={<BairroPage />} />
+            <Route path="/bairros/:slug/:serviceSlug" element={<BairroServicePage />} />
+            <Route path="/termos-de-uso" element={<TermosDeUso />} />
+            <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidade />} />
+            <Route path="/servicos-por-bairro" element={<ServicoPorBairro />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<ArtigoPage />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <CookieConsent />
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
+);
+
+export default App;
