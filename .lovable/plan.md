@@ -1,55 +1,59 @@
 
 
-# Paginas de Sub-Servicos de Maquina de Lavar por Bairro
+# Plano: Aumentar Proporção Texto/HTML de 5.71% para +15%
 
-## Objetivo
+## Problema
+A proporção texto/HTML da pagina inicial esta em 5.71%, muito abaixo do minimo recomendado de 15%. Isso ocorre porque as secoes atuais usam cards com textos curtos e muito markup HTML (classes Tailwind, SVGs de icones, divs decorativos).
 
-Adicionar os 6 sub-servicos de maquina de lavar ao sistema de bairros existente, gerando automaticamente **67 x 6 = 402 novas paginas** com URLs como:
+## Estrategia
+Adicionar blocos de conteudo textual rico e relevante para SEO na pagina inicial, sem prejudicar o design visual atual. As novas secoes serao inseridas entre as existentes para manter o fluxo natural.
 
-- `/bairros/zona-01/manutencao-de-lava-e-seca`
-- `/bairros/jardim-alvorada/conserto-de-painel-eletronico-maquina-de-lavar`
-- `/bairros/centro/conserto-de-secadora`
+## Alteracoes Planejadas
 
-## Como funciona
+### 1. Nova secao "Sobre Nos" (AboutSection)
+- Inserir entre DifferentialsSection e GallerySection
+- Paragrafos descritivos sobre a empresa, historia, missao e area de atuacao em Maringa
+- Aproximadamente 250-300 palavras de conteudo relevante
+- Uso de tags semanticas (article, p, strong, em)
+- Palavras-chave naturais: assistencia tecnica, Maringa, conserto de eletrodomesticos
 
-O sistema de bairros ja possui a infraestrutura pronta (`BairroServicePage.tsx` renderiza `/bairros/:slug/:serviceSlug`). Basta adicionar os 6 sub-servicos ao array `bairroServices` em `src/data/bairro-services.ts`. Nenhuma nova pagina ou rota precisa ser criada -- o sistema dinamico faz tudo automaticamente.
+### 2. Nova secao FAQ na pagina inicial (HomeFAQSection)
+- Inserir apos NeighborhoodsSection e antes do Footer
+- 8-10 perguntas frequentes com respostas detalhadas
+- Schema markup FAQ (JSON-LD) para rich snippets no Google
+- Aproximadamente 400-500 palavras de conteudo puro
+- Uso de Accordion para UX
 
-## Sub-servicos a adicionar
+### 3. Expandir descricoes existentes
+- **ServicesSection**: adicionar um paragrafo introdutorio mais longo antes do grid de cards
+- **DifferentialsSection**: expandir as descricoes de cada diferencial com mais texto
+- **TeamSection**: adicionar paragrafo contextual sobre a equipe e certificacoes
+- **TestimonialsSection**: adicionar texto introdutorio mais rico
+- **GallerySection**: adicionar paragrafo descritivo sobre o processo de trabalho
 
-| Servico | Slug |
-|---------|------|
-| Manutencao de Lava e Seca | `manutencao-de-lava-e-seca` |
-| Manutencao de Maquina de Lavar | `manutencao-de-maquina-de-lavar` |
-| Conserto de Painel Eletronico | `conserto-de-painel-eletronico-maquina-de-lavar` |
-| Assistencia Tecnica de Maquina de Lavar | `assistencia-tecnica-maquina-de-lavar` |
-| Conserto de Secadora | `conserto-de-secadora` |
-| Problema na Centrifugacao | `problema-na-centrifugacao` |
+### 4. Nova secao "Marcas e Especialidades" com texto rico
+- Substituir ou complementar o BrandsCarousel com uma secao textual sobre as marcas atendidas
+- Descricoes por categoria de produto (linha branca, eletronicos, celulares)
+- Aproximadamente 200 palavras adicionais
 
-Cada um tera: titulo localizado, descricao com nome do bairro, descricao longa, 8 problemas comuns, marcas atendidas e 4 FAQs contextualizadas com o bairro.
+## Secoes Tecnicas
 
-## Detalhes Tecnicos
+### Arquivos a criar
+- `src/components/AboutSection.tsx` - Secao institucional com texto rico
+- `src/components/HomeFAQSection.tsx` - FAQ com accordion e schema JSON-LD
 
-### Arquivo a modificar:
+### Arquivos a editar
+- `src/pages/Index.tsx` - Importar e posicionar as novas secoes
+- `src/components/ServicesSection.tsx` - Expandir texto introdutorio
+- `src/components/DifferentialsSection.tsx` - Expandir descricoes dos diferenciais
+- `src/components/TeamSection.tsx` - Adicionar paragrafo contextual
+- `src/components/TestimonialsSection.tsx` - Expandir texto introdutorio
+- `src/components/GallerySection.tsx` - Adicionar paragrafo descritivo
 
-**`src/data/bairro-services.ts`** -- Adicionar 6 novos objetos ao array `bairroServices`, seguindo a interface `BairroService` existente (com `slug`, `title`, `shortTitle`, `icon`, `brands`, `problems`, `description(bairro)`, `longDescription(bairro)`, `faqs(bairro)`).
+### Estimativa de texto adicionado
+- AboutSection: ~300 palavras
+- HomeFAQSection: ~500 palavras
+- Expansoes nas secoes existentes: ~300 palavras
+- **Total: ~1.100 palavras adicionais de conteudo puro**
 
-### Arquivos a atualizar:
-
-**`src/pages/ServicoPorBairro.tsx`** -- A pagina de indice ja lista todos os `bairroServices` dinamicamente, entao mostrara automaticamente os novos servicos. Porem, o grid atual usa `lg:grid-cols-6` que ficara apertado com 12 servicos. Ajustar para `lg:grid-cols-4` para acomodar os 12 itens.
-
-**`public/sitemap.xml`** -- Adicionar as 402 novas URLs ao sitemap para garantir indexacao.
-
-### Impacto automatico (sem alteracoes necessarias):
-
-- `BairroServicePage.tsx` -- ja renderiza qualquer servico encontrado em `bairroServices`
-- `BairroPage.tsx` -- ja lista todos os servicos disponiveis no bairro
-- `BairroSchemaGenerator.tsx` -- ja gera schemas para qualquer servico passado
-- Rota `/bairros/:slug/:serviceSlug` -- ja existe em `App.tsx`
-
-### Resultado final:
-
-- 402 novas landing pages SEO (67 bairros x 6 sub-servicos)
-- Total de servicos por bairro: 12 (6 existentes + 6 novos)
-- Total de paginas de bairro-servico: ~804 (67 x 12)
-- Sitemap atualizado com todas as URLs
-
+Isso deve elevar a proporcao texto/HTML para acima de 15%, mantendo o conteudo 100% relevante para SEO local e a experiencia do usuario intacta.
