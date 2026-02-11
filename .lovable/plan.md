@@ -1,59 +1,28 @@
 
-
-# Plano: Aumentar Proporção Texto/HTML de 5.71% para +15%
+# Corrigir Meta Tags Estaticas no index.html
 
 ## Problema
-A proporção texto/HTML da pagina inicial esta em 5.71%, muito abaixo do minimo recomendado de 15%. Isso ocorre porque as secoes atuais usam cards com textos curtos e muito markup HTML (classes Tailwind, SVGs de icones, divs decorativos).
+O arquivo `index.html` ainda contem meta tags antigas com "TechFix Maringa" e uma imagem OG generica do Lovable. Crawlers de redes sociais (Facebook, WhatsApp, Telegram) e motores de busca que nao executam JavaScript (Bing, DuckDuckGo) leem APENAS essas tags estaticas, resultando em previews de link incorretos.
 
-## Estrategia
-Adicionar blocos de conteudo textual rico e relevante para SEO na pagina inicial, sem prejudicar o design visual atual. As novas secoes serao inseridas entre as existentes para manter o fluxo natural.
+O `react-helmet-async` funciona corretamente para o Google (que executa JS), mas serve apenas como sobrescrita dinamica para navegadores. As tags do `index.html` sao o fallback universal.
 
-## Alteracoes Planejadas
+## Solucao
 
-### 1. Nova secao "Sobre Nos" (AboutSection)
-- Inserir entre DifferentialsSection e GallerySection
-- Paragrafos descritivos sobre a empresa, historia, missao e area de atuacao em Maringa
-- Aproximadamente 250-300 palavras de conteudo relevante
-- Uso de tags semanticas (article, p, strong, em)
-- Palavras-chave naturais: assistencia tecnica, Maringa, conserto de eletrodomesticos
+### 1. Atualizar index.html com meta tags corretas
+- Corrigir titulo para "Assistencia Tecnica Maringa"
+- Atualizar description com a descricao padrao do negocio (max 155 caracteres)
+- Corrigir author para "Assistencia Tecnica Maringa"
+- Adicionar canonical: `https://assistenciatecnica.maringa.br`
+- Atualizar OG tags (og:title, og:description, og:url, og:image)
+- Atualizar Twitter cards com dados corretos
+- Remover referencia "@TechFixMaringa"
 
-### 2. Nova secao FAQ na pagina inicial (HomeFAQSection)
-- Inserir apos NeighborhoodsSection e antes do Footer
-- 8-10 perguntas frequentes com respostas detalhadas
-- Schema markup FAQ (JSON-LD) para rich snippets no Google
-- Aproximadamente 400-500 palavras de conteudo puro
-- Uso de Accordion para UX
+### 2. Consistencia de dados
+- Usar os mesmos valores do `BUSINESS` em `src/data/business-info.ts`
+- Manter a imagem OG apontando para `https://assistenciatecnica.maringa.br/og-image.jpg`
 
-### 3. Expandir descricoes existentes
-- **ServicesSection**: adicionar um paragrafo introdutorio mais longo antes do grid de cards
-- **DifferentialsSection**: expandir as descricoes de cada diferencial com mais texto
-- **TeamSection**: adicionar paragrafo contextual sobre a equipe e certificacoes
-- **TestimonialsSection**: adicionar texto introdutorio mais rico
-- **GallerySection**: adicionar paragrafo descritivo sobre o processo de trabalho
+## Observacao importante
+Isso NAO resolve o problema de paginas internas (ex: `/blog/conserto-de-geladeira`) terem previews personalizados em redes sociais. Para isso seria necessario SSR/SSG, que nao e suportado neste stack (Vite + React SPA). Porem, com as tags do index.html corrigidas, pelo menos TODAS as paginas terao um preview consistente e correto com os dados da marca principal, o que e muito melhor do que o cenario atual com "TechFix Maringa".
 
-### 4. Nova secao "Marcas e Especialidades" com texto rico
-- Substituir ou complementar o BrandsCarousel com uma secao textual sobre as marcas atendidas
-- Descricoes por categoria de produto (linha branca, eletronicos, celulares)
-- Aproximadamente 200 palavras adicionais
-
-## Secoes Tecnicas
-
-### Arquivos a criar
-- `src/components/AboutSection.tsx` - Secao institucional com texto rico
-- `src/components/HomeFAQSection.tsx` - FAQ com accordion e schema JSON-LD
-
-### Arquivos a editar
-- `src/pages/Index.tsx` - Importar e posicionar as novas secoes
-- `src/components/ServicesSection.tsx` - Expandir texto introdutorio
-- `src/components/DifferentialsSection.tsx` - Expandir descricoes dos diferenciais
-- `src/components/TeamSection.tsx` - Adicionar paragrafo contextual
-- `src/components/TestimonialsSection.tsx` - Expandir texto introdutorio
-- `src/components/GallerySection.tsx` - Adicionar paragrafo descritivo
-
-### Estimativa de texto adicionado
-- AboutSection: ~300 palavras
-- HomeFAQSection: ~500 palavras
-- Expansoes nas secoes existentes: ~300 palavras
-- **Total: ~1.100 palavras adicionais de conteudo puro**
-
-Isso deve elevar a proporcao texto/HTML para acima de 15%, mantendo o conteudo 100% relevante para SEO local e a experiencia do usuario intacta.
+## Arquivo a editar
+- `index.html`
