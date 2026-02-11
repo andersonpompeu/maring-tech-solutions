@@ -736,4 +736,224 @@ export const articles: Article[] = [
 <p>Os <strong>reparos elétricos residenciais em Maringá</strong> devem ser tratados com seriedade e responsabilidade. Cada intervenção, por menor que pareça, envolve riscos que exigem conhecimento técnico e ferramentas adequadas. Priorize sempre a segurança e conte com profissionais qualificados para manter sua instalação elétrica em perfeito funcionamento.</p>
     `,
   },
+  {
+    slug: 'assistencia-tecnica-geladeira-refrigerador-maringa',
+    title: 'Assistência Técnica Especializada em Geladeiras e Refrigeradores em Maringá',
+    metaDescription: 'Assistência técnica para geladeiras em Maringá. Frost Free, duplex, inverse e side by side. Troca de gás, compressor e termostato com garantia.',
+    keywords: 'assistência técnica geladeira Maringá, conserto refrigerador, troca de gás geladeira, compressor geladeira Maringá, frost free, side by side',
+    heading: 'Assistência Técnica Especializada em Geladeiras e Refrigeradores em Maringá',
+    content: `
+<p>A <strong>geladeira</strong> é o eletrodoméstico que funciona 24 horas por dia, 7 dias por semana, e qualquer falha exige atenção imediata. Em <strong>Maringá</strong>, oferecemos <strong>assistência técnica completa para geladeiras e refrigeradores</strong> de todas as marcas e modelos, com diagnóstico preciso e reparo garantido. Atendemos desde modelos simples até os mais sofisticados, incluindo <strong>Frost Free</strong>, <strong>duplex</strong>, <strong>inverse</strong> e <strong>side by side</strong>.</p>
+
+<h2>Tipos de Geladeiras que Reparamos</h2>
+
+<h3>Geladeiras Frost Free</h3>
+<p>O sistema Frost Free elimina a necessidade de degelo manual, mas possui componentes delicados como resistências de degelo, sensores de temperatura e ventiladores internos que podem apresentar falhas. Nossos técnicos em Maringá são especializados no diagnóstico e reparo de todos os componentes do sistema de degelo automático, garantindo que sua geladeira volte a funcionar com eficiência máxima.</p>
+
+<h3>Geladeiras Duplex</h3>
+<p>Os modelos duplex, com compartimentos separados para refrigeração e congelamento, exigem atenção especial ao sistema de distribuição de ar e ao termostato. Problemas como geladeira gelando demais, freezer não congelando ou formação de gelo excessiva são comuns e podem ser resolvidos rapidamente por nossos especialistas.</p>
+
+<h3>Geladeiras Side by Side</h3>
+<p>As geladeiras side by side são equipamentos premium que contam com tecnologias avançadas como dispensers de água e gelo, painéis digitais e sistemas de filtragem. O reparo desses modelos exige conhecimento técnico avançado e acesso a peças específicas. Nossa equipe possui treinamento especializado nas principais marcas como <strong>Samsung</strong>, <strong>LG</strong> e <strong>Electrolux</strong>.</p>
+
+<h3>Geladeiras Inverse</h3>
+<p>O design inverse, com o freezer embaixo, utiliza um sistema de refrigeração otimizado que demanda diagnóstico técnico preciso. Reparamos problemas de circulação de ar, falhas no compressor e defeitos na placa eletrônica com agilidade e garantia de serviço.</p>
+
+<h2>Serviços Especializados</h2>
+
+<h3>Troca de Gás Refrigerante</h3>
+<p>A <strong>troca de gás</strong> é um dos serviços mais solicitados em Maringá. Quando a geladeira não gela adequadamente, uma das causas mais comuns é o vazamento de gás refrigerante. Nossos técnicos realizam a detecção do vazamento, solda do ponto de fuga, vácuo no sistema e recarga com o gás correto (R134a, R600a ou R404a), seguindo rigorosamente as normas ambientais e de segurança.</p>
+
+<h3>Troca e Reparo de Compressor</h3>
+<p>O compressor é o coração da geladeira. Quando ele falha, o aparelho para de refrigerar completamente. Realizamos o diagnóstico elétrico e mecânico do compressor, e quando necessário, fazemos a substituição por peças originais ou compatíveis de alta qualidade, sempre com garantia estendida.</p>
+
+<h3>Substituição de Termostato</h3>
+<p>O termostato regula a temperatura interna da geladeira. Um termostato com defeito pode fazer a geladeira gelar demais, não gelar o suficiente ou funcionar continuamente sem desligar. Trocamos termostatos mecânicos e eletrônicos de todas as marcas.</p>
+
+<h3>Reparo no Sistema de Refrigeração</h3>
+<p>Problemas no sistema de refrigeração podem envolver condensador, evaporador, filtro secador, válvula de expansão e tubulações. Nossa equipe possui equipamentos profissionais para identificar e corrigir qualquer falha no circuito de refrigeração.</p>
+
+<h2>Marcas Atendidas</h2>
+
+<p>Reparamos geladeiras e refrigeradores de todas as principais marcas do mercado brasileiro: <strong>Brastemp</strong>, <strong>Consul</strong>, <strong>Electrolux</strong>, <strong>Samsung</strong>, <strong>LG</strong>, <strong>Panasonic</strong>, <strong>Midea</strong>, <strong>Continental</strong> e <strong>Bosch</strong>. Cada marca possui particularidades técnicas que nossos profissionais conhecem profundamente, garantindo um reparo preciso e duradouro.</p>
+
+<h2>Atendimento em Toda Maringá</h2>
+
+<p>Nossos técnicos atendem em todos os bairros de Maringá, incluindo <a href="/bairros/zona-01" title="Assistência técnica na Zona 01">Zona 01</a>, <a href="/bairros/zona-07" title="Assistência técnica na Zona 07">Zona 07</a>, <a href="/bairros/jardim-alvorada" title="Assistência técnica no Jardim Alvorada">Jardim Alvorada</a>, <a href="/bairros/vila-esperanca" title="Assistência técnica na Vila Esperança">Vila Esperança</a>, <a href="/bairros/jardim-paris" title="Assistência técnica no Jardim Paris">Jardim Paris</a> e <a href="/bairros/parque-das-laranjeiras" title="Assistência técnica no Parque das Laranjeiras">Parque das Laranjeiras</a>. Oferecemos atendimento rápido com deslocamento incluso e <strong>conserto no mesmo dia</strong> para casos urgentes.</p>
+
+<p>Confira também nosso guia completo sobre <a href="/blog/conserto-de-geladeira-maringa" title="Conserto de geladeira em Maringá">diagnóstico e reparo de geladeiras</a> e conheça os <a href="/geladeira" title="Serviços para geladeira">serviços especializados para geladeira</a> que oferecemos.</p>
+
+<h2>Perguntas Frequentes (FAQ)</h2>
+
+<h3>Quanto tempo leva o conserto de uma geladeira em Maringá?</h3>
+<p>A maioria dos reparos é concluída no mesmo dia. Problemas simples como troca de termostato ou borracha de vedação levam entre 30 minutos e 1 hora. Serviços mais complexos como troca de compressor ou recarga de gás podem levar de 2 a 4 horas.</p>
+
+<h3>Vale a pena trocar o compressor da geladeira?</h3>
+<p>Sim, na maioria dos casos. O custo da troca do compressor geralmente fica entre 30% e 50% do valor de uma geladeira nova, e com a peça nova você ganha mais alguns anos de vida útil. Para geladeiras com menos de 8 anos de uso, a troca do compressor é quase sempre a melhor opção.</p>
+
+<h3>Qual o gás refrigerante correto para minha geladeira?</h3>
+<p>O tipo de gás depende do modelo e ano de fabricação da geladeira. Os mais comuns são R134a (modelos mais antigos) e R600a (modelos mais recentes e ecológicos). Nunca tente recarregar gás por conta própria — é um serviço que exige equipamento profissional e certificação técnica.</p>
+
+<h3>Como saber se minha geladeira está com vazamento de gás?</h3>
+<p>Os principais sinais são: geladeira não gelando adequadamente, compressor funcionando sem parar, formação de gelo apenas em uma parte do freezer e barulho de "clique" constante. Se perceber algum desses sintomas, entre em contato para um diagnóstico rápido.</p>
+
+<h3>Vocês atendem todas as marcas de geladeira?</h3>
+<p>Sim, atendemos todas as marcas e modelos disponíveis no mercado brasileiro, incluindo Brastemp, Consul, Electrolux, Samsung, LG, Panasonic, Midea, Continental e Bosch.</p>
+
+<h2>Conclusão</h2>
+
+<p>A <strong>assistência técnica para geladeiras em Maringá</strong> que oferecemos combina experiência, equipamentos profissionais e peças de qualidade para garantir o melhor resultado. Com <strong>garantia de 90 dias</strong> em todos os serviços e atendimento em toda a cidade, somos a escolha certa para manter seu refrigerador funcionando perfeitamente. <a href="https://wa.me/5544997398826?text=Olá! Preciso de assistência técnica para minha geladeira." target="_blank" rel="noopener noreferrer">Solicite seu orçamento pelo WhatsApp</a>.</p>
+    `,
+  },
+  {
+    slug: 'conserto-microondas-todas-marcas-maringa',
+    title: 'Conserto de Micro-ondas de Todas as Marcas em Maringá',
+    metaDescription: 'Conserto de micro-ondas em Maringá. Reparo de magnetron, painel eletrônico e prato giratório. Electrolux, LG, Samsung e Panasonic.',
+    keywords: 'conserto micro-ondas Maringá, reparo magnetron, painel eletrônico micro-ondas, conserto Electrolux LG Samsung Panasonic',
+    heading: 'Conserto de Micro-ondas de Todas as Marcas em Maringá',
+    content: `
+<p>O <strong>micro-ondas</strong> se tornou um dos eletrodomésticos mais utilizados nas cozinhas de <strong>Maringá</strong>. Quando ele apresenta defeito, o impacto na rotina é imediato. Somos especializados no <strong>conserto de micro-ondas</strong> de todas as marcas, oferecendo diagnóstico técnico preciso, reparo com peças de qualidade e <strong>garantia de 90 dias</strong> em todos os serviços realizados.</p>
+
+<h2>Componentes que Reparamos</h2>
+
+<h3>Magnetron</h3>
+<p>O <strong>magnetron</strong> é o componente responsável por gerar as micro-ondas que aquecem os alimentos. Quando ele falha, o micro-ondas liga mas não esquenta. É um dos reparos mais técnicos e delicados, pois envolve componentes de alta tensão. Nossos técnicos possuem formação específica para realizar a substituição do magnetron com segurança, utilizando peças compatíveis com cada marca e modelo.</p>
+
+<h3>Painel Eletrônico</h3>
+<p>O <strong>painel eletrônico</strong> controla todas as funções do micro-ondas: tempo, potência, programas automáticos e display. Problemas comuns incluem teclas que não respondem, display apagado ou parcialmente funcional e erro nos programas. Realizamos o reparo da placa eletrônica e, quando necessário, a substituição completa do painel.</p>
+
+<h3>Prato Giratório</h3>
+<p>O sistema do <strong>prato giratório</strong> inclui o motor de rotação, o acoplador e o próprio prato de vidro. Quando o prato para de girar, os alimentos são aquecidos de forma desigual. Reparamos o motor, trocamos acopladores desgastados e fornecemos pratos de reposição para todos os modelos.</p>
+
+<h3>Porta e Travas de Segurança</h3>
+<p>A porta do micro-ondas possui interruptores de segurança (switches) que impedem o funcionamento com a porta aberta. Quando esses componentes falham, o micro-ondas pode não ligar. Realizamos a troca dos switches, ajuste de dobradiças e substituição de trincos com rapidez e segurança.</p>
+
+<h3>Transformador de Alta Tensão</h3>
+<p>O transformador é responsável por elevar a tensão para alimentar o magnetron. Defeitos nesse componente geralmente causam barulho excessivo, cheiro de queimado ou falha total do aparelho. Fazemos o diagnóstico e a troca do transformador quando necessário.</p>
+
+<h2>Marcas que Atendemos</h2>
+
+<p>Nossa equipe é treinada para reparar micro-ondas de todas as marcas disponíveis no mercado: <strong>Electrolux</strong>, <strong>LG</strong>, <strong>Samsung</strong>, <strong>Panasonic</strong>, <strong>Brastemp</strong>, <strong>Consul</strong>, <strong>Midea</strong> e <strong>Philco</strong>. Conhecemos as particularidades técnicas de cada fabricante, desde os modelos mais simples até os micro-ondas de embutir e os combinados com grill.</p>
+
+<h2>Sinais de que seu Micro-ondas Precisa de Reparo</h2>
+
+<ul>
+<li><strong>Não aquece</strong>: pode ser problema no magnetron, capacitor ou diodo de alta tensão</li>
+<li><strong>Faz barulho estranho</strong>: indica possível defeito no magnetron ou transformador</li>
+<li><strong>Cheiro de queimado</strong>: sinal de componente elétrico danificado — desligue imediatamente</li>
+<li><strong>Display não funciona</strong>: problema na placa eletrônica ou fusível queimado</li>
+<li><strong>Prato não gira</strong>: motor de rotação ou acoplador com defeito</li>
+<li><strong>Faíscas internas</strong>: pode ser mica queimada, tinta descascada ou uso de material metálico</li>
+</ul>
+
+<h2>Atendimento em Todos os Bairros de Maringá</h2>
+
+<p>Realizamos atendimento domiciliar para conserto de micro-ondas em toda Maringá. Nossos técnicos atendem em bairros como <a href="/bairros/zona-02" title="Assistência técnica na Zona 02">Zona 02</a>, <a href="/bairros/zona-05" title="Assistência técnica na Zona 05">Zona 05</a>, <a href="/bairros/jardim-imperial" title="Assistência técnica no Jardim Imperial">Jardim Imperial</a>, <a href="/bairros/novo-centro" title="Assistência técnica no Novo Centro">Novo Centro</a>, <a href="/bairros/jardim-america" title="Assistência técnica no Jardim América">Jardim América</a> e <a href="/bairros/vila-morangueira" title="Assistência técnica na Vila Morangueira">Vila Morangueira</a>. Confira a <a href="/bairros" title="Todos os bairros atendidos">lista completa de bairros atendidos</a>.</p>
+
+<p>Veja também nossos <a href="/microondas" title="Serviços para micro-ondas">serviços especializados para micro-ondas</a> e conheça mais sobre nossa <a href="/eletrodomesticos" title="Assistência técnica para eletrodomésticos">assistência técnica para eletrodomésticos</a> em Maringá.</p>
+
+<h2>Perguntas Frequentes (FAQ)</h2>
+
+<h3>Quanto custa o conserto de um micro-ondas em Maringá?</h3>
+<p>O valor varia conforme o tipo de defeito. Reparos simples como troca de fusível ou switch de porta custam entre R$ 80 e R$ 150. A troca de magnetron, que é o reparo mais complexo, pode custar entre R$ 200 e R$ 400, dependendo da marca e modelo.</p>
+
+<h3>Vale a pena consertar micro-ondas?</h3>
+<p>Na maioria dos casos, sim. Se o custo do reparo for inferior a 50% do valor de um aparelho novo e o micro-ondas tiver menos de 5 anos de uso, o conserto é a opção mais econômica e sustentável.</p>
+
+<h3>O micro-ondas pode ser perigoso quando está com defeito?</h3>
+<p>Sim. O micro-ondas trabalha com alta tensão internamente (até 4.000 volts). Por isso, nunca tente consertar por conta própria. Ao perceber faíscas, cheiro de queimado ou qualquer comportamento anormal, desligue o aparelho da tomada e procure assistência técnica profissional.</p>
+
+<h3>Quanto tempo leva o conserto de um micro-ondas?</h3>
+<p>A maioria dos reparos é concluída em 1 a 2 horas. Em casos que exigem encomenda de peças específicas, o prazo pode ser de 2 a 5 dias úteis.</p>
+
+<h3>Vocês consertam micro-ondas de embutir?</h3>
+<p>Sim, atendemos todos os tipos de micro-ondas, incluindo modelos de embutir, de bancada e combinados com grill ou forno. Nossos técnicos possuem experiência com modelos premium de marcas como Electrolux, Brastemp e Fischer.</p>
+
+<h2>Conclusão</h2>
+
+<p>O <strong>conserto de micro-ondas em Maringá</strong> é um serviço que exige conhecimento técnico especializado e equipamentos adequados. Com nossa equipe qualificada, atendemos todas as marcas e modelos, oferecendo <strong>diagnóstico rápido</strong>, peças de qualidade e <strong>garantia de 90 dias</strong>. <a href="https://wa.me/5544997398826?text=Olá! Preciso de conserto para meu micro-ondas." target="_blank" rel="noopener noreferrer">Solicite seu orçamento pelo WhatsApp</a>.</p>
+    `,
+  },
+  {
+    slug: 'tecnico-eletrodomesticos-linha-branca-maringa',
+    title: 'Técnico Especializado em Eletrodomésticos Linha Branca em Maringá',
+    metaDescription: 'Técnicos certificados em linha branca em Maringá-PR. Brastemp, Electrolux, LG, Samsung e Consul com treinamento contínuo.',
+    keywords: 'técnico linha branca Maringá, eletrodomésticos linha branca, Brastemp Electrolux LG Samsung Consul, assistência técnica Maringá',
+    heading: 'Técnico Especializado em Eletrodomésticos Linha Branca em Maringá',
+    content: `
+<p>A <strong>linha branca</strong> engloba os eletrodomésticos mais essenciais de qualquer residência: geladeiras, máquinas de lavar, fogões, micro-ondas e lava-louças. Em <strong>Maringá</strong>, contamos com uma equipe de <strong>técnicos certificados e especializados</strong> nesses equipamentos, com treinamento contínuo nas principais marcas do mercado para oferecer soluções precisas e duradouras.</p>
+
+<h2>O Que é Linha Branca?</h2>
+
+<p>O termo "linha branca" refere-se aos grandes eletrodomésticos que historicamente eram fabricados na cor branca. Hoje, apesar de estarem disponíveis em diversas cores e acabamentos (inox, black, grafite), a nomenclatura permanece. Esses equipamentos são fundamentais para o funcionamento de qualquer lar e incluem:</p>
+
+<ul>
+<li><strong>Geladeiras e refrigeradores</strong>: Frost Free, duplex, inverse e side by side</li>
+<li><strong>Máquinas de lavar</strong>: lavadoras automáticas, semiautomáticas e lava e seca</li>
+<li><strong>Fogões</strong>: 4 e 5 bocas, cooktops e fornos de embutir</li>
+<li><strong>Micro-ondas</strong>: de bancada, embutir e com grill</li>
+<li><strong>Lava-louças</strong>: compactas e de piso</li>
+<li><strong>Secadoras de roupas</strong>: a gás e elétricas</li>
+</ul>
+
+<h2>Marcas em que Somos Especializados</h2>
+
+<h3>Brastemp</h3>
+<p>A <strong>Brastemp</strong> é uma das marcas mais tradicionais do Brasil. Nossos técnicos conhecem profundamente a linha de geladeiras BRM, BRE e BRS, as lavadoras BWK e BWN, os fogões BFS e Ative!, além dos micro-ondas da marca. Realizamos reparos com peças originais e garantia.</p>
+
+<h3>Electrolux</h3>
+<p>A <strong>Electrolux</strong> é líder global em eletrodomésticos. Atendemos toda a linha de geladeiras (DF, DFN, DB, SS), lavadoras (LT, LTD, LAC), fogões (56 e 76) e micro-ondas (ME, MEF, MI). Nossa equipe recebe atualizações constantes sobre novos modelos e tecnologias da marca.</p>
+
+<h3>LG</h3>
+<p>A <strong>LG</strong> se destaca pela tecnologia Inverter em geladeiras e lavadoras. Nossos técnicos são treinados para trabalhar com a linha de lavadoras com Inteligência Artificial, geladeiras Door-in-Door e o sistema Smart Diagnosis, que facilita o diagnóstico remoto de problemas.</p>
+
+<h3>Samsung</h3>
+<p>A <strong>Samsung</strong> oferece eletrodomésticos com tecnologia de ponta como o Digital Inverter, PowerFoam e Eco Bubble. Nossos especialistas dominam essas tecnologias e realizam reparos precisos em geladeiras, lavadoras e micro-ondas da marca.</p>
+
+<h3>Consul</h3>
+<p>A <strong>Consul</strong> é conhecida pelo excelente custo-benefício. Atendemos toda a linha de geladeiras CRB, CRM e CRD, lavadoras CWH e CWB, fogões e micro-ondas. Nossos técnicos conhecem as particularidades de cada modelo para oferecer um reparo eficiente.</p>
+
+<h2>Qualificação e Treinamento Contínuo</h2>
+
+<p>Nossa equipe técnica passa por um programa de capacitação constante que inclui treinamentos em novas tecnologias, atualizações sobre modelos lançados no mercado, certificações técnicas e boas práticas de segurança. Isso garante que qualquer eletrodoméstico que chegar às nossas mãos receba o tratamento técnico adequado, independente da marca ou complexidade do problema.</p>
+
+<h2>Nossos Diferenciais</h2>
+
+<ul>
+<li><strong>Diagnóstico preciso</strong>: utilizamos equipamentos profissionais de medição e teste</li>
+<li><strong>Peças de qualidade</strong>: trabalhamos com peças originais e compatíveis certificadas</li>
+<li><strong>Garantia de 90 dias</strong>: todos os serviços possuem garantia estendida</li>
+<li><strong>Atendimento rápido</strong>: conserto no mesmo dia para casos urgentes</li>
+<li><strong>Transparência</strong>: orçamento detalhado antes de iniciar qualquer serviço</li>
+<li><strong>Atendimento 24 horas</strong>: disponíveis para emergências em qualquer horário</li>
+</ul>
+
+<h2>Cobertura em Maringá</h2>
+
+<p>Atendemos em todos os 67 bairros de Maringá com agilidade e profissionalismo. Entre os bairros mais atendidos estão <a href="/bairros/zona-03" title="Assistência técnica na Zona 03">Zona 03</a>, <a href="/bairros/zona-04" title="Assistência técnica na Zona 04">Zona 04</a>, <a href="/bairros/jardim-olympia" title="Assistência técnica no Jardim Olímpia">Jardim Olímpia</a>, <a href="/bairros/jardim-maringa" title="Assistência técnica no Jardim Maringá">Jardim Maringá</a>, <a href="/bairros/conjunto-habitacional-inocente-vila-nova-junior" title="Assistência técnica no Conj. Inocente Vila Nova">Conj. Inocente Vila Nova</a> e <a href="/bairros/jardim-paulista" title="Assistência técnica no Jardim Paulista">Jardim Paulista</a>. Confira a <a href="/servicos-por-bairro" title="Serviços por bairro em Maringá">lista de serviços por bairro</a>.</p>
+
+<p>Conheça também nossos serviços específicos: <a href="/geladeira" title="Conserto de geladeira">geladeira</a>, <a href="/maquina-de-lavar" title="Conserto de máquina de lavar">máquina de lavar</a>, <a href="/fogao" title="Conserto de fogão">fogão</a> e <a href="/microondas" title="Conserto de micro-ondas">micro-ondas</a>.</p>
+
+<h2>Perguntas Frequentes (FAQ)</h2>
+
+<h3>Vocês fazem orçamento grátis?</h3>
+<p>Sim, oferecemos orçamento sem compromisso para todos os serviços de linha branca. Basta entrar em contato pelo WhatsApp e descrever o problema que você está enfrentando com seu eletrodoméstico.</p>
+
+<h3>Quanto tempo demora o conserto de eletrodomésticos?</h3>
+<p>Depende do tipo de defeito e da disponibilidade de peças. A maioria dos reparos é concluída no mesmo dia. Para casos que exigem peças especiais, o prazo médio é de 2 a 5 dias úteis.</p>
+
+<h3>Vocês atendem em Sarandi e Paiçandu?</h3>
+<p>Nosso foco principal é Maringá, mas atendemos também em cidades da região metropolitana como Sarandi, Paiçandu e Marialva, mediante consulta de disponibilidade.</p>
+
+<h3>É seguro consertar eletrodomésticos antigos?</h3>
+<p>Sim, desde que o reparo seja feito por um técnico qualificado. Em alguns casos, recomendamos a substituição quando o custo do conserto ultrapassa 50% do valor de um equipamento novo ou quando o modelo apresenta riscos de segurança.</p>
+
+<h3>Como funciona a garantia dos serviços?</h3>
+<p>Todos os nossos serviços possuem <strong>garantia de 90 dias</strong>, cobrindo tanto a mão de obra quanto as peças substituídas. Se o mesmo problema voltar a ocorrer dentro do período de garantia, realizamos o reparo sem custo adicional.</p>
+
+<h2>Conclusão</h2>
+
+<p>Contar com um <strong>técnico especializado em linha branca em Maringá</strong> é a garantia de que seus eletrodomésticos receberão o tratamento adequado. Nossa equipe combina experiência, treinamento contínuo e compromisso com a qualidade para oferecer o melhor serviço da região. <a href="https://wa.me/5544997398826?text=Olá! Preciso de assistência técnica para meu eletrodoméstico de linha branca." target="_blank" rel="noopener noreferrer">Fale conosco pelo WhatsApp</a> e agende seu atendimento.</p>
+    `,
+  },
 ];
