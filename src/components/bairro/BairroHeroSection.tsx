@@ -19,9 +19,9 @@ interface BairroHeroSectionProps {
 
 const getSlides = (bairro: string) => [
   {
-    title: `Assistência Técnica de Eletrodoméstico ${noBairro(bairro)}`,
-    subtitle: `Assistência Técnica Premium ${noBairro(bairro)}, Maringá`,
-    description: `Eletrodomésticos, Smart TVs e Celulares ${noBairro(bairro)}. Atendimento rápido com técnicos certificados.`,
+    title: `Técnico de Geladeira ${noBairro(bairro)} - Assistência Técnica em Maringá`,
+    subtitle: `Assistência Técnica da Geladeira Continental e Todas as Marcas`,
+    description: `Técnico geladeira em Maringá ${noBairro(bairro)}. Conserto de geladeira Continental, Brastemp, Electrolux, Consul e mais. Atendimento rápido!`,
     icon: Zap,
     highlight: 'Mesmo Dia',
   },
