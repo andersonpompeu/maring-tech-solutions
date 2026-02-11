@@ -23,6 +23,8 @@ import Microondas from "./pages/Microondas";
 import MicroondasServicePage from "./pages/MicroondasServicePage";
 import MaquinaDeLavarServicePage from "./pages/MaquinaDeLavarServicePage";
 import ServicoPorBairro from "./pages/ServicoPorBairro";
+import Blog from "./pages/Blog";
+import ArtigoPage from "./pages/ArtigoPage";
 import CookieConsent from "./components/CookieConsent";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -55,6 +57,8 @@ const App = () => (
             <Route path="/termos-de-uso" element={<TermosDeUso />} />
             <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidade />} />
             <Route path="/servicos-por-bairro" element={<ServicoPorBairro />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<ArtigoPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
