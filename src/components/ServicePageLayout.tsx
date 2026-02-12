@@ -227,7 +227,7 @@ const ServicePageLayout = ({
           </div>
 
           {/* Hero Section */}
-          <section className="relative bg-gradient-hero text-primary-foreground py-16 lg:py-24 overflow-hidden">
+          <section className="relative bg-gradient-hero text-primary-foreground py-12 md:py-16 lg:py-24 overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 left-0 w-96 h-96 bg-secondary rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
@@ -241,7 +241,7 @@ const ServicePageLayout = ({
                   <span>{heroSubtitle}</span>
                 </div>
 
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6 leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4 sm:mb-6 leading-tight">
                   {heroTitle}
                 </h1>
 
@@ -249,7 +249,7 @@ const ServicePageLayout = ({
                   {heroDescription}
                 </p>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
                   <Button 
                     variant="hero" 
                     size="lg" 
