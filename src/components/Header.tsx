@@ -60,6 +60,7 @@ const Header = () => {
     { name: 'Início', href: isHomePage ? '#inicio' : '/' },
     { name: 'Diferenciais', href: isHomePage ? '#diferenciais' : '/#diferenciais' },
     { name: 'Depoimentos', href: isHomePage ? '#depoimentos' : '/#depoimentos' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contato', href: isHomePage ? '#contato' : '/#contato' },
   ];
 
@@ -84,9 +85,9 @@ const Header = () => {
                 <Phone className="w-4 h-4" />
                 (44) 99739-8826
               </a>
-              <a 
-                href="https://wa.me/5544997398826" 
-                target="_blank" 
+              <a
+                href="https://wa.me/5544997398826"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-secondary transition-colors"
               >
@@ -102,21 +103,20 @@ const Header = () => {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-500 ${
-          isScrolled
+        className={`sticky top-0 z-50 transition-all duration-500 ${isScrolled
             ? 'bg-background/98 backdrop-blur-xl shadow-lg border-b border-border/50'
             : 'bg-background/80 backdrop-blur-sm'
-        }`}
+          }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center group">
-              <img 
-                src={logo} 
-                alt="Assistência Técnica Maringá" 
-                width={300} 
-                height={90} 
+              <img
+                src={logo}
+                alt="Assistência Técnica Maringá"
+                width={300}
+                height={90}
                 className="h-14 lg:h-16 w-auto object-contain"
               />
             </Link>
@@ -131,11 +131,10 @@ const Header = () => {
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   <button
-                    className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${
-                      activeDropdown === 'servicos' 
-                        ? 'bg-background text-primary shadow-sm' 
+                    className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${activeDropdown === 'servicos'
+                        ? 'bg-background text-primary shadow-sm'
                         : 'text-foreground hover:text-primary'
-                    }`}
+                      }`}
                   >
                     Serviços
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'servicos' ? 'rotate-180' : ''}`} />
@@ -147,7 +146,7 @@ const Header = () => {
                       <div className="w-[720px] bg-background rounded-2xl shadow-2xl border border-border/50 p-6 animate-in fade-in slide-in-from-top-2 duration-200">
                         {/* Arrow */}
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-background rotate-45 border-l border-t border-border/50" />
-                        
+
                         <div className="grid grid-cols-3 gap-6 relative">
                           {Object.entries(services).map(([key, category]) => (
                             <div key={key} className="space-y-3">
@@ -207,8 +206,8 @@ const Header = () => {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center gap-3">
-              <a 
-                href="tel:+5544997398826" 
+              <a
+                href="tel:+5544997398826"
                 className="flex items-center gap-2 text-foreground hover:text-primary transition-colors px-3"
               >
                 <div className="w-9 h-9 rounded-full bg-muted flex items-center justify-center">
@@ -241,10 +240,9 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div 
-          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMobileMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
-          }`}
+        <div
+          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
+            }`}
         >
           <nav className="container mx-auto px-4 pb-6">
             <div className="bg-muted/50 rounded-2xl p-4 space-y-2">
@@ -260,7 +258,7 @@ const Header = () => {
                   </span>
                   <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${activeDropdown === 'mobile-servicos' ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 <div className={`overflow-hidden transition-all duration-300 ${activeDropdown === 'mobile-servicos' ? 'max-h-96' : 'max-h-0'}`}>
                   <div className="px-4 py-2 space-y-4">
                     {Object.entries(services).map(([key, category]) => (
@@ -309,8 +307,8 @@ const Header = () => {
                   <Clock className="w-4 h-4" />
                   <span>Atendimento 24h</span>
                 </div>
-                <a 
-                  href="tel:+5544997398826" 
+                <a
+                  href="tel:+5544997398826"
                   className="flex items-center gap-3 px-4 text-sm text-foreground font-medium"
                 >
                   <Phone className="w-4 h-4 text-primary" />

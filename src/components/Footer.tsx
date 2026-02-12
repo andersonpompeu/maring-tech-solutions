@@ -13,16 +13,16 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <img 
-                src={logo2} 
-                alt="Assistência Técnica Maringá" 
-                width={300} 
-                height={90} 
+              <img
+                src={logo2}
+                alt="Assistência Técnica Maringá"
+                width={300}
+                height={90}
                 className="h-14 w-auto object-contain"
               />
             </div>
             <p className="text-white/80 text-sm leading-relaxed mb-6">
-              Assistência técnica premium em Maringá. Especialistas em conserto de 
+              Assistência técnica premium em Maringá. Especialistas em conserto de
               eletrodomésticos, Smart TVs e celulares.
             </p>
             {/* Social Links */}
@@ -116,6 +116,11 @@ const Footer = () => {
                 <a href="#contato" className="hover:text-secondary transition-colors">
                   Contato
                 </a>
+              </li>
+              <li>
+                <Link to="/blog" className="hover:text-secondary transition-colors">
+                  Blog
+                </Link>
               </li>
             </ul>
           </div>

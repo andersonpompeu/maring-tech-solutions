@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     target: "es2015",
   },
-  base: './',
+  base: '/',
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
