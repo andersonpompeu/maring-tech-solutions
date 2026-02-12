@@ -1,5 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
+import StructuredData from '@/components/StructuredData';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
@@ -32,21 +33,13 @@ const ArtigoPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{article.title}</title>
-        <meta name="description" content={article.metaDescription} />
-        <meta name="keywords" content={article.keywords} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={canonical} />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={article.title} />
-        <meta property="og:description" content={article.metaDescription} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:locale" content="pt_BR" />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title={article.title}
+        description={article.metaDescription}
+        keywords={article.keywords}
+        canonical={canonical}
+      />
+      <StructuredData data={structuredData} />
 
       <Header />
 

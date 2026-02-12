@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -11,15 +11,11 @@ const Blog = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Blog - Assistência Técnica Maringá | Dicas e Artigos</title>
-        <meta
-          name="description"
-          content="Artigos e dicas sobre eletrodomésticos, manutenção elétrica e serviços técnicos em Maringá. Informação de qualidade."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={canonical} />
-      </Helmet>
+      <SEOHead
+        title="Blog - Assistência Técnica Maringá | Dicas e Artigos"
+        description="Artigos e dicas sobre eletrodomésticos, manutenção elétrica e serviços técnicos em Maringá. Informação de qualidade."
+        canonical={canonical}
+      />
 
       <Header />
 

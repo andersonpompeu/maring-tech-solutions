@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '@/components/SEOHead';
 import { findNeighborhoodBySlug, neighborhoods } from '@/data/neighborhoods';
 import { BUSINESS } from '@/data/business-info';
 import { noBairro } from '@/lib/utils';
@@ -28,21 +28,12 @@ const BairroPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{`Assistência Técnica ${noBairro(bairro)} - Maringá-PR`}</title>
-        <meta
-          name="description"
-          content={`Assistência técnica ${noBairro(bairro)}, Maringá-PR. Conserto de geladeiras, máquinas de lavar, fogões, TVs e celulares. Garantia de 90 dias.`}
-        />
-        <meta
-          name="keywords"
-          content={`assistência técnica ${bairro} Maringá, conserto eletrodomésticos ${bairro}, reparo geladeira ${bairro}, conserto TV ${bairro}, conserto celular ${bairro}, técnico ${bairro} Maringá`}
-        />
-        <link rel="canonical" href={`${BUSINESS.site}/bairros/${neighborhood.slug}`} />
-        <meta property="og:title" content={`Assistência Técnica ${noBairro(bairro)} - Maringá`} />
-        <meta property="og:description" content={`Conserto de eletrodomésticos, TVs e celulares ${noBairro(bairro)}, Maringá-PR. Orçamento grátis!`} />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <SEOHead
+        title={`Assistência Técnica ${noBairro(bairro)} - Maringá-PR`}
+        description={`Assistência técnica ${noBairro(bairro)}, Maringá-PR. Conserto de geladeiras, máquinas de lavar, fogões, TVs e celulares. Garantia de 90 dias.`}
+        keywords={`assistência técnica ${bairro} Maringá, conserto eletrodomésticos ${bairro}, reparo geladeira ${bairro}, conserto TV ${bairro}, conserto celular ${bairro}, técnico ${bairro} Maringá`}
+        canonical={`${BUSINESS.site}/bairros/${neighborhood.slug}`}
+      />
 
       <BairroSchemaGenerator neighborhood={neighborhood} pageType="bairro" />
 
