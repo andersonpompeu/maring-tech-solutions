@@ -102,13 +102,16 @@ const BairroServicePage = () => {
                   {service.title} em Maringá {noBairro(bairro)}
                 </h1>
                 <p className="text-lg text-white/80 mb-8 max-w-xl page-description">{pageDescription}</p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button variant="hero" size="xl" asChild>
-                    <a href={`https://wa.me/${BUSINESS.whatsapp}?text=Olá! Preciso de ${service.title.toLowerCase()} ${noBairro(bairro)}.`} target="_blank" rel="noopener noreferrer">
-                      Solicitar Orçamento Grátis
-                    </a>
-                  </Button>
-                </div>
+                 <div className="flex flex-col sm:flex-row gap-4">
+                   <Button variant="whatsapp" size="xl" asChild>
+                     <a href={`https://wa.me/${BUSINESS.whatsapp}?text=Olá! Preciso de ${service.title.toLowerCase()} ${noBairro(bairro)}.`} target="_blank" rel="noopener noreferrer">
+                       <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.537 0-2.852-.503-3.867-1.496C4.164 3.402 3.561 1.849 3.561 .283 3.561-.91 4.478-2 5.617-2h2.529C9.323-2 10.24-1.09 10.24.083v2.528c0 1.174-.918 2.075-2.053 2.075h-2.608zM23.94 2.15c0 1.173-.923 2.068-2.061 2.068h-2.521C18.255 4.218 17.34 3.308 17.34.227V-.297C17.34-1.47 18.263-2.36 19.402-2.36h2.521C23.017-2.36 23.94-1.47 23.94-.297v2.447zm-6.506 5.383c1.309 0 2.373-1.069 2.373-2.381 0-1.312-1.064-2.381-2.373-2.381-1.309 0-2.373 1.069-2.373 2.381 0 1.312 1.064 2.381 2.373 2.381z" fill="currentColor" />
+                       </svg>
+                       Solicitar Orçamento Grátis
+                     </a>
+                   </Button>
+                 </div>
               </div>
             </div>
           </section>
