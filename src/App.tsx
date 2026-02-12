@@ -27,11 +27,13 @@ import Blog from "./pages/Blog";
 import ArtigoPage from "./pages/ArtigoPage";
 import CookieConsent from "./components/CookieConsent";
 import ScrollToTop from "./components/ScrollToTop";
+import AnimatedFavicon from "./components/AnimatedFavicon";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <HelmetProvider>
+    <AnimatedFavicon />
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
