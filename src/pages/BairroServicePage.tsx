@@ -19,6 +19,7 @@ import {
 } from '@/components/ui/accordion';
 import { Shield, Clock, Zap, CheckCircle, Wrench, Star } from 'lucide-react';
 import heroImage from '@/assets/hero-technician.jpg';
+import BairroServiceHomePage from '@/components/bairro/BairroServiceHomePage';
 
 const BairroServicePage = () => {
   const { slug, serviceSlug } = useParams<{ slug: string; serviceSlug: string }>();
@@ -27,6 +28,10 @@ const BairroServicePage = () => {
 
   if (!neighborhood || !service) {
     return <Navigate to={neighborhood ? `/bairros/${neighborhood.slug}` : '/bairros'} replace />;
+  }
+
+  if (service.homeLayout) {
+    return <BairroServiceHomePage neighborhood={neighborhood} service={service} />;
   }
 
   const bairro = neighborhood.name;
